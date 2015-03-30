@@ -1,5 +1,5 @@
 \documentclass[12pt]{article}
-\usepackage[margin=1.1in]{geometry}
+\usepackage[margin=1.2in]{geometry}
 \usepackage{color}
 \usepackage{graphicx}
 \usepackage{url}
@@ -51,10 +51,8 @@ It is largely unknown at what specific timepoints and from which lines most of t
 \label{fig:joost}
 \end{figure}
 
-The opportunity to find such alleles rests in old lines. We term this \textbf{``pedigree assisted introgression'' (PAI)}.
-
-
-Maize germplasm can and is preserved through time in various germplasm repositories around the world, but this ``old '' diversity  does not stay preserved forever. Public breeding programs of yesteryear at land grant institutions are a likely goldmine of information vital to the future of breeding. But few public or private breeders, if any are revisiting or using this information. Worse, much of the data documenting ancestry and thus the diversity of old modern lines is vulnerable to loss. 
+The opportunity to find such alleles rests in old lines. 
+\par Maize germplasm can and is preserved through time in various germplasm repositories around the world, but this ``old '' diversity  does not stay preserved forever. Public breeding programs of yesteryear at land grant institutions are a likely goldmine of information vital to the future of breeding. But few public or private breeders, if any are revisiting or using this information. Worse, much of the data documenting ancestry and thus the diversity of old modern lines is vulnerable to loss. 
 \par Private companies such as Pioneer recognize the value of such data, and take many pains to insure that accurate records are kept, so that old genetic diversity can be brought back in at any given time point to revitalize the contemporary breeding pool (see letter of support from Dr. Robert Meeley - Dupont Pioneer).
 
 \subsection{Loss of historical records documenting loss of diversity: development of an open source pedigree database}
@@ -99,19 +97,22 @@ Maintaining this system for propagation of inbred lines and hybridizing inbreds 
 
 \subsection*{Slowing yields: a cause for alarm} 
 
-\par Maize yields have continued to increase since the 1930s when breeders and farmers first adopted vigourous hybrids produced from inbred lines. The latter increases in yield growth rate are also likely due (in part) to advanced agriculture management practices - input of nitrogen fertilizer, use of modern herbicides and pesticides. Continued improvement with environmental management practices has likely plateaued. It is probable that much of the change in yield over time is due to the adoption of modern breeding programs \citep{Duvick:2001fy}, and the genetics of these breeding programs in producing lines resistant to drought, pests and other diseases. However, while maize yields continue to increase, the velocity at which they are increasing has slowed in the modern era (since the 1970s) (Fig. 1). \textbf{NB: The eras in Fig. 1 roughly correspond to the eras described in \citep{vanHeerwaarden:2012im}}.
-We propose here that the major cause that is contributing to this observed slowing yield may be the drop in diversity. It has been shown that while diversity has increased amongst inbred lines \citep{Gerke:2013tw}; the within population level haplotype diversity of modern inbred lines \citep{vanHeerwaarden:2012im} has dropped over time. Maize inbreds from different breeding pools are rarely (if ever) crossed for propagation, and beneficial/adaptive alleles are only meeting during hybrid test crosses. 
+\par Maize yields have continued to increase since the 1930s when breeders and farmers first adopted vigorous hybrids produced from inbred lines. The latter increases in yield growth rate are also very likely due (in part) to advanced agriculture management practices - input of nitrogen fertilizer, use of modern herbicides and pesticides. However, continued improvement with environmental management practices has likely plateaued. It is probable that much of the change in yield over time is due to the adoption of modern breeding programs \citep{Duvick:2001fy}, and the genetics of these breeding programs in producing lines resistant to drought, pests and other diseases. However, while maize yields continue to increase, the velocity at which they are increasing has slowed in the modern era (since the 1970s) (Figure \ref{fig:piecewise}). \textbf{NB: The eras in Fig. 1 roughly correspond to the eras described in \citep{vanHeerwaarden:2012im}}.
+\par Removing the effect of input of nitrogen and other fertilizers from yield each year reveals that a good portion of the variation in yield is due to genetics (and possibly other environmental factors) (Figure\ref{fig:inflection}. 
+We propose here that the major cause that is contributing to this observed slowing yield may be the drop in genetic diversity. It has been shown that while diversity has increased amongst inbred lines \citep{Gerke:2013tw}; the within population level haplotype diversity of modern inbred lines \citep{vanHeerwaarden:2012im} has dropped over time. Maize inbreds from different breeding pools are rarely (if ever) crossed for propagation, and beneficial/adaptive alleles are only meeting during hybrid test crosses. 
 \par This drop within separate inbred line breeding pools is likely due to the current breeding practice of discarding inbred lines out of the breeding population or pool if they do not show favorable combining ability (thus, alleles are gradually discarded within a population).  We contend that this genetic diversity within a breeding pool or population needs to be recovered in some way.  
 \par Perhaps of greatest concern for the future of maize breeding, is that much of the original diversity from inbreds used to create modern hybrids used jointly by public researchers and industry has dropped over time \citep{Gerke:2013tw}. This inherently means a reduced response to natural and/or artificial selection, and indicates that there will be only diminishing returns on yields as time goes on unless new diversity is brought back into breeding pools. Recombination between current commercial inbred lines creates only new genotypic combinations of alleles, not new diversity and new mutational inputs over the short term that are not neutral are likely to be deleterious.
 
 \begin{figure}[ht]
 \includegraphics[width=1.0\linewidth]{yield.pdf}
 \caption{Piecewise regressions of time against total yield through the four eras of modern maize breeding. Lines correspond to distinct eras of maize breeding.} 
+\label{fig:piecewise}
 \end{figure}
 
 \begin{figure}[ht]
 \includegraphics[width=1.0\linewidth]{inflection_point.pdf}
-\caption{Piecewise regressions of time against total yield through the four eras of modern maize breeding. Lines correspond to distinct eras of maize breeding.} 
+\caption{Model residuals after removing the effect of nitrogen from Figure \ref{fig:piecewise}, with inlection points (blue squares) and piecewise regressions showing the possible points allelic gains and losses through time.} 
+\label{fig:inflection}
 \end{figure}
 
 
@@ -146,7 +147,7 @@ Our proposed research has three major aims in using pedigree information to dete
 \subsubsection*{Travel and digitization of records and agreed upon database format for all data}
 The first part of our proposal aims to preserve hard-copy pedigree records by traveling to different land grant institutions by digitizing them. These raw data scans will then be manually translated into an agreed upon format, with numbering/naming of each line/accession agreed upon.
 Dr. Kate Crosby, Dr. Taner Sen (support letter from maize GDB enclosed), senior personnel Dr. Oscar Smith, and CO-PI Dr. Bill Tracy will consult on an agreed upon standard format with which to store the raw scan of pedigree records, the phenotypic and genomic information. Establishing an agreed upon format in the first few months of the project will enable easy mapping of current and future genomic data formats to pedigree information.
-\par Additionally, Dr. Kate Crosby is currently investigating the possibility of using no-SQL database without formal schemas specified \textit{a priori} (graph databases) to be able handle queries with respect to mapped genomic data, extended ancestry, and phenotypic data, along with new visualization tools (example visualization below) \citep{ParejaTobes:2015bf}.
+\par Additionally, Dr. Kate Crosby is currently investigating the possibility of using no-SQL database without formal schemas specified \textit{a priori} (graph databases) to be able handle queries with respect to mapped genomic data, extended ancestry, and phenotypic data, along with new visualization tools \citep{ParejaTobes:2015bf}.
 
 
 
@@ -163,7 +164,7 @@ In the section above we mention that certain maize lines feature heavily in the 
 \label{fig:b73isbig}
 \end{figure}
 
-\par The first masters student to be supervised by Dr. James Holland (NC State) will, with the cooperation of Dr. William Tracy, Dr. Sherry Flint-Garcia, Dr. Howie Smith, and the post-doc Dr. Kate Crosby use the information gathered during the first year to identify these historically important lines. Many small pedigrees will be constructed from lines identified as having many inbred ``progeny''. This student will then identify distorted segregation at all heterozygous loci (using GBS markers) within and across these many small pedigrees (Figure \ref{fig:alleledrop}), this is known as \textbf{``allele-dropping''}. It is a simple Mendelian approach to identifying traces of selection by directly accounting for ancestry, and without the worry of having to account for shared population structure (as in modern population genomics approaches). If we can identify the uni-directional shift of a given allele across many of these small pedigrees at a set locus, this would indicate selection. 
+\par The first masters student to be supervised by Dr. James Holland (NC State) will, with the cooperation of Dr. William Tracy, Dr. Sherry Flint-Garcia, Dr. Oscar Smith, and the post-doc Dr. Kate Crosby use the information gathered during the first year to identify these historically important lines. Many small pedigrees will be constructed from lines identified as having many inbred ``progeny''. This student will then identify distorted segregation at all heterozygous loci (using GBS markers) within and across these many small pedigrees (Figure \ref{fig:alleledrop}), this is known as \textbf{``allele-dropping''}. It is a simple Mendelian approach to identifying traces of selection by directly accounting for ancestry, and without the worry of having to account for shared population structure (as in modern population genomics approaches). If we can identify the uni-directional shift of a given allele across many of these small pedigrees at a set locus, this would indicate selection. 
 \par The student would also be responsible for simulating allele frequency change under neutral processes (genetic drift). The approach would be similar to that used in \citep{Gerke:2013tw}, to evaluate at which loci adaptive (by breeders) or neutral forces have shaped the current allelic diversity of the overall modern breeding population. 
 \par Should loci be identified as having uni-directionally shifted through time across many of these small pedigrees, we would compare this to our findings in project 2 (see next section).
 
@@ -174,17 +175,20 @@ In the section above we mention that certain maize lines feature heavily in the 
 \end{figure}
 
 
-\subsubsection*{Genotyping and grow out of lines that appear to feature heavily in the pedigree}
-The inbreds that feature heavily in the historic pedigree may also  
+
 
 
 
 \subsubsection*{Project 2 for student 2: novel population genomics approaches to project current phenotypes back in time}
 
+\subsubsection*{Genotyping and grow out of lines that appear to feature heavily in the pedigree}
+The inbreds that feature heavily in the historic pedigree may also  
 
 
 \subsection*{Expected outcomes \& Utility of results}
+
 \subsubsection*{A user friendly, open db}
+
 Our first expected deliverable is an open public pedigree database to be hosted on maize GDB for the long term future. Users will be able to contribute and revise incomplete information, with the goal of establishing a nearly complete public pedigree of maize inbred lines. \textbf{To our knowledge, this will be one of the first public crop databases of its kind (with lines having genomic and phenotypic data mapped onto entries).}
 \par Ensuring data, code, and script are open-access or open-source (freely available to the public) is important for critique, debate, and dialogue in science. Dr. Ross-Ibarra has a long track record of ensuring openness with his science, data, and code. Throughout this project, both Dr. Ross-Ibarra and Dr. Crosby will endeavour to ensure that code and data are available via repositories such as github, figshare, maize GDB, and iPlant.
 
