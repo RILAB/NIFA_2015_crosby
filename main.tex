@@ -1,0 +1,230 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[round]{natbib}
+\bibliographystyle{evolution}
+
+\begin{document}
+
+\title{Project Narrative: The genetic archaeology of modern maize breeding: identifying useful genetic and phenotypic diversity through historical pedigree reconstruction}
+\author{}
+\date{}
+\maketitle
+
+\section*{Rationale and Significance}
+\label{rationale}
+
+Maize is a natural resource of fundamental national importance, vital for food, livestock feed, and fuel production.
+Maize is also the most valuable field crop in the United States, with production values at greater than \$50 billion dollars every year since 2010 \citep{usdanass}. 
+
+But while maize yields have increased over the last several decades, the rate of gain falls short of projected needs in the near future.
+Even under stable climatic conditions, current rates of maize improvement are insufficient to meet requirements of population growth over the next 30 years \citep{ray2013yield}; in  addition to requirements in terms of food and animal feed, worldwide ethanol use is projected to increase 40\% within just the next decade \citep{usdalong}.
+Changing climatic conditions, however, will likely further challenge our ability to meet needed yield gains. 
+Historical analyses suggests that climate change over the last 30 years has already dramatically impacted maize yields worldwide, retarding gains from breeding and management \citep{Lobell2011}.
+Moreover, predicted temperature increases will increase volatility in yield across the U.S. and may even decrease future yields \citep{urban2012projected}, with some models suggesting a change of even 1$^{\circ}$C could negatively impact yields by as much as 17\% \citep{lobell2003climate}; more dire warnings suggest that U.S. maize yields could drop 30-46\% below current levels by the end of the century \citep{schlenker2009nonlinear}.
+Substantial efforts will clearly be needed to preserve U.S. maize production and increase or maintain yields.  
+
+Much of the historical gains in maize yield can be directly attributed to breeding efforts \citep{Duvick1992, duvick2005genetic}, and \textbf{breeding must remain of central importance in order to meet increased yield demands}.  
+Breeding is also of key importance in adapting maize to the challenges of changing climates \citep{Troyer2004a}, with recent models suggesting that efficient use of extant adaptive diversity in maize could significantly ameliorate the effects of climate change \citep{butler2013adaptation}. 
+
+\subsection*{Loss of diversity in modern inbreds: little evidence of selection observed across breeding pools}
+ Efforts attempting to detect artificial selection on standing genetic variation across breeding populations from modern maize lines have largely pointed to random loss of genetic diversity through time \citep{Gerke:2013tw}\citep{vanHeerwaarden:2012im}. 
+
+\begin{figure}[ht]
+\includegraphics[width=1.0\linewidth]{justin_het_fst.pdf}
+\caption{The decline in heterozygosity and increase in between population diversity in reciprocal recurrent selection program of Iowa Stiff Stalk Synthetic (BSSS) and Iowa Corn Borer Synthetic No. 1 from \citep{Gerke:2013tw}} 
+\end{figure}
+
+
+Generally, a uni-directional loss of diversity can be attributed to breeder's selection, while the stochastic loss of genetic diversity through time indicates the action of random genetic drift. In highly inbred populations (such as modern maize breeding pools and breeding programs), the effective population size is generally lower than that of open pollinated or outcrossed landraces. This means that the modern breeding populations are more vulnerable to genetic drift, and the ability to respond to selection becomes less efficient as diversity is removed from the population (hence the diminishing returns in terms of yield/fitness). Both additive genetic variation and effective population size must be large to maximize the efficiency of selection on traits correlated with total yield per acre.
+
+It is largely unknown at what specific timepoints and from which lines most of this diversity has been lost - or, at the very least this data is not public. The fraction of the diversity that has been purged from modern maize lines by breeders was likely deleterious, and now fewer deleterious alleles remain within breeding pools than in earlier era inbred lines \citep{Mezmouk:2014jd}. However, due to the nature of linkage between loci and genotypic correlations among traits, much of this total lost diversity may have been adaptive. Further, it is possible that a great deal of neutral diversity in these lines was or is conditionally neutral diversity; meaning that some of the neutral diversity is contextually dependent on the environment (spatial and/or temporal selection) in which it is grown, commonly referred to as ``G X E'' (genotype-by-environment interaction). This ``lost'' or ``old'' diversity may be important to future challenges for breeders such as drought, disease, and other challenges brought about by climate change. At least one study of ours, has shown that some older maize inbred lines likely contain more adaptive alleles than expected (Figure \ref{fig:joost}).
+
+
+\begin{figure}[p]
+\includegraphics[width=1.0\linewidth]{joost_wf9.pdf}
+\caption{Figure from \citep{vanHeerwaarden:2012im} showing the buildup of beneficial alleles present modern maize inbred lines, such as WF9}. 
+\label{fig:joost}
+\end{figure}
+
+The opportunity to find such alleles rests in old lines. We term this \textbf{``pedigree assisted introgression'' (PAI)}.
+
+
+Maize germplasm can and is preserved through time in various germplasm repositories around the world, but this ``old '' diversity  does not stay preserved forever. Public breeding programs of yesteryear at land grant institutions are a likely goldmine of information vital to the future of breeding. But few public or private breeders, if any are revisiting or using this information. Worse, much of the data documenting ancestry and thus the diversity of old modern lines is vulnerable to loss. 
+\par Private companies such as Pioneer recognize the value of such data, and take many pains to insure that accurate records are kept, so that old genetic diversity can be brought back in at any given time point to revitalize the contemporary breeding pool (see letter of support from Dr. Robert Meeley - Dupont Pioneer).
+
+\subsection{Loss of historical records documenting loss of diversity: development of an open source pedigree database}
+A second problem facing not only maize, but many crops, is that much of the information on this ``old'' diversity is contained within research station bulletins, annual meeting minutes, and breeding release sheets is that they exist only in hard-copy format. This data is thus vulnerable to loss or physical damage due to age, or it may simply be misplaced. Yet, this hard-copy information contains a wealth of data on parentage, ancestry, and even phenotypic data (namely the susceptibility to disease of different lines), i.e. European corn borer, northern and southern blight susceptibility and resistance, drought resistance, etc. This seemingly outdated information is inherently beneficial (and the lines already developed) for the future of breeding programs nationally and globally. Digitizing this information and translating it into a standard format and placing in a public database is a reasonable and logical course of action.
+\par We propose building a centralized public pedigree database to be hosted on maize GDB for the long-term future (see letter of support from Dr. Taner Sen). This database would jointly contain maize inbred line pedigree information with genomic information mapped to the lines. We would also provide easy to use visualization tools it would allow public researchers and breeders to choose lines and diversity based on their own needs and environments. 
+
+
+\begin{itemize}
+
+
+\item adaptation relies on diversity; diversity has been decreasing
+
+\item methods of utilizing exotic diversity difficult and not likely to be incorporated by industry
+
+\item considerable adaptive diversity exists in older maize lines not used:
+%chen2012characterization
+%http://www.jswconline.org/content/67/5/354.full.pdf
+% identified B76 -- iowa line from 1974 that did not contribute as much to current pedigrees, vs B73 which is more important pedigree-wise
+
+\item we propose  to catalogue public maize breeding lines and identify individual lines of possible greatest utility for breeding
+
+this meets goals XYZ
+
+\end{itemize}
+
+\section*{INTRODUCTION}
+\label{S:1}
+\subsection*{Current breeding practices}
+Maize is one of the most important domesticated crops, serving as a critical source of feed, food and fuel both nationally and internationally. 
+Maize has undergone dramatic phenotypic and genetic changes since its domestication and subsequent spread through North and South America \citep{daFonseca:2015ey} \citep{Doebley:2004ce}. More recently, beginning in the mid-20$^{th}$ century, the intensification of maize breeding efforts has lead to subtler but equally important changes, increasing yield but also significantly impacting patterns of genetic diversity \citep{Duvick:2001fy} \citep{vanHeerwaarden:2012im}.
+
+Maize is  a self-compatible crop, and modern breeding programs (post-1960) take advantage of self-fertilization (or now double-haploid technology) to create homozygous inbred lines. 
+However, this practice of  inbreeding (breeding between close relatives or self-fertilization) dramatically decreases the amount of genetic diversity and variation \citep{Charlesworth:2001to} within a breeding pool or population.  
+Decreased variation and diversity reduces the efficacy of selection by breeders. Inbreeding ultimately effects the fitness or yield of a given line relative to a line that is outcrossed with another - this is termed ``inbreeding depression''. While it seems counterproductive, there has been good reason for the current breeding practice of maintaining highly inbred maize lines. 
+Distinct inbreds are maintained in separate breeding pools or heterotic groups (two popular modern heterotic groups are ``stiff stalk'' and ``non-stiff stalk'').
+Inbred lines from separate breeding pools are crossed to make hybrid progeny.  
+These hybrids often display heterosis, meaning that yield and yield associated traits (termed ``production traits'') in the hybrid are significantly greater than either inbred parent \citep{Springer:2007bj}.  
+Inbreds resulting in high-yielding, heterotic offspring are said to have good ``combining ability'', and are recycled in their respective breeding pools.
+Inbreds that form less desirable combinations are usually discarded from the breeding pool. 
+Useful inbreds within a group are crossed with each other, and their segregating progeny evaluated and self-fertilized to create new inbreds. 
+Maintaining this system for propagation of inbred lines and hybridizing inbreds (termed ``the inbred-hybrid method'') for evaluating production traits has worked well for many decades, but there is growing reason for concern that this method may need a genetic boost. 
+
+\subsection*{Slowing yields: a cause for alarm} 
+
+\par Maize yields have continued to increase since the 1930s when breeders and farmers first adopted vigourous hybrids produced from inbred lines. The latter increases in yield growth rate are also likely due (in part) to advanced agriculture management practices - input of nitrogen fertilizer, use of modern herbicides and pesticides. Continued improvement with environmental management practices has likely plateaued. It is probable that much of the change in yield over time is due to the adoption of modern breeding programs \citep{Duvick:2001fy}, and the genetics of these breeding programs in producing lines resistant to drought, pests and other diseases. However, while maize yields continue to increase, the velocity at which they are increasing has slowed in the modern era (since the 1970s) (Fig. 1). \textbf{NB: The eras in Fig. 1 roughly correspond to the eras described in \citep{vanHeerwaarden:2012im}}.
+We propose here that the major cause that is contributing to this observed slowing yield may be the drop in diversity. It has been shown that while diversity has increased amongst inbred lines \citep{Gerke:2013tw}; the within population level haplotype diversity of modern inbred lines \citep{vanHeerwaarden:2012im} has dropped over time. Maize inbreds from different breeding pools are rarely (if ever) crossed for propagation, and beneficial/adaptive alleles are only meeting during hybrid test crosses. 
+\par This drop within separate inbred line breeding pools is likely due to the current breeding practice of discarding inbred lines out of the breeding population or pool if they do not show favorable combining ability (thus, alleles are gradually discarded within a population).  We contend that this genetic diversity within a breeding pool or population needs to be recovered in some way.  
+\par Perhaps of greatest concern for the future of maize breeding, is that much of the original diversity from inbreds used to create modern hybrids used jointly by public researchers and industry has dropped over time \citep{Gerke:2013tw}. This inherently means a reduced response to natural and/or artificial selection, and indicates that there will be only diminishing returns on yields as time goes on unless new diversity is brought back into breeding pools. Recombination between current commercial inbred lines creates only new genotypic combinations of alleles, not new diversity and new mutational inputs over the short term that are not neutral are likely to be deleterious.
+
+\begin{figure}[ht]
+\includegraphics[width=1.0\linewidth]{yield.pdf}
+\caption{Piecewise regressions of time against total yield through the four eras of modern maize breeding. Lines correspond to distinct eras of maize breeding.} 
+\end{figure}
+
+\begin{figure}[ht]
+\includegraphics[width=1.0\linewidth]{inflection_point.pdf}
+\caption{Piecewise regressions of time against total yield through the four eras of modern maize breeding. Lines correspond to distinct eras of maize breeding.} 
+\end{figure}
+
+
+
+\subsection*{Future diversity - ghosts of maize past: A novel approach to incorporate new diversity}
+\par Incorporating novel diversity into contemporary modern maize lines can occur in two ways, by introgressing modern lines with open pollinated landraces from the tropics not previously incorporated into any breeding program. Or, alternatively, back-tracking through time using pedigree information to inform breeders at what time points potentially commercially important allelic diversity has been lost and breeding this diversity back into current breeding pools. Pedigrees when combined with modern genomic and phenotypic trait data are useful tools not only for tracking loss in allelic diversity, but for identifying loci that have experienced strong artificial selection across breeding pools. Examples of their application can be found with: cattle \citep{Decker:2012kd}, soybean (cite), and grape (cite). While private companies likely have their own pedigree databases to do exactly this, these data are private, patented, and not available to the public. 
+Further, much of the pedigree information on older founder inbred maize lines sits in old volumes of crop science, release sheets, or breeding books, unused and vulnerable to loss.
+\subsubsection*{Missing or incomplete data}
+\par The National Plant Germplasm Service database contains information with regards to ancestry of public maize inbred lines, much of this information is incomplete or missing. Or it does not 
+%\jri{i think here you give some stats from GRIN: how many lines have complete, partial parentage info, GBS, etc. figure 2 only shows that pedigree doesn't give you genetic relatedness always, and really just argues for genotyping everything. the bigger issue is that we're missing both for a large number of taxa. i would drop that figure in favor of something showing incompleteness of records. }. 
+\textbf{However, much of this ancestry information on modern maize lines  is still publicly available, only not in digital form, nor is it easily-accessible. This historical pedigree information exists in old volumes and minutes of breeding committees, old breeding program books, and other hard-copy-only sources. Here, we propose a project that will help preserve, maintain, and use this historical information with novel genomic data to better benefit future maize breeding programs.} 
+
+\section*{APPROACH}
+\label{S:3}
+Our proposed research has three major aims in using pedigree information to detect change in diversity of modern inbred maize lines.
+
+% “Small-scale evaluation of individual lines.” These are the grow-outs of individual awesome old lines. need some methodology here — we can’t do crosses, but we can collect good phenotype data on lines. so i would propose:
+
+%year 2) 100 lines of interest in the pedigree, either because of how few or how many offspring they have.  especially focus on those without genotype data.  grow up and get phenotype and genotype
+%year 3) 100 lines of known genotype (50 good genotypes 50 bad). grow these up to both i) test phenotype prediction from Qx and ii) see whether lines with lots of good alleles are agronomically superior to lines without
+
+%explain we don’t have the time or resources to actively test these in hybrid yield trials, but this gets preliminary information breeders and industry could use to make decisions about including some of these lines and allows us some ground-truthing of the methods.  we should grow a set of say 20 exPVP lines in each year to compare across years and use as a standard
+
+\begin{itemize}
+\item Aim 1: Digitize and curate pedigree and genotype information into a publicly available database. 
+\item Aim 2: Identify adaptive alleles and loci using a combination of pedigree-approaches via allele-dropping, and population genetics approaches.
+\item Aim 3: The small-scale phenotypic and genotypic evaluation of individuals lines that feature heavily in the historical pedigree
+
+ 
+\end{itemize}
+\subsection*{Proposed activities, methods \& feasibility}
+\subsubsection*{Travel and digitization of records and agreed upon database format for all data}
+The first part of our proposal aims to preserve hard-copy pedigree records by traveling to different land grant institutions by digitizing them. These raw data scans will then be manually translated into an agreed upon format, with numbering/naming of each line/accession agreed upon.
+Dr. Kate Crosby, Dr. Taner Sen (support letter from maize GDB enclosed), senior personnel Dr. Oscar Smith, and CO-PI Dr. Bill Tracy will consult on an agreed upon standard format with which to store the raw scan of pedigree records, the phenotypic and genomic information. Establishing an agreed upon format in the first few months of the project will enable easy mapping of current and future genomic data formats to pedigree information.
+\par Additionally, Dr. Kate Crosby is currently investigating the possibility of using no-SQL database without formal schemas specified \textit{a priori} (graph databases) to be able handle queries with respect to mapped genomic data, extended ancestry, and phenotypic data, along with new visualization tools (example visualization below) \citep{ParejaTobes:2015bf}.
+
+
+
+\subsubsection*{Genotyping of lines that feature heavily in historical pedigree information}
+Undoubtedly, there will be information garnered from historical pedigree information on lines that do not have any genomic data available for them. In such cases (where germplasm is available), we intend to use genotype-by-sequencing (GBS) \citep{Elshire:2011ha} as a cost-efficient platform \citep{Glaubitz:2014eu} to obtain genomic data for such lines, with markers aligned to the newest maize reference genome (currently B73 v. 3). 
+
+\subsubsection*{Project 1 for student 1: understanding the dynamics of selection through time with allele-dropping and pedigree}
+In the section above we mention that certain maize lines feature heavily in the historic pedigree. For example, in the public pedigree B73 features heavily as a parent to many ancestors of current inbred lines (Figure \ref{fig:b73isbig}). 
+
+
+\begin{figure}[ht]
+\includegraphics[width=1.0\linewidth]{pedigree_poster.pdf}
+\caption{Example of a modern maize inbred line that features heavily in the overall pedigree, B73, with numerous inbred progeny.}
+\label{fig:b73isbig}
+\end{figure}
+
+\par The first masters student to be supervised by Dr. James Holland (NC State) will, with the cooperation of Dr. William Tracy, Dr. Sherry Flint-Garcia, Dr. Howie Smith, and the post-doc Dr. Kate Crosby use the information gathered during the first year to identify these historically important lines. Many small pedigrees will be constructed from lines identified as having many inbred ``progeny''. This student will then identify distorted segregation at all heterozygous loci (using GBS markers) within and across these many small pedigrees (Figure \ref{fig:alleledrop}), this is known as \textbf{``allele-dropping''}. It is a simple Mendelian approach to identifying traces of selection by directly accounting for ancestry, and without the worry of having to account for shared population structure (as in modern population genomics approaches). If we can identify the uni-directional shift of a given allele across many of these small pedigrees at a set locus, this would indicate selection. 
+\par The student would also be responsible for simulating allele frequency change under neutral processes (genetic drift). The approach would be similar to that used in \citep{Gerke:2013tw}, to evaluate at which loci adaptive (by breeders) or neutral forces have shaped the current allelic diversity of the overall modern breeding population. 
+\par Should loci be identified as having uni-directionally shifted through time across many of these small pedigrees, we would compare this to our findings in project 2 (see next section).
+
+\begin{figure}[p]
+\includegraphics[width=1.0\linewidth]{Pruned.pdf}
+\caption{B73 (also known as PI550473 by NPGS and a number of its inbred progeny) is heterozygous at 379 loci out of over 954000 loci with GBS markers). The blue labels represent which inbred progeny obtained the A allele, whereas the yellow labels indicate the progeny that have obtained the G allele at a particular locus. \textbf{NB: the other parent of these lines is not indicated for simplicity}.}
+\label{fig:alleledrop}
+\end{figure}
+
+
+\subsubsection*{Genotyping and grow out of lines that appear to feature heavily in the pedigree}
+The inbreds that feature heavily in the historic pedigree may also  
+
+
+
+\subsubsection*{Project 2 for student 2: novel population genomics approaches to project current phenotypes back in time}
+
+
+
+\subsection*{Expected outcomes \& Utility of results}
+\subsubsection*{A user friendly, open db}
+Our first expected deliverable is an open public pedigree database to be hosted on maize GDB for the long term future. Users will be able to contribute and revise incomplete information, with the goal of establishing a nearly complete public pedigree of maize inbred lines. \textbf{To our knowledge, this will be one of the first public crop databases of its kind (with lines having genomic and phenotypic data mapped onto entries).}
+\par Ensuring data, code, and script are open-access or open-source (freely available to the public) is important for critique, debate, and dialogue in science. Dr. Ross-Ibarra has a long track record of ensuring openness with his science, data, and code. Throughout this project, both Dr. Ross-Ibarra and Dr. Crosby will endeavour to ensure that code and data are available via repositories such as github, figshare, maize GDB, and iPlant.
+
+\subsection*{The application of current cutting-edge population genomic approaches to quantitative genetics}
+
+- Application of novel population genomic approaches to project current phenotypes back in time
+
+\subsection*{}
+- Ground truth with actual grow-out
+- Way of discovering het error rates in GBS
+- identification of ghost ancestors?
+
+\subsection*{Means of analysis/interpretation}
+Dr. Randall Wisser has agreed to provide plot space for growing up germplasm of lines disproportionately present in the pedigree that have phenotypic data affiliated with their release sheets or with NPGS, i.e. drought resistance, heavy-metal tolerance, disease resistance, etc. The grow-out is to ground truth the suppositions gained from \citep{Berg:2014bs}.
+
+
+\subsection*{Limitations \& Prospective pitfalls}
+While we are very optimistic about the prospect of obtaining accurate pedigree information from these various institutions the nature of corn-breeding and record keeping of corn-breeding can be nebulous. Ideally, we would be able to accurately count the number of meioses in the total pedigree, in each heterotic group, down to each line; thus, retracing the complete ancestry of a given contemporary inbred. However, in many cases, it may not have been noted at which point in a breeding program a line was bulked at, nor on occasion which lines were used in recycling an inbred when seed was exhausted. For instance, a record from NPGS may indicate that a line was bulked and stored at cycle 6, or it may have been bulked and stored at cycle 4. As a ballpark figure, a ``cycle 6 inbred'' means that germplasm from that line is 99\% homozygous at all locus pairs. Meaning that if this inbred is selfed further, not much changes with respect to levels of homozygosity nor heterozygosity (as recombination via selfing is ineffective beyond this point).  Thus, so long as an inbred is at or beyond cycle 6, it will be kept, but inbreds before this period shall be discarded.
+
+\par To ensure that historical records of inbred lines are isolated at cycle 6 and beyond we will investigate the level of heterozygosity in each of these lines with GBS data relative to the total amount of missing data in an individual line. Within a reasonable confidence limit most lines should show a very small portion of heterozygous loci even with GBS markers (known to have a high rate of error in undercalling heterozygous). 
+
+\par Historical pedigree records and other information on old lines may be available, but the germplasm from these old lines may simply not be available (genomic data will not be able to be mapped onto these lines \textcolor{red}{give numbers on unavailable germplasm}). In such cases, we would seek available germplasm from the next nearest relatives according to historical information. 
+
+
+\subsection*{Hazards to personnel}
+There will be car/air travel required by Dr. James Holland's masters student, CO-PI Dr. William Tracy, and the post-doc Dr. Kate Crosby) to the different land grant institutions. This travel is required for obtaining pedigree records from each land grant institution's library during year 1 of the proposed three year grant. Air travel will likely be necessary for the students and the post-doc to travel to a conference (most likely the Maize Genetics conference in 2016 or 2017) to present their results to the maize community at large. Travel is likely the most dangerous activity that any personnel will experience for the duration of this project, so we will take steps to ensure that all participants have travel insurance and benefits during these periods, and this is reflected in our current budget. 
+
+
+\subsection*{Timeline}
+A graphical timeline of our three-year proposal is presented below.
+The first year will be spent traveling and gathering and digitizing pedigree records at land-grant institutions that have been identified by CO-PI Dr. William Tracy (one of two authors of the most authoritative public guide on the pedigrees of maize inbred lines to date) and senior personnel Dr. Oscar Smith (recently retired senior corn breeder who spent 30 + years with Dupont Pioneer) as having had breeding programs, but where records have not been digitized or made widely available. 
+\par Dr. William Tracy and Dr. James Holland's masters student will largely be responsible for traveling to and scanning hard-copy records into digital format. Dr. William Tracy has committed to obtaining records from the University of Wisconsin, University of Nebraska, and will also visit the University of Florida. Dr. James Holland's student will be responsible for the breeding records at North Carolina State University, Virgina Tech, and the inbred records housed at the USDA at the University of Missouri. We estimate that this should take no longer than a few weeks at each institution with the first student or CO-PI. 
+\par The scanned digital records must then be translated into a usable data format for further analysis with NGS or phenotype data. At worst, this will involve the student, CO-PI (Holland or Tracy) or the postdoc (Crosby), physically reading and translating each of the scanned papers, and this could take several months to the entire first year depending on volume of records. Dr. Kate Crosby with assistance from Dr. Oscar Smith, Dr. William Tracy, with cooperation from Dr. Taner Zen will be responsible for ensuring a consistent data format for hosting on maize GDB.
+\par At the start of the second year, any inbred line that is disproportionately present in the pedigree with available germplasm, but that has no to little genetic information on it will be genotyped using the GBS platform. 
+\par
+Dr. Randall Wisser's student will then start and over a period of 3-6 months will learn the population genomics approach presented in \citep{Berg:2014bs}, as well as identify and incorporate phenotypic information into the database from the data gathered in year one. As a way of ground-truthing the phenotypic data and assessing the , Dr. Randall Wisser and his student will grow out lines used 
+
+
+
+
+\bibliography{kc.bib}
+
+\end{document}
