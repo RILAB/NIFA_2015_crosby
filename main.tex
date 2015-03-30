@@ -7,6 +7,9 @@
 \usepackage{amssymb}
 \usepackage[round]{natbib}
 \bibliographystyle{evolution}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+
+
 %\bibliographystyle{abbrvnat}
 %\setcitestyle{authoryear,open={(},close={)}}
 \usepackage[innercaption]{sidecap} % side captions
@@ -70,14 +73,12 @@ For example, a recent phenotypic evaluation identified several older inbreds as 
 Breeders will not blindly incorporate older material into their populations, however.  
 Perhaps the most important piece of information required to effectively utilize older germplasm is pedigree.
 Pedigree data immediately gives a breeder information on crosses likely to produce higher yields due to heterosis, and often provides additional utility in identifying likely maturity (flowering time) and other agronomic characteristics. 
-Combined with phenotype data, pedigree information can even be used to predict phenotype even in the absence of genotype.
-%NEED CITATION(s) HERE!!
-While private industry may in many cases have detailed records of their own breeding material, the vast majority of private germplasm is founded on $20^{th}$ century public breeding lines.
-%NEED CITATIONS
+Combined with phenotype data, pedigree information can even be used to predict phenotype even in the absence of genotype \textcolor{red}{CITE}.
+While private industry may in many cases have detailed records of their own breeding material, the vast majority of private germplasm is founded on $20^{th}$ century public breeding lines \textcolor{red}{CITE}.
 
 Unfortunately, pedigree data for most U.S. maize inbreds is unavailable to most breeders. 
-For example, of the XXX inbreds in the USDA Germplasm Resources Information Network, only XX\% have both parents identified. 
-While there are published compilations of germplasm, these are far from complete:  \citet{gerdes1993compilation}, for example, contains complete pedigree data for less than XX\% of the germplasm in the USDA database.
+For example, of the \textcolor{red}{XXX} inbreds in the USDA Germplasm Resources Information Network, only \textcolor{red}{XXX}\% have both parents identified. 
+While there are published compilations of germplasm, these are far from complete:  \citet{gerdes1993compilation}, for example, contains complete pedigree data for less than \textcolor{red}{XXX}\% of the germplasm in the USDA database.
 Moreover, what ancestry information that is available is not in electronic form nor easily accessible in any single resource.  
 Instead, historical pedigree information exists primarily in the minutes of breeding committees, old breeding program books, and other hard-copy sources with limited distribution.  
 
@@ -108,14 +109,15 @@ Our proposal will develop tools to accelerate breeding by allowing breeders to m
 \end{itemize}
 
 \subsection*{Maize breeding}
-Maize has undergone dramatic phenotypic and genetic changes since its domestication and subsequent spread through North and South America \citep{daFonseca:2015ey,Doebley:2004ce}. More recently, beginning in the mid-20$^{th}$ century, the intensification of maize breeding efforts has lead to subtler but equally important changes, increasing yield but also significantly impacting patterns of genetic diversity \citep{Duvick:2001fy,van2012historical}.
+Maize has undergone dramatic phenotypic and genetic changes since its domestication and subsequent spread through North and South America \citep{daFonseca:2015ey,Doebley:2004ce}. More recently, beginning in the mid-20$^{th}$ century, the intensification of maize breeding efforts has lead to subtler but equally important changes including increasing yields and improved agronomic traits such as leaf angle and density tolerance \textcolor{red}{CITE}. 
+
+%, but also significantly impacting patterns of genetic diversity \citep{Duvick:2001fy,van2012historical}.
 
 Maize is  a self-compatible crop, and modern breeding programs (post-1960) take advantage of self-fertilization (or now double-haploid technology) to create homozygous inbred lines. 
-%However, this practice of  inbreeding (breeding between close relatives or self-fertilization) dramatically decreases the amount of genetic diversity and variation \citep{Charlesworth:2001to} within a breeding pool or population.  
-Decreased variation and diversity reduces the efficacy of selection by breeders. Inbreeding ultimately effects the fitness or yield of a given line relative to a line that is outcrossed with another - this is termed ``inbreeding depression''. While it seems counterproductive, there has been good reason for the current breeding practice of maintaining highly inbred maize lines. 
-Distinct inbreds are maintained in separate breeding pools or heterotic groups (two popular modern heterotic groups are ``stiff stalk'' and ``non-stiff stalk'').
-Inbred lines from separate breeding pools are crossed to make hybrid progeny.  
-These hybrids often display heterosis, meaning that yield and yield associated traits (termed ``production traits'') in the hybrid are significantly greater than either inbred parent \citep{Springer:2007bj}.  
+Distinct inbreds are maintained in separate breeding pools or heterotic groups.
+The most important heterotic groups among U.S. public germplasm are the ``stiff stalk'', ``non-stiff stalk'', and ``iodent'' (Figure \ref{fig:diversity}).
+Inbred lines from separate breeding pools are then crossed to make hybrid progeny.  
+These hybrids often display heterosis, meaning that yield and associated traits of the hybrid are superior to  either inbred parent \citep{Springer:2007bj}.  
 Inbreds resulting in high-yielding, heterotic offspring are said to have good ``combining ability'', and are recycled in their respective breeding pools.
 Inbreds that form less desirable combinations are usually discarded from the breeding pool. 
 Useful inbreds within a group are crossed with each other, and their segregating progeny evaluated and self-fertilized to create new inbreds. 
@@ -123,11 +125,24 @@ Maintaining this system for propagation of inbred lines and hybridizing inbreds 
 
 \subsection*{Slowing yields: a cause for alarm} 
 
-\par Maize yields have continued to increase since the 1930s when breeders and farmers first adopted vigorous hybrids produced from inbred lines. The latter increases in yield growth rate are also very likely due (in part) to advanced agriculture management practices - input of nitrogen fertilizer, use of modern herbicides and pesticides. However, continued improvement with environmental management practices has likely plateaued. It is probable that much of the change in yield over time is due to the adoption of modern breeding programs \citep{Duvick:2001fy}, and the genetics of these breeding programs in producing lines resistant to drought, pests and other diseases. However, while maize yields continue to increase, the velocity at which they are increasing has slowed in the modern era (since the 1970s) (Figure \ref{fig:piecewise}). \textbf{NB: The eras in Fig. 1 roughly correspond to the eras described in \citep{van2012historical}}.
-\par Removing the effect of input of nitrogen and other fertilizers from yield each year reveals that a good portion of the variation in yield is due to genetics (and possibly other environmental factors) (Figure\ref{fig:inflection}. 
-We propose here that the major cause that is contributing to this observed slowing yield may be the drop in genetic diversity. It has been shown that while diversity has increased amongst inbred lines \citep{Gerke:2013tw}; the within population level haplotype diversity of modern inbred lines \citep{van2012historical} has dropped over time. Maize inbreds from different breeding pools are rarely (if ever) crossed for propagation, and beneficial/adaptive alleles are only meeting during hybrid test crosses. 
-\par This drop within separate inbred line breeding pools is likely due to the current breeding practice of discarding inbred lines out of the breeding population or pool if they do not show favorable combining ability (thus, alleles are gradually discarded within a population).  We contend that this genetic diversity within a breeding pool or population needs to be recovered in some way.  
-\par Perhaps of greatest concern for the future of maize breeding, is that much of the original diversity from inbreds used to create modern hybrids used jointly by public researchers and industry has dropped over time \citep{Gerke:2013tw}. This inherently means a reduced response to natural and/or artificial selection, and indicates that there will be only diminishing returns on yields as time goes on unless new diversity is brought back into breeding pools. Recombination between current commercial inbred lines creates only new genotypic combinations of alleles, not new diversity and new mutational inputs over the short term that are not neutral are likely to be deleterious.
+Maize yields have increased since the 1930s when breeders and farmers first began to adopt hybrid maize.
+The pace at which yield gains are made, however, has slowed: since the late 1960's the rate of gain of yield has slowed, while maize yields continue to increase, the velocity at which they are increasing has slowed in the modern era (since the 1970s) (Figure \ref{fig:piecewise}). 
+ (Figure: \ref{fig:piecewise}).
+While some of this change has resulted from changing management practices, it is probable that much of the change in yield over time is due to the adoption of modern breeding programs \citep{Duvick:2001fy}. 
+
+, and the genetics of these breeding programs in producing lines resistant to drought, pests and other diseases. 
+
+Removing the effect of input of nitrogen and other fertilizers from yield each year reveals that a good portion of the variation in yield is due to genetics (and possibly other environmental factors) (Figure\ref{fig:inflection}. 
+We propose here that the major cause that is contributing to this observed slowing yield may be the drop in genetic diversity. 
+It has been shown that while diversity has increased amongst inbred lines \citep{Gerke:2013tw}; the within population level haplotype diversity of modern inbred lines \citep{van2012historical} has dropped over time. 
+Maize inbreds from different breeding pools are rarely (if ever) crossed for propagation, and beneficial/adaptive alleles are only meeting during hybrid test crosses. 
+
+This drop within separate inbred line breeding pools is likely due to the current breeding practice of discarding inbred lines out of the breeding population or pool if they do not show favorable combining ability (thus, alleles are gradually discarded within a population).  
+We contend that this genetic diversity within a breeding pool or population needs to be recovered in some way.  
+
+Perhaps of greatest concern for the future of maize breeding, is that much of the original diversity from inbreds used to create modern hybrids used jointly by public researchers and industry has dropped over time \citep{Gerke:2013tw}. 
+This inherently means a reduced response to natural and/or artificial selection, and indicates that there will be only diminishing returns on yields as time goes on unless new diversity is brought back into breeding pools. 
+Recombination between current commercial inbred lines creates only new genotypic combinations of alleles, not new diversity and new mutational inputs over the short term that are not neutral are likely to be deleterious.
 
 \begin{figure}[ht]
 \includegraphics[width=1.0\linewidth]{yield.pdf}
@@ -141,14 +156,15 @@ We propose here that the major cause that is contributing to this observed slowi
 \label{fig:inflection}
 \end{figure}
 
-
-
 \subsection*{Future diversity - ghosts of maize past: A novel approach to incorporate new diversity}
-\par Incorporating novel diversity into contemporary modern maize lines can occur in two ways, by introgressing modern lines with open pollinated landraces from the tropics not previously incorporated into any breeding program. Or, alternatively, back-tracking through time using pedigree information to inform breeders at what time points potentially commercially important allelic diversity has been lost and breeding this diversity back into current breeding pools. Pedigrees when combined with modern genomic and phenotypic trait data are useful tools not only for tracking loss in allelic diversity, but for identifying loci that have experienced strong artificial selection across breeding pools. Examples of their application can be found with: cattle \citep{Decker:2012kd}, soybean (cite), and grape (cite). While private companies likely have their own pedigree databases to do exactly this, these data are private, patented, and not available to the public. 
+
+Incorporating novel diversity into contemporary modern maize lines can occur in two ways, by introgressing modern lines with open pollinated landraces from the tropics not previously incorporated into any breeding program. Or, alternatively, 
+. Pedigrees when combined with modern genomic and phenotypic trait data are useful tools not only for tracking loss in allelic diversity, but for identifying loci that have experienced strong artificial selection across breeding pools. Examples of their application can be found with: cattle \citep{Decker:2012kd}, soybean (cite), and grape (cite). 
+While private companies likely have their own pedigree databases to do exactly this, these data are private, patented, and not available to the public. 
 Further, much of the pedigree information on older founder inbred maize lines sits in old volumes of crop science, release sheets, or breeding books, unused and vulnerable to loss.
 \subsubsection*{Missing or incomplete data}
 \par The National Plant Germplasm Service database contains information with regards to ancestry of public maize inbred lines, much of this information is incomplete or missing. Or it does not 
-%\jri{i think here you give some stats from GRIN: how many lines have complete, partial parentage info, GBS, etc. figure 2 only shows that pedigree doesn't give you genetic relatedness always, and really just argues for genotyping everything. the bigger issue is that we're missing both for a large number of taxa. i would drop that figure in favor of something showing incompleteness of records. }. 
+
 \textbf{However, much of this ancestry information on modern maize lines  is still publicly available, only not in digital form, nor is it easily-accessible. This historical pedigree information exists in old volumes and minutes of breeding committees, old breeding program books, and other hard-copy-only sources. Here, we propose a project that will help preserve, maintain, and use this historical information with novel genomic data to better benefit future maize breeding programs.} 
 
 \section*{APPROACH}
@@ -164,10 +180,9 @@ Our proposed research has three major aims in using pedigree information to dete
 
 \begin{itemize}
 \item Aim 1: Digitize and curate pedigree and genotype information into a publicly available database. 
-\item Aim 2: Identify adaptive alleles and loci using a combination of pedigree-approaches via allele-dropping, and population genetics approaches.
-\item Aim 3: The small-scale phenotypic and genotypic evaluation of individuals lines that feature heavily in the historical pedigree
+\item Aim 2: Identify adaptive alleles using a combination of pedigree and population genetic approaches.
+\item Aim 3: Phenotypic and genotypic evaluation of small numbers of individuals lines that feature heavily in the historical pedigree.
 
- 
 \end{itemize}
 \subsection*{Proposed activities, methods \& feasibility}
 \subsubsection*{Travel and digitization of records and agreed upon database format for all data}
