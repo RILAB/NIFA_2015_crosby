@@ -188,11 +188,11 @@ Incorporating novel diversity into contemporary modern maize lines can occur in 
 %
 . Pedigrees when combined with modern genomic and phenotypic trait data are useful tools not only for tracking loss in allelic diversity, but for identifying loci that have experienced strong artificial selection across breeding pools. Examples of their application can be found with: cattle \citep{Decker:2012kd}, soybean (cite), and grape (cite). 
 While private companies likely have their own pedigree databases to do exactly this, these data are private, patented, and not available to the public. 
-Further, much of the pedigree information on older founder inbred maize lines sits in old volumes of crop science, release sheets, or breeding books, unused and vulnerable to loss.
-% * <jholland@ncsu.edu> 2015-03-30T19:12:23.592Z:
+Further, much of the pedigree information on older founder inbred maize lines sits in old volumes of Crop Science and Agronomy Journal, experimental station technical bulletins, regional corn breeding meeting records, release sheets, or breeding books, unused and vulnerable to loss. % * <jholland@ncsu.edu> 2015-03-30T19:12:23.592Z:
 %
 %  might want to say Agronomy Journal, since it goes back much longer than Crop Sci (which started in '60). Also experiment station technical bulletins and regional corn breeding meeting records.
 %
+% ^ <kate.crosby@gmail.com> 2015-03-30T21:15:27.675Z.
 \subsubsection*{Missing or incomplete data}
 \par The National Plant Germplasm Service database contains information with regards to ancestry of public maize inbred lines, much of this information is incomplete or missing. Or it does not 
 
@@ -200,7 +200,7 @@ Further, much of the pedigree information on older founder inbred maize lines si
 
 \section*{Approach}
 \label{sec:approach}
-Our proposed research has three major aims in using pedigree information to detect change in diversity of modern inbred maize lines.
+Our proposed research has three major aims in using pedigree information to detect historic shifts in allele frequencies of modern inbred maize lines.
 
 % “Small-scale evaluation of individual lines.” These are the grow-outs of individual awesome old lines. need some methodology here — we can’t do crosses, but we can collect good phenotype data on lines. so i would propose:
 
@@ -217,14 +217,15 @@ Our proposed research has three major aims in using pedigree information to dete
 \end{itemize}
 \subsection*{Proposed activities, methods \& feasibility}
 \subsubsection*{Travel and digitization of records and agreed upon database format for all data}
-The first part of our proposal aims to preserve hard-copy pedigree records by traveling to different land grant institutions by digitizing them. These raw data scans will then be manually translated into an agreed upon format, with numbering/naming of each line/accession agreed upon.
-Dr. Kate Crosby, Dr. Taner Sen (support letter from maize GDB enclosed), senior personnel Dr. Oscar Smith, and CO-PI Dr. Bill Tracy will consult on an agreed upon standard format with which to store the raw scan of pedigree records, the phenotypic and genomic information. Establishing an agreed upon format in the first few months of the project will enable easy mapping of current and future genomic data formats to pedigree information.
+The first part of our proposal aims to preserve hard-copy pedigree records by traveling to different land grant institutions by digitizing them. 
+These raw data scans will then be manually translated into an agreed upon format, with numbering/naming of each line/accession agreed upon.
+Dr. Kate Crosby, Dr. Taner Sen (support letter from maize GDB enclosed), senior personnel Dr. Oscar Smith, and CO-PI Dr. Bill Tracy will consult on an agreed upon standard format with which to store the raw scan of pedigree records, the phenotypic and genomic information. 
+Establishing an agreed upon format in the first few months of the project will enable easy mapping of current and future genomic data formats to pedigree information.
 \par Additionally, Dr. Kate Crosby is currently investigating the possibility of using no-SQL database without formal schemas specified \textit{a priori} (graph databases) to be able handle queries with respect to mapped genomic data, extended ancestry, and phenotypic data, along with new visualization tools \citep{ParejaTobes:2015bf}.
 
-
-
 \subsubsection*{Genotyping of lines that feature heavily in historical pedigree information}
-Undoubtedly, there will be information garnered from historical pedigree information on lines that do not have any genomic data available for them. In such cases (where germplasm is available), we intend to use genotype-by-sequencing (GBS) \citep{Elshire:2011ha} as a cost-efficient platform \citep{Glaubitz:2014eu} to obtain genomic data for such lines, with markers aligned to the newest maize reference genome (currently B73 v. 3). 
+Undoubtedly, there will be information garnered from historical pedigree information on lines that do not have any genomic data available for them. 
+In such cases (where germplasm is available), we intend to use genotype-by-sequencing (GBS) \citep{Elshire:2011ha} as a cost-efficient platform \citep{Glaubitz:2014eu} to obtain genomic data for such lines, with markers aligned to the newest maize reference genome (currently B73 v. 3). 
 
 \subsubsection*{Project 1 for student 1: understanding the dynamics of selection through time with allele-dropping and pedigree}
 In the section above we mention that certain maize lines feature heavily in the historic pedigree. For example, in the public pedigree B73 features heavily as a parent to many ancestors of current inbred lines (Figure \ref{fig:b73isbig}). 
@@ -236,7 +237,11 @@ In the section above we mention that certain maize lines feature heavily in the 
 \label{fig:b73isbig}
 \end{figure}
 
-\par The first masters student to be supervised by Dr. James Holland (NC State) will, with the cooperation of Dr. William Tracy, Dr. Sherry Flint-Garcia, Dr. Oscar Smith, and the post-doc Dr. Kate Crosby use the information gathered during the first year to identify these historically important lines. Many small pedigrees will be constructed from lines identified as having many inbred ``progeny''. This student will then identify distorted segregation at all heterozygous loci (using GBS markers) within and across these many small pedigrees (Figure \ref{fig:alleledrop}), this is known as \textbf{``allele-dropping''}. It is a simple Mendelian approach to identifying traces of selection by directly accounting for ancestry, and without the worry of having to account for shared population structure (as in modern population genomics approaches). If we can identify the uni-directional shift of a given allele across many of these small pedigrees at a set locus, this would indicate selection. 
+\par The first masters student to be supervised by Dr. James Holland (NC State) will, with the cooperation of Dr. William Tracy, Dr. Sherry Flint-Garcia, Dr. Oscar Smith, and the post-doc Dr. Kate Crosby use the information gathered during the first year to identify these historically important lines. 
+Many small pedigrees will be constructed from lines identified as having many inbred ``progeny''. 
+This student will then identify distorted segregation at all heterozygous loci (using GBS markers) within and across these many small pedigrees (Figure \ref{fig:alleledrop}), this is known as \textbf{``allele-dropping''}. 
+It is a simple Mendelian approach to identifying traces of selection by directly accounting for ancestry, and without the worry of having to account for shared population structure (as in modern population genomics approaches). 
+If we can identify the uni-directional shift of a given allele across many of these small pedigrees at a set locus, this would indicate selection. 
 \par The student would also be responsible for simulating allele frequency change under neutral processes (genetic drift). The approach would be similar to that used in \citep{Gerke:2013tw}, to evaluate at which loci adaptive (by breeders) or neutral forces have shaped the current allelic diversity of the overall modern breeding population. 
 \par Should loci be identified as having uni-directionally shifted through time across many of these small pedigrees, we would compare this to our findings in project 2 (see next section).
 
@@ -253,7 +258,11 @@ In the section above we mention that certain maize lines feature heavily in the 
 
 \subsubsection*{Project 2 for student 2: novel population genomics approaches to project current phenotypes back in time}
 \label{}
-Novel population genomic approaches described in \cite{Berg:2014bs} propose the idea of using a technique analogous to $Q_{ST}$- $F_{ST}$ approaches popularized in the 1990s \cite{Latta:1998ek} to project phenotypes from one environment or time period to another environment or time period. Large effect QT
+Novel population genomic approaches described in \cite{Berg:2014bs} propose the idea of using a technique analogous to $Q_{ST}$- $F_{ST}$ approaches popularized in the 1990s \citep{Latta:1998ek,  McKay:2002wi}, but applied to SNP hits from Genome-Wide-Association-Studies (GWAS). 
+GWAS hits have typically fallen short in explaining much of variation in quantitative characters \citep{Rockman:2011ej}, with only a small portion of GWAS hits associated with or close to a quantitative trait locus (QTL) of large effect. 
+This lack of signal in GWAS hits may be due to the polygenic nature of many traits, with the genetic basis of each trait explained by many loci of small effect(s), with each locus and effect scattered throughout the genome, and difficult to detect with conventional statistical methods. 
+In order to be able to detect these weak signals, \cite{Berg:2014bs} make use of a random set of SNPs 
+We propose using hits from GWAS analyses in the present day modern maize lines to project phenotypes from one environment or time period (the present-day) to another environment or time period. 
 
 \subsubsection*{Genotyping and grow out of lines that appear to feature heavily in the pedigree}
 The inbreds that feature heavily in the historic pedigree will not only be genotyped, but phenotyped and grown out at the University of Delaware. This allow us to ground truth the expected results from using the approach in \cite{Berg:2014bs}
@@ -272,11 +281,17 @@ Our first expected deliverable is an open public pedigree database to be hosted 
 %- identification of ghost ancestors?
 
 \subsection*{Means of analysis/interpretation}
-Dr. Randall Wisser has agreed to provide plot space for growing up germplasm of lines disproportionately present in the pedigree that have phenotypic data affiliated with their release sheets or with NPGS, i.e. drought resistance, heavy-metal tolerance, disease resistance, etc. The main purpose of this grow-out is to ground truth both the information from release sheets and compare this to the suppositions gained from \citep{Berg:2014bs}, with lines that appear to harbor alleles that contribute to production traits.
+Dr. Randall Wisser has agreed to provide plot space for growing up germplasm of lines disproportionately present in the pedigree that have phenotypic data affiliated with their release sheets or with NPGS, i.e. drought resistance, heavy-metal tolerance, disease resistance, etc. 
+The main purpose of this grow-out is to ground truth both the information from release sheets and compare this to the suppositions gained from \citep{Berg:2014bs}, with lines that appear to harbor alleles that contribute to production traits.
 
 
 \subsection*{Limitations \& Prospective pitfalls}
-While we are very optimistic about the prospect of obtaining accurate pedigree information from these various institutions the nature of corn-breeding and record keeping of corn-breeding can be nebulous. Ideally, we would be able to accurately count the number of meioses in the total pedigree, in each heterotic group, down to each line; thus, retracing the complete ancestry of a given contemporary inbred. However, in many cases, it may not have been noted at which point in a breeding program a line was bulked at, nor on occasion which lines were used in recycling an inbred when seed was exhausted. For instance, a record from NPGS may indicate that a line was bulked and stored at cycle 6, or it may have been bulked and stored at cycle 4. As a ballpark figure, a ``cycle 6 inbred'' means that germplasm from that line is 99\% homozygous at all locus pairs. Meaning that if this inbred is selfed further, not much changes with respect to levels of homozygosity nor heterozygosity (as recombination via selfing is ineffective beyond this point).  Thus, so long as an inbred is at or beyond cycle 6, it will be kept, but inbreds before this period shall be discarded.
+While we are very optimistic about the prospect of obtaining accurate pedigree information from these various institutions the nature of corn-breeding and record keeping of corn-breeding can be nebulous. 
+Ideally, we would be able to accurately count the number of meioses in the total pedigree, in each heterotic group, down to each line; thus, retracing the complete ancestry of a given contemporary inbred. 
+However, in many cases, it may not have been noted at which point in a breeding program a line was bulked at, nor on occasion which lines were used in recycling an inbred when seed was exhausted. 
+For instance, a record from NPGS may indicate that a line was bulked and stored at cycle 6, or it may have been bulked and stored at cycle 4. As a ballpark figure, a ``cycle 6 inbred'' means that germplasm from that line is 99\% homozygous at all locus pairs. 
+Meaning that if this inbred is selfed further, not much changes with respect to levels of homozygosity nor heterozygosity (as recombination via selfing is ineffective beyond this point).  
+Thus, so long as an inbred is at or beyond cycle 6, it will be kept, but inbreds before this period shall be discarded.
 
 \par To ensure that historical records of inbred lines are isolated at cycle 6 and beyond we will investigate the level of heterozygosity in each of these lines with GBS data relative to the total amount of missing data in an individual line. Within a reasonable confidence limit most lines should show a very small portion of heterozygous loci even with GBS markers (known to have a high rate of error in undercalling heterozygous). 
 
@@ -284,17 +299,21 @@ While we are very optimistic about the prospect of obtaining accurate pedigree i
 
 
 \subsection*{Hazards to personnel}
-There will be car/air travel required by Dr. James Holland's masters student, CO-PI Dr. William Tracy, and the post-doc Dr. Kate Crosby) to the different land grant institutions. This travel is required for obtaining pedigree records from each land grant institution's library during year 1 of the proposed three year grant. Air travel will likely be necessary for the students and the post-doc to travel to a conference (most likely the Maize Genetics conference in 2016 or 2017) to present their results to the maize community at large. Travel is likely the most dangerous activity that any personnel will experience for the duration of this project, so we will take steps to ensure that all participants have travel insurance and benefits during these periods, and this is reflected in our current budget. 
+There will be car/air travel required by Dr. James Holland's masters student, CO-PI Dr. William Tracy, and the post-doc Dr. Kate Crosby) to the different land grant institutions. 
+This travel is required for obtaining pedigree records from each land grant institution's library during year 1 of the proposed three year grant. Air travel will likely be necessary for the students and the post-doc to travel to a conference (most likely the Maize Genetics conference in 2016 or 2017) to present their results to the maize community at large. Travel is likely the most dangerous activity that any personnel will experience for the duration of this project, so we will take steps to ensure that all participants have travel insurance and benefits during these periods, and
+this is reflected in our current budget. 
 
 
 \subsection*{Timeline}
 A graphical timeline of our three-year proposal is presented below.
+
 The first year will be spent traveling and gathering and digitizing pedigree records at land-grant institutions that have been identified by CO-PI Dr. William Tracy (one of two authors of the most authoritative public guide on the pedigrees of maize inbred lines to date) and senior personnel Dr. Oscar Smith (recently retired senior corn breeder who spent 30 + years with Dupont Pioneer) as having had breeding programs, but where records have not been digitized or made widely available. 
-\par Dr. William Tracy and Dr. James Holland's masters student will largely be responsible for traveling to and scanning hard-copy records into digital format. Dr. William Tracy has committed to obtaining records from the University of Wisconsin, University of Nebraska, and will also visit the University of Florida. Dr. James Holland's student will be responsible for the breeding records at North Carolina State University, Virgina Tech, and the inbred records housed at the USDA at the University of Missouri. We estimate that this should take no longer than a few weeks at each institution with the first student or CO-PI. 
-\par The scanned digital records must then be translated into a usable data format for further analysis with NGS or phenotype data. At worst, this will involve the student, CO-PI (Holland or Tracy) or the postdoc (Crosby), physically reading and translating each of the scanned papers, and this could take several months to the entire first year depending on volume of records. Dr. Kate Crosby with assistance from Dr. Oscar Smith, Dr. William Tracy, with cooperation from Dr. Taner Zen will be responsible for ensuring a consistent data format for hosting on maize GDB.
+\par Dr. William Tracy and Dr. James Holland's masters student will largely be responsible for traveling to and scanning hard-copy records into digital format. Dr. William Tracy has committed to obtaining records from the University of Wisconsin, University of Nebraska, and will also visit the University of Florida. 
+Dr. James Holland's student will be responsible for the breeding records at North Carolina State University, Virgina Tech, and the inbred records housed at the USDA at the University of Missouri. We estimate that this should take no longer than a few weeks at each institution with the first student or CO-PI. 
+\par The scanned digital records must then be translated into a usable data format for further analysis with NGS or phenotype data. At worst, this will involve the student, CO-PI (Holland or Tracy) or the postdoc (Crosby), physically reading and translating each of the scanned papers, and this could take several months to the entire first year depending on volume of records. 
+Dr. Kate Crosby with assistance from Dr. Oscar Smith, Dr. William Tracy, with cooperation from Dr. Taner Zen will be responsible for ensuring a consistent data format for hosting on maize GDB.
 \par At the start of the second year, any inbred line that is disproportionately present in the pedigree with available germplasm, but that has no to little genetic information on it will be genotyped using the GBS platform. 
-\par
-Dr. Randall Wisser's student will then start and over a period of 3-6 months will learn the population genomics approach presented in \citep{Berg:2014bs}, as well as identify and incorporate phenotypic information into the database from the data gathered in year one. As a way of ground-truthing the phenotypic data and assessing the , Dr. Randall Wisser and his student will grow out lines deemed to have favorable production traits.
+\par Dr. Randall Wisser's student will then start and over a period of 3-6 months will learn the population genomics approach presented in \citep{Berg:2014bs}, as well as identify and incorporate phenotypic information into the database from the data gathered in year one. As a way of ground-truthing the phenotypic data and assessing the , Dr. Randall Wisser and his student will grow out lines deemed to have favorable production traits.
 
 
 
