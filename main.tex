@@ -29,6 +29,10 @@ Maize is a natural resource of fundamental national importance, vital for food, 
 Maize is also the most valuable field crop in the United States, with production values at greater than \$50 billion dollars every year since 2010 \citep{usdanass}. 
 
 But while maize yields have increased over the last several decades, the rate of gain falls short of projected needs in the near future.
+% * <jholland@ncsu.edu> 2015-03-30T18:46:15.836Z:
+%
+%  http://www.nature.com/ncomms/2013/131217/ncomms3918/full/  This paper shows essentially a linear trend in corn yield gains in the past 40 years, but argues that the R&D investment has increased faster than the rate of gain, suggesting increase per investment is decreasing. (most field breeders would blame that on investment in molecular research, but investments in scale of field testing in private sector have been increasing as well. This is a debated area, but I think your main point is basically correct.)
+%
 Even under stable climatic conditions, current rates of maize improvement are insufficient to meet requirements of population growth over the next 30 years \citep{ray2013yield}; in  addition to requirements in terms of food and animal feed, worldwide ethanol use is projected to increase 40\% within just the next decade \citep{usdalong}.
 %could be convinced to drop the ethanol comment
 
@@ -44,9 +48,9 @@ Breeding is also of key importance in adapting maize to the challenges of changi
 
 Breeding, and adaptation in general, relies critically on the availability of genetic diversity. 
 This is best represented mathematically by JL Lush's famous ``breeder's equation'' $R=\frac{V_a}{V_p}s$, showing that adaptation --- the response to selection $R$ --- depends not only on the strength of selection $s$ but also directly on the amount of heritable genetic variation $V_a$ for the trait of interest \citep{kelly2011breeder}. 
-The advent of modern hybrid maize breeding, the development of distinct breeding pools and the winnowing of inbreds from individual breeding programs has led to a marked decrease in genetic diversity. 
+The advent of modern hybrid maize breeding, the development of distinct breeding pools and the winnowing of inbreds from individual breeding programs has led to a marked decrease in genetic diversity (Figure 1). 
 Analyzing genotypes of more than 4000 public and recently released private lines, we recently showed that the diversity available to maize breeders in current germplasm is less than half what it was in before 1950 (Figure \ref{fig:diversity}). 
-With decreasing diversity available for breeding, decreasing yield gains are a mathematical certainty. 
+With decreasing diversity available for breeding decreasing yield gains are a mathematical certainty. 
 %over the top?
 
 \begin{SCfigure}[][t]
@@ -74,7 +78,15 @@ Breeders will not blindly incorporate older material into their populations, how
 Perhaps the most important piece of information required to effectively utilize older germplasm is pedigree.
 Pedigree data immediately gives a breeder information on crosses likely to produce higher yields due to heterosis, and often provides additional utility in identifying likely maturity (flowering time) and other agronomic characteristics. 
 Combined with phenotype data, pedigree information can even be used to predict phenotype even in the absence of genotype \textcolor{red}{CITE}.
+% * <jholland@ncsu.edu> 2015-03-30T18:55:39.680Z:
+%
+%  actually, given pedigree data ALONE, you can predict breeding values if  you have some relatives measured for traits. see Bernardo's BLUP papers of mid 90s
+%
 While private industry may in many cases have detailed records of their own breeding material, the vast majority of private germplasm is founded on $20^{th}$ century public breeding lines \textcolor{red}{CITE}.
+% * <jholland@ncsu.edu> 2015-03-30T18:56:49.240Z:
+%
+%  discussed to some extent in Nelson et al 2008 ex pvp paper
+%
 
 Unfortunately, pedigree data for most U.S. maize inbreds is unavailable to most breeders. 
 For example, of the \textcolor{red}{XXX} inbreds in the USDA Germplasm Resources Information Network, only \textcolor{red}{XXX}\% have both parents identified. 
@@ -84,7 +96,7 @@ Instead, historical pedigree information exists primarily in the minutes of bree
 
 {\bf We propose to  generate an open-source database of public maize pedigrees and genotypes and use this resource to identify genotypic and phenotypic diversity of high utility in advancing maize breeding.}
 %this reads too long, efforts to shorten are welcome.
-Given the importance of maize to U.S. agriculture, this proposed clearly alines with the USDA AFRI program priority of ``Plant Breeding for Agricultural Production''.  
+Given the importance of maize to U.S. agriculture, this proposal clearly aligns with the USDA AFRI program priorities of ``Plant Breeding for Agricultural Production.''  
 Our proposal will develop tools to accelerate breeding by allowing breeders to more quickly identify useful inbreds, and our application of population and quantitative genetic methods will identify specific genetic and phenotypic diversity of potential use for future breeding.  
 %do we say something about ``Development and application of tools to predict phenotype from genotype to accelerate breeding of finished varieties;'' (from the RFA)??
 
@@ -119,7 +131,7 @@ Distinct inbreds are maintained in separate breeding pools or heterotic groups.
 The most important heterotic groups among U.S. public germplasm are the ``stiff stalk'', ``non-stiff stalk'', and ``iodent'' (Figure \ref{fig:diversity}).
 Inbred lines from separate breeding pools are then crossed to make hybrid progeny.  
 These hybrids often display heterosis, meaning that yield and associated traits of the hybrid are superior to  either inbred parent \citep{Springer:2007bj}.  
-Inbreds resulting in high-yielding, heterotic offspring are said to have good ``combining ability'', and are recycled in their respective breeding pools.
+Inbreds capable of producing high-yielding, heterotic offspring are said to have good ``combining ability'', and are recycled in their respective breeding pools.
 Inbreds that form less desirable combinations are usually discarded from the breeding pool. 
 Useful inbreds within a group are crossed with each other, and their segregating progeny evaluated and self-fertilized to create new inbreds. 
 Maintaining this system for propagation of inbred lines and hybridizing inbreds (termed ``the inbred-hybrid method'') for evaluating production traits has worked well for many decades, but there is growing reason for concern that this method may need a genetic boost. 
@@ -128,18 +140,28 @@ Maintaining this system for propagation of inbred lines and hybridizing inbreds 
 
 Maize yields have increased since the 1930s when breeders and farmers first began to adopt hybrid maize.
 The pace at which yield gains are made, however, has slowed: since the late 1960's the rate of gain of yield has slowed, while maize yields continue to increase, the velocity at which they are increasing has slowed in the modern era (since the 1970s) (Figure \ref{fig:piecewise}). 
+% * <jholland@ncsu.edu> 2015-03-30T19:00:00.051Z:
+%
+%  see Cassman paper mentioned above, the trend appears linear. the issue may be gain per investment effort.
+%
  (Figure: \ref{fig:piecewise}).
-While some of this change has resulted from changing management practices, it is probable that much of the change in yield over time is due to the adoption of modern breeding programs \citep{Duvick:2001fy}. 
-
-, and the genetics of these breeding programs in producing lines resistant to drought, pests and other diseases. 
+While some of this improvement has resulted from changing management practices, it is probable that much of the change in yield over time is due to the success of breeding programs in producing hybrids capable of producing high yields under stress and in combination with modern agronomic practices.  \citep{Duvick:2001fy}. 
 
 Removing the effect of input of nitrogen and other fertilizers from yield each year reveals that a good portion of the variation in yield is due to genetics (and possibly other environmental factors) (Figure\ref{fig:inflection}. 
 We propose here that the major cause that is contributing to this observed slowing yield may be the drop in genetic diversity. 
 It has been shown that while diversity has increased amongst inbred lines \citep{Gerke:2013tw}; the within population level haplotype diversity of modern inbred lines \citep{van2012historical} has dropped over time. 
+% * <jholland@ncsu.edu> 2015-03-30T19:05:15.855Z:
+%
+%  is this the BSSS paper? can its results be inferred to all of USA maize? this might need clarification.
+%
 Maize inbreds from different breeding pools are rarely (if ever) crossed for propagation, and beneficial/adaptive alleles are only meeting during hybrid test crosses. 
 
 This drop within separate inbred line breeding pools is likely due to the current breeding practice of discarding inbred lines out of the breeding population or pool if they do not show favorable combining ability (thus, alleles are gradually discarded within a population).  
 We contend that this genetic diversity within a breeding pool or population needs to be recovered in some way.  
+% * <jholland@ncsu.edu> 2015-03-30T19:07:13.871Z:
+%
+%  the reaction by breeders to this is likely to be: such lines are dropped for good reason, and breeding gains may require some loss of diversity, since much of diversity is not favorable. i wonder if the objective needs to be something more like identifying this lost diversity is important assuming that SOME of those alleles are useful and were lost due to drift, negative hitchiking, or whatever. I bet there are many of those alleles that no breeder wants to see again, inbred performance is just so much better now than 50 years ago.
+%
 
 Perhaps of greatest concern for the future of maize breeding, is that much of the original diversity from inbreds used to create modern hybrids used jointly by public researchers and industry has dropped over time \citep{Gerke:2013tw}. 
 This inherently means a reduced response to natural and/or artificial selection, and indicates that there will be only diminishing returns on yields as time goes on unless new diversity is brought back into breeding pools. 
@@ -160,9 +182,17 @@ Recombination between current commercial inbred lines creates only new genotypic
 \subsection*{Future diversity - ghosts of maize past: A novel approach to incorporate new diversity}
 
 Incorporating novel diversity into contemporary modern maize lines can occur in two ways, by introgressing modern lines with open pollinated landraces from the tropics not previously incorporated into any breeding program. Or, alternatively, 
+% * <jholland@ncsu.edu> 2015-03-30T19:13:28.362Z:
+%
+%  ??
+%
 . Pedigrees when combined with modern genomic and phenotypic trait data are useful tools not only for tracking loss in allelic diversity, but for identifying loci that have experienced strong artificial selection across breeding pools. Examples of their application can be found with: cattle \citep{Decker:2012kd}, soybean (cite), and grape (cite). 
 While private companies likely have their own pedigree databases to do exactly this, these data are private, patented, and not available to the public. 
 Further, much of the pedigree information on older founder inbred maize lines sits in old volumes of crop science, release sheets, or breeding books, unused and vulnerable to loss.
+% * <jholland@ncsu.edu> 2015-03-30T19:12:23.592Z:
+%
+%  might want to say Agronomy Journal, since it goes back much longer than Crop Sci (which started in '60). Also experiment station technical bulletins and regional corn breeding meeting records.
+%
 \subsubsection*{Missing or incomplete data}
 \par The National Plant Germplasm Service database contains information with regards to ancestry of public maize inbred lines, much of this information is incomplete or missing. Or it does not 
 
@@ -223,7 +253,7 @@ In the section above we mention that certain maize lines feature heavily in the 
 
 \subsubsection*{Project 2 for student 2: novel population genomics approaches to project current phenotypes back in time}
 \label{}
-Novel population genomic approaches described in \cite{Berg:2014bs} propose the idea that it is possible to project current phenotypes (or phenotypes from one environment) back in time (to another environment).
+Novel population genomic approaches described in \cite{Berg:2014bs} propose the idea of using a technique analogous to $Q_ST$ that it is possible to project current phenotypes (or phenotypes from one environment) back in time (to another environment)
 
 \subsubsection*{Genotyping and grow out of lines that appear to feature heavily in the pedigree}
 The inbreds that feature heavily in the historic pedigree will not only be genotyped, but phenotyped and grown out at the University of Delaware. This allow us to ground truth the expected results from using the approach in \cite{Berg:2014bs}
@@ -254,7 +284,7 @@ While we are very optimistic about the prospect of obtaining accurate pedigree i
 
 \par To ensure that historical records of inbred lines are isolated at cycle 6 and beyond we will investigate the level of heterozygosity in each of these lines with GBS data relative to the total amount of missing data in an individual line. Within a reasonable confidence limit most lines should show a very small portion of heterozygous loci even with GBS markers (known to have a high rate of error in undercalling heterozygous). 
 
-\par Historical pedigree records and other information on old lines may be available, but the germplasm from these old lines may simply not be available (genomic data will not be able to be mapped onto these lines \textcolor{red}{give numbers on unavailable germplasm}). In such cases, we would seek available germplasm from the next nearest relatives according to historical information. 
+\par Historical pedigree records and other information on old lines may be available, but the germplasm from these old lines may simply not be available (genomic data will not be able to be mapped onto these lines. Currently, we know that 12.9 In such cases, we would seek available germplasm from the next nearest relatives according to historical information. 
 
 
 \subsection*{Hazards to personnel}
