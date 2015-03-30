@@ -95,20 +95,7 @@ Our proposal will develop tools to accelerate breeding by allowing breeders to m
 %a. Introduction
 %Include a clear statement of the long-term goal(s) and supporting objectives of the proposed project. Summarize the body of knowledge or past activities that substantiate the need for the proposed project. Describe ongoing or recently completed activities significant to the proposed project including the work of key project personnel.
 
-\begin{itemize}
-\item history of maize breeding
-\item show decline of yield
-\item show loss of diversity
-%joost, gerke
-\item diversity needed for selection to function, breeder's equation
-\item weaknesses with previous approaches
-\item pedigree data allows idnetificaiton of direct action of breeder selection
-%citep some lit on allele dropping!!
-\item Preliminary work: Howie's inbred pedigrees
-\item Preliminary work: Kate pedigree building
-\item preliminary work: GBS pruning pedigree
-\item preliminary work: allele dropping works?
-\end{itemize}
+m preliminary work: allele dropping works?
 
 \subsection*{Maize breeding}
 Maize has undergone dramatic phenotypic and genetic changes since its domestication and subsequent spread through North and South America \citep{daFonseca:2015ey,Doebley:2004ce}. More recently, beginning in the mid-20$^{th}$ century, the intensification of maize breeding efforts has lead to subtler but equally important changes including increasing yields and improved agronomic traits such as leaf angle and density tolerance \textcolor{red}{CITE}. 
@@ -123,14 +110,49 @@ Inbreds that form less desirable combinations are usually discarded from the bre
 Useful inbreds within a group are crossed with each other, and their segregating progeny evaluated and self-fertilized to create new inbreds. 
 Maintaining this system for propagation of inbred lines and hybridizing inbreds for evaluating production traits has worked well for many decades, but there is growing reason for concern that this method may need a genetic boost. 
 
+\subsection*{Decelerating yield gains} 
+
+Maize yields have steadily increased since the advent of hybrid breeding in the 1930's.
+But linear increases necessarily mean a decrease in relative gain  decreasing, and projections suggest that current trends are unlikely to meet future yield goals \citep{grassini2013distinguishing}. 
+Of even greater concern is the possibility that the rate of gain is actually decreasing (Figure \ref{fig:piecewise}).
+While some of these differences are likely due to changing management practices, much of the change is indeed due to breeding \citep{Duvick:2001fy}, and current rates of yield gain are lower than historical trends even after correcting for nitrogen fertilizer inputs (data not shown). 
+%i don't want to try to explain the inflection point figure. do we just cite wherever you got the N2 data from?  do we include but change the graph? do we not even mention? ideas?
+
+\begin{SCfigure}
+\includegraphics[width=0.6\linewidth]{yield.pdf}
+\caption{Piecewise regressions of time against total yield through the four eras of modern maize breeding. Colors represent distinct eras of maize breeding that roughly correspond to the eras  referred to in Figure \ref(fig:diversity).} 
+\label{fig:piecewise}
+\end{SCfigure}
+
+Breeding  requires heritable genetic diversity, and efforts to meet future yield goals will require access to sufficient diversity to maintain or increase genetic gain.
+Lack of access to genetic diversity may already be slowing breeding gains.
+
+ 
+Recombination between current commercial inbred lines creates only new genotypic combinations of alleles, not new diversity and new mutational inputs over the short term that are not neutral are likely to be deleterious.
+
+%Maize inbreds from different breeding pools are rarely (if ever) crossed for propagation, and beneficial/adaptive alleles are only meeting during hybrid test crosses. 
+ 
+% * <jholland@ncsu.edu> 2015-03-30T19:07:13.871Z:
+%
+%  the reaction by breeders to this is likely to be: such lines are dropped for good reason, and breeding gains may require some loss of diversity, since much of diversity is not favorable. i wonder if the objective needs to be something more like identifying this lost diversity is important assuming that SOME of those alleles are useful and were lost due to drift, negative hitchiking, or whatever. I bet there are many of those alleles that no breeder wants to see again, inbred performance is just so much better now than 50 years ago.
+%
+
+
+%\begin{figure}[ht]
+%\includegraphics[width=1.0\linewidth]{inflection_point.pdf}
+%\caption{Model residuals after removing the effect of nitrogen from Figure \ref{fig:piecewise}, with inlection points (blue squares) and piecewise regressions showing the possible points allelic gains and losses through time.} 
+%\label{fig:inflection}
+%\end{figure}
+
 \subsection*{Decreasing diversity} 
 
-As selection progresses within an individual breeding program, inbred lines with poor combining ability are generally discarded leading to a decreased effective population size ($N_e$) of the breeding pools and the loss of genetic diversity over time.
-We have recently demonstrated these effects in our analysis of genotype data from the Iowa Reciprocal Recurrent Selection program (Figure \ref{fig:pca}A):  loss of diversity can be seen in the tighter clusters of later cycles (generations) of selection in the principle component analysis.
+As selection progresses within a breeding program, inbred lines with poor combining ability are generally discarded, leading to a decreased effective population size ($N_e$) of the breeding pools and the loss of genetic diversity over time.
+A smaller $N_e$ inherently leads to a reduced response to  selection, and indicates that there will be only diminishing returns on yields as time goes on unless new diversity is brought back into breeding pools.
+We have recently demonstrated these effects in our analysis of genotype data from the Iowa Reciprocal Recurrent Selection program (Figure \ref{fig:pca}A): loss of diversity can be seen in the tighter clusters of later cycles (generations) of selection in the principle component analysis.
 A decrease in $N_e$ and independent selection within breeding pools also increases genetic differentiation among breeding pools (increasing distance between pools on PC1 in Figure \ref{fig:pca}A).
 Importantly, decreased diversity and increasing population structure are not limited to individual breeding programs, but are seen across all public maize germplasm (Figure \ref{fig:diversity} and Figure \ref{fig:pca}B). 
 
-\begin{figure}
+\begin{figure}[ht]
 \includegraphics[width=\linewidth]{joostgerke.png}
 \caption{Changes in diversity and population structure during maize breeding.  
 A) Principal component analysis of genotypes from the Iowa Reciprocal Recurrent Selection population. The first eignevector represents divergence between the two heterotic pools, and the second divergence over time within each pool. Figure from \citet{Gerke:2013tw}. 
@@ -138,46 +160,15 @@ B) Population structure --- quantified by the differentiation statistic C --- ov
 \label{fig:pca}
 \end{figure}
 
+%\item diversity needed for selection to function, breeder's equation
+%\item weaknesses with previous approaches
+%\item pedigree data allows idnetificaiton of direct action of breeder selection
+%citep some lit on allele dropping!!
+%\item Preliminary work: Howie's inbred pedigrees
+%\item Preliminary work: Kate pedigree building
+%\item preliminary work: GBS pruning pedigree
+%\ite
 
-Maize yields have increased since the 1930s when breeders and farmers first began to adopt hybrid maize.
-
-The pace at which yield gains are made, however, has slowed: since the late 1960's the rate of gain of yield has slowed, while maize yields continue to increase, the velocity at which they are increasing has slowed in the modern era (since the 1970s) (Figure \ref{fig:piecewise}). 
-%grassini2013distinguishing
-
- (Figure: \ref{fig:piecewise}).
-While some of this improvement has resulted from changing management practices, it is probable that much of the change in yield over time is due to the success of breeding programs in producing hybrids capable of producing high yields under stress and in combination with modern agronomic practices.  \citep{Duvick:2001fy}. 
-
-Removing the effect of input of nitrogen and other fertilizers from yield each year reveals that a good portion of the variation in yield is due to genetics (and possibly other environmental factors) (Figure\ref{fig:inflection}. 
-We propose here that the major cause that is contributing to this observed slowing yield may be the drop in genetic diversity. 
-It has been shown that while diversity has increased amongst inbred lines \citep{Gerke:2013tw}; the within population level haplotype diversity of modern inbred lines \citep{van2012historical} has dropped over time. 
-% * <jholland@ncsu.edu> 2015-03-30T19:05:15.855Z:
-%
-%  is this the BSSS paper? can its results be inferred to all of USA maize? this might need clarification.
-%
-Maize inbreds from different breeding pools are rarely (if ever) crossed for propagation, and beneficial/adaptive alleles are only meeting during hybrid test crosses. 
-
-This drop within separate inbred line breeding pools is likely due to the current breeding practice of discarding inbred lines out of the breeding population or pool if they do not show favorable combining ability (thus, alleles are gradually discarded within a population).  
-We contend that this genetic diversity within a breeding pool or population needs to be recovered in some way.  
-% * <jholland@ncsu.edu> 2015-03-30T19:07:13.871Z:
-%
-%  the reaction by breeders to this is likely to be: such lines are dropped for good reason, and breeding gains may require some loss of diversity, since much of diversity is not favorable. i wonder if the objective needs to be something more like identifying this lost diversity is important assuming that SOME of those alleles are useful and were lost due to drift, negative hitchiking, or whatever. I bet there are many of those alleles that no breeder wants to see again, inbred performance is just so much better now than 50 years ago.
-%
-
-Perhaps of greatest concern for the future of maize breeding, is that much of the original diversity from inbreds used to create modern hybrids used jointly by public researchers and industry has dropped over time \citep{Gerke:2013tw}. 
-This inherently means a reduced response to natural and/or artificial selection, and indicates that there will be only diminishing returns on yields as time goes on unless new diversity is brought back into breeding pools. 
-Recombination between current commercial inbred lines creates only new genotypic combinations of alleles, not new diversity and new mutational inputs over the short term that are not neutral are likely to be deleterious.
-
-\begin{figure}[ht]
-\includegraphics[width=1.0\linewidth]{yield.pdf}
-\caption{Piecewise regressions of time against total yield through the four eras of modern maize breeding. Lines correspond to distinct eras of maize breeding.} 
-\label{fig:piecewise}
-\end{figure}
-
-\begin{figure}[ht]
-\includegraphics[width=1.0\linewidth]{inflection_point.pdf}
-\caption{Model residuals after removing the effect of nitrogen from Figure \ref{fig:piecewise}, with inlection points (blue squares) and piecewise regressions showing the possible points allelic gains and losses through time.} 
-\label{fig:inflection}
-\end{figure}
 
 \subsection*{Future diversity - ghosts of maize past: A novel approach to incorporate new diversity}
 
