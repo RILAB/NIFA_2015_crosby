@@ -52,7 +52,7 @@ With decreasing diversity available for breeding decreasing yield gains are a ma
 \begin{SCfigure}[][t]
 \includegraphics[width=0.5\linewidth]{joost_diversity.png}
 \caption{Changes in genetic diversity (represented as the effective number of ancestors) of the three primary maize heterotic groups (SS: stiff-stalk; NSS: non-stiff-stalk; IDT: iodent). Inbreds are divided into eras representing different time periods: 1:1930-1950; 2:1950-1980; 3:1985-1992. Figure from \citet{van2012historical}.} 
-\label{diversity}
+\label{fig:diversity}
 \end{SCfigure}
 
 While open-pollinated varieties and exotic inbred lines represent a viable source of new diversity, these have been only sparingly used in the private sector due to their poor agronomic performance, photoperiod sensitivity, and the necessary generations of back-crossing to adapted lines required to incorporate useful alleles into high-performing temperate germplasm \citep{goodman1999broadening}.
@@ -89,7 +89,7 @@ Given the importance of maize to U.S. agriculture, this proposal clearly aligns 
 Our proposal will develop tools to accelerate breeding by allowing breeders to more quickly identify useful inbreds, and our application of population and quantitative genetic methods will identify specific genetic and phenotypic diversity of potential use for future breeding.  
 %do we say something about ``Development and application of tools to predict phenotype from genotype to accelerate breeding of finished varieties;'' (from the RFA)??
 
-\section*{INTRODUCTION}
+\section*{Introduction}
 \label{sec:introduction}
 
 %a. Introduction
@@ -125,12 +125,13 @@ Maintaining this system for propagation of inbred lines and hybridizing inbreds 
 
 \subsection*{Decreasing diversity} 
 
-Our analysis of the Iowa Reciprocal Recurrent Selection program provides an insight into how modern breeding programs impact genetic diversity. 
-
-A set of founding genotypes 
+As selection progresses within an individual breeding program, inbred lines with poor combining ability are generally discarded leading to a decreased effective population size ($N_e$) of the breeding pools and the loss of genetic diversity over time.
+We have recently demonstrated these effects in our analysis of genotype data from the Iowa Reciprocal Recurrent Selection program (Figure \ref{fig:pca}A):  loss of diversity can be seen in the tighter clusters of later cycles (generations) of selection in the principle component analysis.
+A decrease in $N_e$ and independent selection within breeding pools also increases genetic differentiation among breeding pools (increasing distance between pools on PC1 in Figure \ref{fig:pca}A).
+Importantly, decreased diversity and increasing population structure are not limited to individual breeding programs, but are seen across all public maize germplasm (Figure \ref{fig:diversity} and Figure \ref{fig:pca}B). 
 
 \begin{figure}
-\includegraphics[width=\linewidth]{joostgerke}
+\includegraphics[width=\linewidth]{joostgerke.png}
 \caption{Changes in diversity and population structure during maize breeding.  
 A) Principal component analysis of genotypes from the Iowa Reciprocal Recurrent Selection population. The first eignevector represents divergence between the two heterotic pools, and the second divergence over time within each pool. Figure from \citet{Gerke:2013tw}. 
 B) Population structure --- quantified by the differentiation statistic C --- over time across all U.S. public inbreds. Eras represent time periods in Fig. \ref{fig:diversity}; figure is from \citep{van2012historical} } 
@@ -196,8 +197,8 @@ Further, much of the pedigree information on older founder inbred maize lines si
 
 \textbf{However, much of this ancestry information on modern maize lines  is still publicly available, only not in digital form, nor is it easily-accessible. This historical pedigree information exists in old volumes and minutes of breeding committees, old breeding program books, and other hard-copy-only sources. Here, we propose a project that will help preserve, maintain, and use this historical information with novel genomic data to better benefit future maize breeding programs.} 
 
-\section*{APPROACH}
-\label{S:3}
+\section*{Approach}
+\label{sec:approach}
 Our proposed research has three major aims in using pedigree information to detect change in diversity of modern inbred maize lines.
 
 % “Small-scale evaluation of individual lines.” These are the grow-outs of individual awesome old lines. need some methodology here — we can’t do crosses, but we can collect good phenotype data on lines. so i would propose:
