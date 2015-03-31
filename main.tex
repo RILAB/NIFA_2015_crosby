@@ -10,7 +10,7 @@
 \bibliographystyle{evolution}
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 
-\newcommand{\citex}[]{\textcolor{red}{\textbf{(CITE)}}}
+\newcommand{\citex}{\textcolor{red}{\textbf{(CITE)}}}
 
 %\bibliographystyle{abbrvnat}
 %\setcitestyle{authoryear,open={(},close={)}}
@@ -165,46 +165,59 @@ Incorporating novel diversity into contemporary modern maize lines is clearly an
 While there are other public efforts to achieve this goal, like the GEM  (Germplasm Enhancement of Maize) program \citep{pollak2003history}, these  focus on incorporating exotic germplasm into U.S. materials by introgressing high quality exotic germplasm (e.g. CIMMYT lines, tropical hybrids, etc.) into well-adapted U.S. cornbelt backgrounds.
 While this approach is successful at bringing in new diversity, it requires time-consuming back-crossing before it can generate lines that are of sufficient quality to incorporate into a breeding program.
 
-\begin{wrapfigure}{L}{0.5\textwidth}
-\begin{minipage}[t]{0.5\textwidth}
-\includegraphics[width=\textwidth]{BSSS.png}
+\begin{wrapfigure}{R}{0.5\textwidth}
+%\begin{minipage}[t]{0.5\textwidth}
+%\begin{SCfigure}
+\includegraphics[width=0.5\textwidth]{BSSS.png}
 \caption{Yield and genetic diversity in the Iowa Recriprocal Recurrent Selection Program across 16 cycles of selection. (Top) Grain yield at three planting densities; data are from \citet{rouse2003selection}. (Bottom) Genetic diversity of the BSSS and BSCB1 breeding pools separately and combined; data are from \citet{Gerke:2013tw}.} 
 \label{fig:trends}
-\end{minipage}
+%\end{SCfigure}
+%\end{minipage}
 \end{wrapfigure}
 
 \textbf{We propose a different approach, using pedigree and genetic data to identify underutilized cornbelt germplasm.}  
-While this approach shares with GEM the disadvantage that older inbreds and exotic material are usually inferior agronomically, it has several advantages.  
+While this approach shares with projects like GEM the disadvantage that diverse material is often  agronomically inferior, it has several advantages.  
 First, with sufficient information (see below), breeders may be able to learn a substantial amount about the potential utility of a line by predicting phenotype directly or understanding its relationship to known material. 
+Second, in contrast to exotic germplasm, older U.S. germplasm is already reasonably well-adapted to the photoperiod and climate of the U.S., meaning it can be immediately incorporated into breeding programs.
+\textcolor{red}{MORE ADVANTAGES??}
+
+\subsection*{Identifying useful diversity}
+As any breeder will attest, many old lines have fallen out of use precisely because they showed inferior agronomic performance.
+There are a number of reasons, however, why older lines may retain useful genetic diversity.
+First, lines are often discarded because of poor performance for a particular trait, which does not preclude that line's utility in breeding for other traits.
+For example, thanks to its combining ability, the U.S. inbred B73 quickly spread in popularity and now makes up a considerable portion of modern breeding material \citep{van2012historical}.
+Yet when evaluated for drought and heat stress, B73 significantly underperformed compared to less well-utilized lines such as B76 \citep{chen2012characterization}.
+Second, the contribution of older lines to modern germplasm does not necessarily reflect their genetic potential.
+Our previous analysis of maize ancestry found popular lines with fewer beneficial alleles than expected given their importance to modern germplasm as well as lines with more beneficial (as defined by a steady increase in allele frequency over time) alleles than expected (Figure \ref{fig:wf9}).
+
+\begin{itemize}
+\item popgen point about alleles lost due to drift
+\item previous efforts like our popgen only looked at allele frequency. this is problematic because of structure etc.
+\item pedigree analysis allows improved popgen and other benefits (discuss)
+\end{itemize}
+
+\subsection*{Pedigree-based approaches to identifying useful maize germplasm}
+
+\begin{itemize}
+\item advantage of pedigree
+\item what you can do with a pedigree
+\item Preliminary work: how much pedigree to date (howie/kate) cite \ref{fig:b73isbig} and explain YOU did it.
+\item Preliminary work: allele dropping works? GBS pruning?
+\end{itemize}
+
+\begin{figure}[ht]
+\includegraphics[width=1.0\linewidth]{pedigree_poster.pdf}
+\caption{Reconstructed pedigree data for the inbred line B73 that features heavily in modern germplasm.}
+\label{fig:b73isbig}
+\end{figure}
+
+\paragraph{unincorporated text $->$}
 Pedigrees, especially when combined with modern genomic and phenotypic trait data, are useful tools for predicting phenotype \citep{crossa2010prediction} and identifying beneficial alleles \citep{sebastian1995method}.
  that have experienced strong artificial selection across breeding pools. Examples of their application can be found with: cattle \citep{Decker:2012kd}, soybean (cite), and grape (cite). 
-
-
-
-%\item diversity needed for selection to function, breeder's equation
-%\item weaknesses with previous approaches
-%\item pedigree data allows idnetificaiton of direct action of breeder selection
-%citep some lit on allele dropping!!
-%\item Preliminary work: Howie's inbred pedigrees
-%\item Preliminary work: Kate pedigree building
-%\item preliminary work: GBS pruning pedigree
-%\item preliminary work: allele dropping works?
-
-%http://www.jswconline.org/content/67/5/354.full.pdf
-% identified B76 -- iowa line from 1974 that did not contribute as much to current pedigrees, vs B73 which is more important pedigree-wise
-%COME BACK TO THIS POINT IN INTRO -- BOTH SHOW FAVORABLE ALLELES NOT ALWAYS USED IN MODERN
-
 While private companies likely have their own pedigree databases to do exactly this, these data are private, patented, and not available to the public. 
-Further, much of the pedigree information on older founder inbred maize lines sits in old volumes of Crop Science and Agronomy Journal, experimental station technical bulletins, regional corn breeding meeting records, release sheets, or breeding books, unused and vulnerable to loss. % * <jholland@ncsu.edu> 2015-03-30T19:12:23.592Z:
-%
-%  might want to say Agronomy Journal, since it goes back much longer than Crop Sci (which started in '60). Also experiment station technical bulletins and regional corn breeding meeting records.
-%
-% ^ <kate.crosby@gmail.com> 2015-03-30T21:15:27.675Z.
-\subsubsection*{Missing or incomplete data}
-
-The National Plant Germplasm Service database contains information with regards to ancestry of public maize inbred lines, much of this information is incomplete or missing. Or it does not 
-
-\textbf{However, much of this ancestry information on modern maize lines  is still publicly available, only not in digital form, nor is it easily-accessible. This historical pedigree information exists in old volumes and minutes of breeding committees, old breeding program books, and other hard-copy-only sources. Here, we propose a project that will help preserve, maintain, and use this historical information with novel genomic data to better benefit future maize breeding programs.} 
+Further, much of the pedigree information on older founder inbred maize lines sits in old volumes of Crop Science or the Agronomy Journal, experimental station technical bulletins, regional corn breeding meeting records, release sheets, or breeding books, unused and vulnerable to loss.  
+The National Plant Germplasm Service database contains information with regards to ancestry of public maize inbred lines, much of this information is incomplete or missing. 
+However, much of this ancestry information on modern maize lines  is still publicly available, only not in digital form, nor is it easily-accessible. This historical pedigree information exists in old volumes and minutes of breeding committees, old breeding program books, and other hard-copy-only sources. Here, we propose a project that will help preserve, maintain, and use this historical information with novel genomic data to better benefit future maize breeding programs.
 
 \section*{Approach}
 \label{sec:approach}
@@ -213,7 +226,7 @@ Our proposed research has three major aims in using pedigree information to dete
 \begin{itemize}
 \item Aim 1: Digitize and curate pedigree and genotype information into a publicly available database. 
 \item Aim 2: Identify adaptive alleles using a combination of pedigree and population genetic approaches.
-\item Aim 3: Phenotypic and genotypic evaluation of small numbers of individuals lines that feature heavily in the historical pedigree.
+\item Aim 3: Phenotypic and genotypic evaluation of individuals lines that feature heavily in the historical pedigree.
 
 \end{itemize}
 \subsection*{Proposed activities, methods \& feasibility}
@@ -233,11 +246,6 @@ In such cases (where germplasm is available), we intend to use genotype-by-seque
 In the section above we mention that certain maize lines feature heavily in the historic pedigree. For example, in the public pedigree B73 features heavily as a parent to many ancestors of current inbred lines (Figure \ref{fig:b73isbig}). 
 
 
-\begin{figure}[ht]
-\includegraphics[width=1.0\linewidth]{pedigree_poster.pdf}
-\caption{Example of a modern maize inbred line that features heavily in the overall pedigree, B73, with numerous inbred progeny. Pedigree is based on parentage information collected by Dr. Kate Crosby and Dr. Oscar ``Howie'' Smith.}
-\label{fig:b73isbig}
-\end{figure}
 
 
 The first masters student to be supervised by Dr. James Holland (NC State) will, with the cooperation of Dr. William Tracy, Dr. Sherry Flint-Garcia, Dr. Oscar Smith, and the post-doc Dr. Kate Crosby use the information gathered during the first year to identify these historically important lines. 
