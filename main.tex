@@ -10,6 +10,7 @@
 \bibliographystyle{evolution}
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 
+\newcommand{\citex}[]{\textcolor{red}{\textbf{(CITE)}}}
 
 %\bibliographystyle{abbrvnat}
 %\setcitestyle{authoryear,open={(},close={)}}
@@ -38,7 +39,7 @@ Historical analyses suggests that climate change over the last 30 years has alre
 Moreover, predicted temperature increases will increase volatility in yield across the U.S. and may even decrease future yields \citep{urban2012projected}, with some models suggesting a change of even 1$^{\circ}$C could negatively impact yields by as much as 17\% \citep{lobell2003climate}; more dire warnings suggest that U.S. maize yields could drop 30-46\% below current levels by the end of the century \citep{schlenker2009nonlinear}.
 Substantial efforts will clearly be needed to preserve U.S. maize production and increase or maintain yields.  
 
-Much of the historical gains in maize yield can be directly attributed to breeding efforts \citep{Duvick1992, duvick2005genetic}, and {\bf breeding must remain of central importance in order to meet increased yield demands}.  
+Much of the historical gains in maize yield can be directly attributed to breeding efforts \citep{Duvick1992, duvick2005genetic}, and \textbf{ breeding must remain of central importance in order to meet increased yield demands}.  
 Breeding is also of key importance in adapting maize to the challenges of changing climates \citep{Troyer2004a}, with recent models suggesting that efficient use of extant adaptive diversity in maize could significantly ameliorate the effects of climate change \citep{butler2013adaptation}.   
 
 \subsection*{Diversity loss threatens breeding gains}
@@ -81,7 +82,7 @@ While there are published compilations of germplasm, these are far from complete
 Moreover, what ancestry information that is available is not in electronic form nor easily accessible in any single resource.  
 Instead, historical pedigree information exists primarily in the minutes of breeding committees, old breeding program books, and other hard-copy sources with limited distribution.  
 
-{\bf We propose to  generate an open-source database of public maize pedigrees and genotypes and use this resource to identify genotypic and phenotypic diversity of high utility in advancing maize breeding.}
+{We propose to  generate an open-source database of public maize pedigrees and genotypes and use this resource to identify genotypic and phenotypic diversity of high utility in advancing maize breeding.}
 %this reads too long, efforts to shorten are welcome.
 Given the importance of maize to U.S. agriculture, this proposal clearly aligns with the USDA AFRI program priorities of ``Plant Breeding for Agricultural Production.''  
 Our proposal will develop tools to accelerate breeding by allowing breeders to more quickly identify useful inbreds, and our application of population and quantitative genetic methods will identify specific genetic and phenotypic diversity of potential use for future breeding.  
@@ -120,12 +121,6 @@ While some of these yield trends are undoubtedly related to changing management 
 \caption{Piecewise regressions of time against total yield through the four eras of modern maize breeding. Colors represent distinct eras of maize breeding that roughly correspond to the eras  referred to in Figure \ref{fig:diversity}.} 
 \label{fig:piecewise}
 \end{SCfigure}
-
-%Breeding  requires heritable genetic diversity, and efforts to meet future yield goals will require access to sufficient diversity to maintain or increase genetic gain.
-%Lack of access to genetic diversity may already be slowing breeding gains.
-%
-%Recombination between current commercial inbred lines creates only new genotypic combinations of alleles, not new diversity and new mutational inputs over the short term that are not neutral are likely to be deleterious.
-%Maize inbreds from different breeding pools are rarely (if ever) crossed for propagation, and beneficial/adaptive alleles are only meeting during hybrid test crosses. 
  
 % * <jholland@ncsu.edu> 2015-03-30T19:07:13.871Z:
 %
@@ -149,8 +144,10 @@ The expected additive genetic variance, in turn, depends on the effective popula
 E[V_a] = 4N_e {\sigma}_m^2
 \end{align*}
 A reduction in $N_e$ thus inherently leads to a reduced response to  selection, leading to diminishing returns on yield unless new diversity is brought back into breeding pools.
+Evidence from the Iowa Reciprocal Recurrent Selection breeding program suggests these concerns are valid (Figure \ref{fig:trends}), as yield gains plateau over time \citep{rouse2003selection} concomitant with continued declines in genetic diversity \citep{Gerke:2013tw}.
+\textbf{ Decreasing $N_e$ (Figure \ref{fig:diversity}) in U.S. cornbelt germplasm risks our ability to maintain or increase rates of genetic gain in yield.} 
+%stop here? mention anything about importance of Iowa RRS?
 
-These effects are evident in the Iowa Reciprocal Recurrent Selection breeding program (Figure \ref{fig:trends}): yield gains plateau over time \citep{rouse2003selection}, concomitant with continued declines in genetic diversity \citep{Gerke:2013tw}.
 
 %\begin{figure}[ht]
 %\includegraphics[width=\linewidth]{joostgerke.png}
@@ -159,6 +156,28 @@ These effects are evident in the Iowa Reciprocal Recurrent Selection breeding pr
 %B) Population structure --- quantified by the differentiation statistic C --- over time across all U.S. public inbreds. Eras represent time periods in Fig. \ref{fig:diversity}; figure is from \citep{van2012historical} } 
 %\label{fig:pca}
 %\end{figure}
+
+\subsection*{A novel approach to incorporate new diversity}
+
+Incorporating novel diversity into contemporary modern maize lines is clearly an important goal necessary to maintain and increase rates of yield gain.
+While there are other public efforts to achieve this goal, like the GEM  (Germplasm Enhancement of Maize) program \citep{pollak2003history}, these  focus on incorporating exotic germplasm into U.S. materials by introgressing high quality exotic germplasm (e.g. CIMMYT lines, tropical hybrids, etc.) into well-adapted U.S. cornbelt backgrounds.
+While this approach is successful at bringing in new diversity, it requires time-consuming back-crossing before it can generate lines that are of sufficient quality to incorporate into a breeding program.
+
+\begin{wrapfigure}{L}{0.5\textwidth}
+\begin{minipage}[t]{0.5\textwidth}
+\includegraphics[width=\textwidth]{BSSS.png}
+\caption{Yield and genetic diversity in the Iowa Recriprocal Recurrent Selection Program across 16 cycles of selection. (Top) Grain yield at three planting densities; data are from \citet{rouse2003selection}. (Bottom) Genetic diversity of the BSSS and BSCB1 breeding pools separately and combined; data are from \citet{Gerke:2013tw}.} 
+\label{fig:trends}
+\end{minipage}
+\end{wrapfigure}
+
+\textbf{We propose a different approach, using pedigree and genetic data to identify underutilized cornbelt germplasm.}  
+While this approach shares with GEM the disadvantage that older inbreds and exotic material are usually inferior agronomically, it has several advantages.  
+First, with sufficient information (see below), breeders may be able to learn a substantial amount about the potential utility of a line by predicting phenotype directly or understanding its relationship to known material. 
+Pedigrees, especially when combined with modern genomic and phenotypic trait data, are useful tools for predicting phenotype \citep{crossa2010prediction} and identifying beneficial alleles \citep{sebastian1995method}.
+ that have experienced strong artificial selection across breeding pools. Examples of their application can be found with: cattle \citep{Decker:2012kd}, soybean (cite), and grape (cite). 
+
+
 
 %\item diversity needed for selection to function, breeder's equation
 %\item weaknesses with previous approaches
@@ -173,22 +192,6 @@ These effects are evident in the Iowa Reciprocal Recurrent Selection breeding pr
 % identified B76 -- iowa line from 1974 that did not contribute as much to current pedigrees, vs B73 which is more important pedigree-wise
 %COME BACK TO THIS POINT IN INTRO -- BOTH SHOW FAVORABLE ALLELES NOT ALWAYS USED IN MODERN
 
-\subsection*{A novel approach to incorporate new diversity}
-
-Incorporating novel diversity into contemporary modern maize lines is clearly an important goal necessary to maintain and increase rates of yield gain.
-Other public efforts to achieve this goal exist.
-For example, the GEM (Germplasm Enhancement of Maize) project works to incorporate exotic germplasm into U.S. materials by back-crossing high quality exotic germplasm (e.g. CIMMYT lines, tropical hybrids, etc.) into well-adapted U.S. cornbelt backgrounds \citep{pollak2003history}.
-
-\begin{wrapfigure}{l}{0.5\textwidth}
-\begin{minipage}[t]{0.5\textwidth}
-\includegraphics[width=\textwidth]{BSSS.png}
-\caption{Yield and genetic diversity in the Iowa Recriprocal Recurrent Selection Program across 16 cycles of selection. (Top) Grain yield at three planting densities; data are from \citet{rouse2003selection}. (Bottom) Genetic diversity of each breeding pool separately and combined; data are from \citet{Gerke:2013tw}.} 
-\label{fig:trends}
-\end{minipage}
-\end{wrapfigure}
-
-
-. Pedigrees when combined with modern genomic and phenotypic trait data are useful tools not only for tracking loss in allelic diversity, but for identifying loci that have experienced strong artificial selection across breeding pools. Examples of their application can be found with: cattle \citep{Decker:2012kd}, soybean (cite), and grape (cite). 
 While private companies likely have their own pedigree databases to do exactly this, these data are private, patented, and not available to the public. 
 Further, much of the pedigree information on older founder inbred maize lines sits in old volumes of Crop Science and Agronomy Journal, experimental station technical bulletins, regional corn breeding meeting records, release sheets, or breeding books, unused and vulnerable to loss. % * <jholland@ncsu.edu> 2015-03-30T19:12:23.592Z:
 %
