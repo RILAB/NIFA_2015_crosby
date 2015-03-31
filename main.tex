@@ -95,7 +95,7 @@ Our proposal will develop tools to accelerate breeding by allowing breeders to m
 %a. Introduction
 %Include a clear statement of the long-term goal(s) and supporting objectives of the proposed project. Summarize the body of knowledge or past activities that substantiate the need for the proposed project. Describe ongoing or recently completed activities significant to the proposed project including the work of key project personnel.
 
-m preliminary work: allele dropping works?
+%m preliminary work: allele dropping works?
 
 \subsection*{Maize breeding}
 Maize has undergone dramatic phenotypic and genetic changes since its domestication and subsequent spread through North and South America \citep{daFonseca:2015ey,Doebley:2004ce}. More recently, beginning in the mid-20$^{th}$ century, the intensification of maize breeding efforts has lead to subtler but equally important changes including increasing yields and improved agronomic traits such as leaf angle and density tolerance \textcolor{red}{CITE}. 
@@ -113,7 +113,7 @@ Maintaining this system for propagation of inbred lines and hybridizing inbreds 
 \subsection*{Decelerating yield gains} 
 
 Maize yields have steadily increased since the advent of hybrid breeding in the 1930's.
-But linear increases necessarily mean a decrease in relative gain  decreasing, and projections suggest that current trends are unlikely to meet future yield goals \citep{grassini2013distinguishing}. 
+But linear increases necessarily mean a decrease in relative gain, and projections suggest that current trends are unlikely to meet future yield goals \citep{grassini2013distinguishing}. 
 Of even greater concern is the possibility that the rate of gain is actually decreasing (Figure \ref{fig:piecewise}).
 While some of these differences are likely due to changing management practices, much of the change is indeed due to breeding \citep{Duvick:2001fy}, and current rates of yield gain are lower than historical trends even after correcting for nitrogen fertilizer inputs (data not shown). 
 %i don't want to try to explain the inflection point figure. do we just cite wherever you got the N2 data from?  do we include but change the graph? do we not even mention? ideas?
@@ -146,19 +146,38 @@ Recombination between current commercial inbred lines creates only new genotypic
 
 \subsection*{Decreasing diversity} 
 
-As selection progresses within a breeding program, inbred lines with poor combining ability are generally discarded, leading to a decreased effective population size ($N_e$) of the breeding pools and the loss of genetic diversity over time.
-A smaller $N_e$ inherently leads to a reduced response to  selection, and indicates that there will be only diminishing returns on yields as time goes on unless new diversity is brought back into breeding pools.
-We have recently demonstrated these effects in our analysis of genotype data from the Iowa Reciprocal Recurrent Selection program (Figure \ref{fig:pca}A): loss of diversity can be seen in the tighter clusters of later cycles (generations) of selection in the principle component analysis.
-A decrease in $N_e$ and independent selection within breeding pools also increases genetic differentiation among breeding pools (increasing distance between pools on PC1 in Figure \ref{fig:pca}A).
-Importantly, decreased diversity and increasing population structure are not limited to individual breeding programs, but are seen across all public maize germplasm (Figure \ref{fig:diversity} and Figure \ref{fig:pca}B). 
+As selection progresses within a breeding program, inbred lines with poor combining ability are generally discarded, leading to a decreased effective population size ($N_e$) of the breeding pools.
+Response to selection $R$ depends on the additive genetic variance $V_a$ for a trait \citep{kelly2011breeder}:
+\begin{align*}
+R=\frac{V_a}{V_p}s
+\end{align*}
+The expected additive genetic variance, in turn, depends on the effective population size $N_e$ as well as the mutational variance per generation ${\sigma}_m^2$ \citep{whitlock1999neutral}:
+\begin{align*}
+E[V_a] = 2N_e {\sigma}_m^2
+\end{align*}
+A reduction in $N_e$ thus inherently leads to a reduced response to  selection, leading to diminishing returns on yield unless new diversity is brought back into breeding pools.
 
-\begin{figure}[ht]
-\includegraphics[width=\linewidth]{joostgerke.png}
-\caption{Changes in diversity and population structure during maize breeding.  
-A) Principal component analysis of genotypes from the Iowa Reciprocal Recurrent Selection population. The first eignevector represents divergence between the two heterotic pools, and the second divergence over time within each pool. Figure from \citet{Gerke:2013tw}. 
-B) Population structure --- quantified by the differentiation statistic C --- over time across all U.S. public inbreds. Eras represent time periods in Fig. \ref{fig:diversity}; figure is from \citep{van2012historical} } 
-\label{fig:pca}
-\end{figure}
+These effects are evident in the Iowa Reciprocal Recurrent Selection breeding program (Figure \ref{fig:trends}): yield gains plateau over time \citep{rouse2003selection}, concomitant with continued declines in genetic diversity \citep{Gerke:2013tw}.
+
+%A decrease in $N_e$ and independent selection within breeding pools also increases genetic differentiation among breeding pools (increasing distance between pools on PC1 in Figure \ref{fig:pca}A).
+%Importantly, decreased diversity and increasing population structure are not limited to individual breeding programs, but are seen across all public maize germplasm (Figure \ref{fig:diversity} and Figure \ref{fig:pca}B). 
+
+\begin{SCfigure}[][ht]
+\includegraphics[width=0.5\linewidth]{BSSS.png}
+\caption{Yield and genetic diversity in the Iowa Recriprocal Recurrent Selection Program across 16 cycles of selection. (Top) Grain yield at three planting densities; data are from \citet{rouse2003selection}. (Bottom) Genetic diversity of each breeding pool separately and combined; data are from \citet{Gerke:2013tw}. 
+} 
+\label{fig:trends}
+\end{SCfigure}
+
+
+
+%\begin{figure}[ht]
+%\includegraphics[width=\linewidth]{joostgerke.png}
+%\caption{Changes in diversity and population structure during maize breeding.  
+%A) Principal component analysis of genotypes from the Iowa Reciprocal Recurrent Selection population. The first eignevector represents divergence between the two heterotic pools, and the second divergence over time within each pool. Figure from \citet{Gerke:2013tw}. 
+%B) Population structure --- quantified by the differentiation statistic C --- over time across all U.S. public inbreds. Eras represent time periods in Fig. \ref{fig:diversity}; figure is from \citep{van2012historical} } 
+%\label{fig:pca}
+%\end{figure}
 
 %\item diversity needed for selection to function, breeder's equation
 %\item weaknesses with previous approaches
