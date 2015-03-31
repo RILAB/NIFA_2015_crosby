@@ -193,13 +193,6 @@ Further, much of the pedigree information on older founder inbred maize lines si
 \label{sec:approach}
 Our proposed research has three major aims in using pedigree information to detect historic shifts in allele frequencies of modern inbred maize lines.
 
-% “Small-scale evaluation of individual lines.” These are the grow-outs of individual awesome old lines. need some methodology here — we can’t do crosses, but we can collect good phenotype data on lines. so i would propose:
-
-%year 2) 100 lines of interest in the pedigree, either because of how few or how many offspring they have.  especially focus on those without genotype data.  grow up and get phenotype and genotype
-%year 3) 100 lines of known genotype (50 good genotypes 50 bad). grow these up to both i) test phenotype prediction from Qx and ii) see whether lines with lots of good alleles are agronomically superior to lines without
-
-%explain we don’t have the time or resources to actively test these in hybrid yield trials, but this gets preliminary information breeders and industry could use to make decisions about including some of these lines and allows us some ground-truthing of the methods.  we should grow a set of say 20 exPVP lines in each year to compare across years and use as a standard
-
 \begin{itemize}
 \item Aim 1: Digitize and curate pedigree and genotype information into a publicly available database. 
 \item Aim 2: Identify adaptive alleles using a combination of pedigree and population genetic approaches.
@@ -215,8 +208,8 @@ Establishing an agreed upon format in the first few months of the project will e
 \par Additionally, Dr. Kate Crosby is currently investigating the possibility of using no-SQL database without formal schemas specified \textit{a priori} (graph databases) to be able handle queries with respect to mapped genomic data, extended ancestry, and phenotypic data, along with new visualization tools \citep{ParejaTobes:2015bf}.
 
 \subsubsection*{Genotyping of lines that feature heavily in historical pedigree information}
-Undoubtedly, there will be information garnered from historical pedigree information on lines that do not have any genomic data available for them. 
-In such cases (where germplasm is available), we intend to use genotype-by-sequencing (GBS) \citep{Elshire:2011ha} as a cost-efficient platform \citep{Glaubitz:2014eu} to obtain genomic data for such lines, with markers aligned to the newest maize reference genome (currently B73 v. 3). 
+Undoubtedly, there will be information obtained from historical pedigree information on lines that do not have any genomic data available for them. 
+In such cases (where germplasm is available), we intend to use genotype-by-sequencing (GBS) \citep{Elshire:2011ha} as a cost-efficient platform \citep{Glaubitz:2014eu} to obtain high-coverage and density of SNPs  for these lines, with markers aligned to the newest maize reference genome (currently B73 v. 3). 
 
 \subsubsection*{Project 1 for student 1: understanding the dynamics of selection through time with allele-dropping and pedigree}
 In the section above we mention that certain maize lines feature heavily in the historic pedigree. For example, in the public pedigree B73 features heavily as a parent to many ancestors of current inbred lines (Figure \ref{fig:b73isbig}). 
@@ -234,7 +227,7 @@ This student will then identify distorted segregation at all heterozygous loci (
 It is a simple Mendelian approach to identifying traces of selection by directly accounting for ancestry, and without the worry of having to account for shared population structure (as in modern population genomics approaches). 
 If we can identify the uni-directional shift of a given allele across many of these small pedigrees at a set locus, this would indicate selection. 
 \par The student would also be responsible for simulating allele frequency change under neutral processes (genetic drift). The approach would be similar to that used in \citep{Gerke:2013tw}, to evaluate at which loci adaptive (by breeders) or neutral forces have shaped the current allelic diversity of the overall modern breeding population. 
-\par Should loci be identified as having uni-directionally shifted through time across many of these small pedigrees, we would compare this to our findings in project 2 (see next section).
+\par Should loci be identified as having uni-directionally shifted through time across many of these small pedigrees, we would compare this to our findings in project 2 (see next section \textbf{project 2}).
 
 \begin{figure}[p]
 \includegraphics[width=1.0\linewidth]{Pruned.pdf}
@@ -248,12 +241,14 @@ If we can identify the uni-directional shift of a given allele across many of th
 
 
 \subsubsection*{Project 2 for student 2: novel population genomics approaches to project current phenotypes back in time}
-\label{}
-Novel population genomic approaches described in \cite{Berg:2014bs} propose the idea of using a technique analogous to $Q_{ST}$- $F_{ST}$ approaches popularized in the 1990s \citep{Latta:1998ek,  McKay:2002wi}, but applied to SNP hits from Genome-Wide-Association-Studies (GWAS). 
+Novel population genomic approaches described in \cite{Berg:2014bs} propose the idea of using a technique analogous to $Q_{ST}$- $F_{ST}$ approaches popularized in the 1990s \citep{Latta:1998ek,  McKay:2002wi}, but applied to large numbers of SNP marker hits from Genome-Wide-Association-Studies (GWAS). 
 GWAS hits have typically fallen short in explaining much of variation in quantitative characters \citep{Rockman:2011ej}, with only a small portion of GWAS hits associated with or close to a quantitative trait locus (QTL) of large effect. 
-This lack of signal in GWAS hits may be due to the polygenic nature of many traits, with the genetic basis of each trait explained by many loci of small effect(s), with each locus and effect scattered throughout the genome, and difficult to detect with conventional statistical methods. 
-In order to be able to detect these weak signals, \cite{Berg:2014bs} make use of a random set of SNPs 
-We propose using hits from GWAS analyses in the present day modern maize lines to project phenotypes from one environment or time period (the present-day) to another environment or time period. 
+This lack of signal in GWAS hits may be due to the polygenic nature of many traits, with the genetic basis of each trait explained by many loci of small effect(s). 
+\par With polygenic signals and their effects scattered throughout the genome, these become difficult to detect and interpret with conventional statistical methods. 
+In order to be able to detect these weak signals, \cite{Berg:2014bs} compare the dispersion of GWAS hits, and their effect sizes (in different environments or time periods), to random sets of SNPs (from the same time), and look for a correlated shift in alleles associated with traits of interest in each divergent environment (or, in our case time period).
+\par Dr. Randall Wisser's student will be responsible for performing this analysis on lines deemed to be of interest from both periods (likely those founder parents and their progeny or later generation ancestors). 
+The student will then grow out these lines as a way of verifying that the traits in earlier lines do indeed have .
+
 
 \subsubsection*{Genotyping and grow out of lines that appear to feature heavily in the pedigree}
 The inbreds that feature heavily in the historic pedigree will not only be genotyped, but phenotyped and grown out at the University of Delaware. This allow us to ground truth the expected results from using the approach in \cite{Berg:2014bs}
