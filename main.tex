@@ -1,11 +1,13 @@
-\documentclass[draft,12pt]{article}
-\usepackage[margin=1.2in]{geometry}
+\documentclass[final,12pt]{article}
+\usepackage[margin=1.1in]{geometry}
 \usepackage{color}
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage{wrapfig}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{caption}
+\usepackage{subcaption}
 \usepackage[round]{natbib}
 \bibliographystyle{evolution}
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
@@ -79,8 +81,7 @@ While private industry may in many cases have detailed records of their own bree
 Unfortunately, pedigree data for most U.S. maize inbreds is unavailable to most breeders. 
 For example, of the over 45,000 worldwide inbreds in the USDA Germplasm Resources Information Network, only some 34,000 have some amount of ancestry determined, and much of this information is incomplete.
 If we look at available germplasm only, that number shrinks to 2931 accessions with any available ancestry information.
-While there are published compilations of germplasm, these are far from complete:  \citet{gerdes1993compilation}, for example, contains complete pedigree data for less than \textcolor{red}{XXX}\% of the germplasm in the USDA database.
-%I actually don't know this actual figure - but would presume on the order of 10% or less (fuzzy matches).
+While there are published compilations of germplasm, these are far from complete:  \citet{gerdes1993compilation}, for example, contains complete pedigree data for less than 20\% of the germplasm in the USDA database.
 Moreover, what ancestry information that is available is not in electronic form nor easily accessible in any single resource.  
 Instead, historical pedigree information exists primarily in the minutes of breeding committees, old breeding program books, and other hard-copy sources with limited distribution.  
 
@@ -182,13 +183,10 @@ Second, in contrast to exotic germplasm, older U.S. germplasm is already reasona
 \textcolor{red}{MORE ADVANTAGES??}
 
 \subsection*{Identifying useful diversity}
-As any breeder will attest, many old lines have fallen out of use precisely because they showed inferior agronomic performance.
-%Can put in here that this is selection ON phenotypes not genotypes (as it always is with breeding) - ideally we could select on alleles 
-%Current methods allow us to get at the ``adaptive alleles'' or we propose that they should even in the baddie lines
-%Germplasm can be resurrected, targeted for beneficial alleles and introgressed back in
+As any breeder will attest, many old lines have fallen out of use precisely because they showed inferior agronomic performance under a particular selective regime (drought, disease resistance, etc) \textcolor{red}{can do a quick summary of what currently has that information}. 
 There are a number of reasons, however, why older lines may retain useful genetic diversity.
 First, lines are often discarded or selected against because of poor performance for a particular trait, which does not preclude that line's utility in breeding for other traits.
-For example, thanks to its combining ability, the U.S. inbred B73 quickly spread in popularity and now makes up a considerable portion of modern breeding material \citep{van2012historical}.
+For example, thanks to its combining ability, the U.S. inbred B73 quickly spread in popularity and now makes up a considerable portion of modern breeding material \citep{van2012historical}. 
 Yet when evaluated for drought and heat stress, B73 significantly underperformed compared to less well-utilized lines such as B76 \citep{chen2012characterization}.
 Second, the contribution of older lines to modern germplasm does not necessarily reflect their genetic potential.
 Our previous analysis of maize ancestry found popular lines with fewer beneficial alleles than expected given their importance to modern germplasm as well as lines with more beneficial (as defined by a steady increase in allele frequency over time) alleles than expected (Figure \ref{fig:wf9}).
@@ -202,12 +200,44 @@ Our previous analysis of maize ancestry found popular lines with fewer beneficia
 \subsection*{Pedigree-based approaches to identifying useful maize germplasm}
 
 
-\subsubsection*{advantage of pedigree}
-\- what you can do with a pedigree
+\subsubsection*{Advantage of pedigree vs. disadvantages of other approaches}
+Most release sheets and information in NPGS on modern inbreds contain not only parentage information, but a wealth of important phenotypic information and the selective regime used in propagating that line. 
+As an example, a grep search of terms associated with selection regimes from our own ancestry data table-joined to data from NPGS reveals that many lines were probably selections of different types of selection programs (Figure %\ref{fig:panel}).
+Broadly, most inbred lines have been selected for ``combining ability'' across the pedigree, but other programs are more targeted in their choice of selective regime: blight resistance, maize mosaic virus, drought resistance, etc. 
+\par Using expectations of relatedness coefficients between \textbf{known} close relatives (inbred parents-inbred progeny) we can compare to observations of genomic sharing, where significant deviations from expected relatedness coefficients would tend to indicate selection. 
+Across the entire pedigree, we expect that certain alleles will go to fixation due to breeder's selection as they are beneficial for ``combining ability''. 
+But, within smaller breeding programs (and pedigrees) under a specific selective regime we will observe only 
+
+
+\begin{figure}[h]
+        \centering
+        \begin{subfigure}[b]{0.55\textwidth}
+                \includegraphics[width=\textwidth]{selection_disease.pdf}
+                \caption{}
+                \label{fig:words}
+        \end{subfigure}%
+        ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+        \begin{subfigure}[b]{0.55\textwidth}
+                \includegraphics[width=\textwidth]{alleles_divergent.pdf}
+                \caption{}
+                \label{fig:div}
+        \end{subfigure}
+\caption{\textbf{a)} Counts of a grep search of unique lines containing words that are most likely affiliated with some sort of selection/breeding programme. \textbf{NB: it is also possible that some of these terms could co-occur, e.g. selection for disease and drought resistance.} \textbf{b)} Selective regime for combining ability across two example breeding programs and loci. Fitness (w) of each allele indicated, with selection coefficient (1-\textit{s}) for the allele being selected against in a given regime. In the bottom left corner, }
+\end{figure}
+
+
+\begin{itemize}
+\item observed vs. expected allow us to look allele specific ``hard'' breeder sweeps across the pedigree for combining ability
+\item but phenotypic information of each program contained in release sheets may also allow us to look at selective regimes within programs (while selection is relaxed in others).
+\item If alleles exist in other programs along with the specific diversity of that program, we can target those.
+\end{itemize}
+
+
 
 \subsubsection*{Preliminary work: pedigree records to date}
 To date, we (Drs. Smith and Crosby) have gathered parentage info for over 3193 lines and originally built a large pedigree of some 700 lines (Figure \ref{fig:b73isbig}is but a small portion of this pedigree) with complete parentage information that overlaps with currently available GBS maize 2.7 data \citep{Glaubitz:2014eu}. 
-\par Further work, has led to a total of 1696 records overlapping with GBS data, and we have applied the approach of allele-dropping \textcolor{red}{add in basic allele dropping schematic - and then show for some families} to some lines that feature heavily in the pedigree.
+\par Further work, has led to a total of 1696 unique (1900 duplicate) records overlapping with GBS data, and we have applied the approach of allele-dropping \textcolor{red}{add in basic allele dropping schematic - and then show for some families} to some lines that feature heavily in the pedigree.
 
 \subsubsection*{Preliminary work: allele dropping works? GBS pruning?}
 
