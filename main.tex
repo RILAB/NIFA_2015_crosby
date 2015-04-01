@@ -201,13 +201,10 @@ Our previous analysis of maize ancestry found popular lines with fewer beneficia
 
 
 \subsubsection*{Advantage of pedigree vs. disadvantages of other approaches}
-Most release sheets and information in NPGS on modern inbreds contain not only parentage information, but a wealth of important phenotypic information and the selective regime used in propagating that line. 
-As an example, a grep search of terms associated with selection regimes from our own ancestry data table-joined to data from NPGS reveals that many lines were probably selections of different types of selection programs (Figure %\ref{fig:panel}).
+Most release sheets and information in NPGS on modern inbreds contain not only parentage information, but a wealth of important phenotypic information and the selective regime used in propagating a given line. 
+As an example, a regular expression ``grep", case-insensitive search of character strings of terms that might typically be associated with selection regimes  (Figure \ref{fig:words}), such as ``resistance'', ``'' .
+from our own ancestry data table-joined to data from NPGS reveals that many lines were probably selections of different types of selection programs
 Broadly, most inbred lines have been selected for ``combining ability'' across the pedigree, but other programs are more targeted in their choice of selective regime: blight resistance, maize mosaic virus, drought resistance, etc. 
-\par Using expectations of relatedness coefficients between \textbf{known} close relatives (inbred parents-inbred progeny) we can compare to observations of genomic sharing, where significant deviations from expected relatedness coefficients would tend to indicate selection. 
-Across the entire pedigree, we expect that certain alleles will go to fixation due to breeder's selection as they are beneficial for ``combining ability''. 
-But, within smaller breeding programs (and pedigrees) under a specific selective regime we will observe only 
-
 
 \begin{figure}[h]
         \centering
@@ -225,6 +222,11 @@ But, within smaller breeding programs (and pedigrees) under a specific selective
         \end{subfigure}
 \caption{\textbf{a)} Counts of a grep search of unique lines containing words that are most likely affiliated with some sort of selection/breeding programme. \textbf{NB: it is also possible that some of these terms could co-occur, e.g. selection for disease and drought resistance.} \textbf{b)} Selective regime for combining ability across two example breeding programs and loci. Fitness (w) of each allele indicated, with selection coefficient (1-\textit{s}) for the allele being selected against in a given regime. In the bottom left corner, }
 \end{figure}
+
+Using expectations of relatedness coefficients between \textbf{known} close relatives (inbred parents-inbred progeny) we can compare to observations of genomic sharing, where significant deviations from expected relatedness coefficients would tend to indicate selection. 
+Across the entire pedigree, we expect that certain alleles will go to fixation due to breeder's selection as they are beneficial for ``combining ability''. 
+But, within smaller breeding programs (and pedigrees) under a specific selective regime we will observe only 
+
 
 
 \begin{itemize}
