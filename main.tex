@@ -202,14 +202,14 @@ Our previous analysis of maize ancestry found popular lines with fewer beneficia
 
 \subsubsection*{Advantage of pedigree vs. disadvantages of other approaches}
 Most release sheets and information in NPGS on modern inbreds contain not only parentage information, but a wealth of important phenotypic information and the selective regime used in propagating a given line. 
-As an example, a regular expression ``grep", case-insensitive search of character strings of terms that might typically be associated with selection regimes  (Figure \ref{fig:words}), such as ``resistance'', ``'' .
-from our own ancestry data table-joined to data from NPGS reveals that many lines were probably selections of different types of selection programs
+As an example, a regular expression ``grep", case-insensitive search for counts of character strings of terms that might typically be associated with selection regimes  (Figure \ref{fig:words}), such as ``resistance'', ``tolerance'', ``blight'', ``drought'', ``disease'', etc - reveal that indeed, many lines with ancestry information were targeted by breeder's for different phenotypes. 
+If 
 Broadly, most inbred lines have been selected for ``combining ability'' across the pedigree, but other programs are more targeted in their choice of selective regime: blight resistance, maize mosaic virus, drought resistance, etc. 
 
 \begin{figure}[h]
         \centering
         \begin{subfigure}[b]{0.55\textwidth}
-                \includegraphics[width=\textwidth]{selection_disease.pdf}
+                \includegraphics[width=\textwidth]{disease.pdf}
                 \caption{}
                 \label{fig:words}
         \end{subfigure}%
@@ -238,8 +238,7 @@ But, within smaller breeding programs (and pedigrees) under a specific selective
 
 
 \subsubsection*{Preliminary work: pedigree records to date}
-To date, we (Drs. Smith and Crosby) have gathered parentage info for over 3193 lines and originally built a large pedigree of some 700 lines (Figure \ref{fig:b73isbig}is but a small portion of this pedigree) with complete parentage information that overlaps with currently available GBS maize 2.7 data \citep{Glaubitz:2014eu}. 
-\par Further work, has led to a total of 1696 unique (1900 duplicate) records overlapping with GBS data, and we have applied the approach of allele-dropping \textcolor{red}{add in basic allele dropping schematic - and then show for some families} to some lines that feature heavily in the pedigree.
+To date, we (Drs. Smith and Crosby) have gathered parentage info for over 3193 lines and originally built a large pedigree of some 700 lines (Figure \ref{fig:b73isbig}is but a small portion of this pedigree) with complete parentage information that overlaps with currently available GBS maize 2.7 data \citep{Glaubitz:2014eu}. Currently, we have a total of 1696 unique (1900 duplicate) records overlapping with GBS data.
 
 \subsubsection*{Preliminary work: allele dropping works? GBS pruning?}
 
@@ -274,6 +273,7 @@ The first part of our proposal aims to preserve hard-copy pedigree records by tr
 These raw data scans will then be manually translated into an agreed upon format, with numbering/naming of each line/accession agreed upon.
 Dr. Kate Crosby, Dr. Taner Sen (support letter from maize GDB enclosed), senior personnel Dr. Oscar Smith, and CO-PI Dr. Bill Tracy will consult on an agreed upon standard format with which to store the raw scan of pedigree records, the phenotypic and genomic information. 
 Establishing an agreed upon format in the first few months of the project will enable easy mapping of current and future genomic data formats to pedigree information.
+The initial database will house information on release dates, selection regime,
 Additionally, Dr. Kate Crosby is currently investigating the possibility of using no-SQL database without formal schemas specified \textit{a priori} (graph databases) to be able handle queries with respect to mapped genomic data, extended ancestry, and phenotypic data, along with new visualization tools \citep{ParejaTobes:2015bf}.
 
 \subsubsection*{Genotyping of lines that feature heavily in historical pedigree information}
