@@ -125,7 +125,6 @@ Maize yields have steadily increased since the advent of hybrid breeding in the 
 But linear increases necessarily mean a decrease in relative gain, and projections suggest that current trends are unlikely to meet future yield goals \citep{grassini2013distinguishing}. 
 Of even greater concern is the possibility that the rate of gain may actually be decreasing (Figure \ref{fig:piecewise}).
 While some of these yield trends are undoubtedly related to changing management practices, much of the change is indeed due to breeding \citep{Duvick:2001fy}, and current rates of yield gain are lower than historical trends even after correcting for nitrogen fertilizer inputs (data not shown). 
-%i don't want to try to explain the inflection point figure. do we just cite wherever you got the N2 data from?  do we include but change the graph? do we not even mention? ideas?
 
 \begin{SCfigure}
 \includegraphics[width=0.6\linewidth]{yield.pdf}
@@ -146,19 +145,14 @@ While some of these yield trends are undoubtedly related to changing management 
 \subsection*{Decreasing diversity} 
 
 As selection progresses within a breeding program, inbred lines with poor performance are generally discarded, leading to a decreased effective population size ($N_e$) of the breeding pools.
-Response to selection $R$ depends both on the strength of selection $s$ and the narrow-sense heritability of a trait, which is the ratio of the additive genetic variance $V_A$ to the phenotypic variance $V_P$ \citep{kelly2011breeder}:
-\begin{align*}
-R=\frac{V_A}{V_P}s
-\end{align*}
-The expected additive genetic variance of traits between relatives, in turn, depends on the effective population size $N_e$ as well as the mutational variance per generation ${\sigma}_m^2$ \citep{whitlock1999neutral}:
+Response to selection is proportional to the additive genetic variance $V_A$ (equation \ref{eq:lush}), and $V_A$, in turn, depends on $N_e$ as well as the mutational variance per generation ${\sigma}_m^2$ \citep{whitlock1999neutral}:
 \begin{align*}
 E[V_a] = 4N_e {\sigma}_m^2
+\label{eq:whitlock}
 \end{align*}
 A reduction in $N_e$ thus inherently leads to a reduced response to  selection, leading to diminishing returns on yield unless new diversity is brought back into breeding pools.
 Evidence from the Iowa Reciprocal Recurrent Selection breeding program suggests these concerns are valid (Figure \ref{fig:trends}), as yield gains plateau over time \citep{rouse2003selection} concomitant with continued declines in genetic diversity \citep{Gerke:2013tw}.
-\textbf{ Decreasing $N_e$ (Figure \ref{fig:diversity}) in U.S. cornbelt germplasm risks our ability to maintain or increase rates of genetic gain in yield.} 
-%stop here? mention anything about importance of Iowa RRS?
-
+Decreasing $N_e$ (Figure \ref{fig:diversity}) in U.S. cornbelt germplasm risks our ability to maintain or increase rates of genetic gain in yield.
 
 %\begin{figure}[ht]
 %\includegraphics[width=\linewidth]{joostgerke.png}
@@ -176,23 +170,27 @@ While this approach is successful at bringing in new diversity, it requires time
 
 %rjw: this will raise the question --  how the proposed approach will accomplish the desired end result differently, since in the end mining for lost alleles will still require breeding which itself is being presented as the bottleneck here.
 
-\begin{wrapfigure}{R}{0.5\textwidth}
+%\begin{wrapfigure}{R}{0.5\textwidth}
 %\begin{minipage}[t]{0.5\textwidth}
 %\begin{SCfigure}
-\includegraphics[width=0.5\textwidth]{BSSS.png}
-\caption{Yield and genetic diversity in the Iowa Recriprocal Recurrent Selection Program across 16 cycles of selection. (Top) Grain yield at three planting densities; data are from \citet{rouse2003selection}. (Bottom) Genetic diversity of the BSSS and BSCB1 breeding pools separately and combined; data are from \citet{Gerke:2013tw}.} 
-\label{fig:trends}
+%\includegraphics[width=0.5\textwidth]{BSSS.png}
+% 
+%
 %\end{SCfigure}
 %\end{minipage}
-\end{wrapfigure}
+%\end{wrapfigure}
+%\begin{wrapfigure}[30]{R}{0.5\textwidth}
+\begin{SCfigure}
+    \includegraphics[width=0.4\textwidth]{BSSS.png}
+  \caption{Yield and genetic diversity in the Iowa Recriprocal Recurrent Selection Program across 16 cycles of selection. (Top) Grain yield at three planting densities; data are from \citet{rouse2003selection}. (Bottom) Genetic diversity of the BSSS and BSCB1 breeding pools separately and combined; data are from \citet{Gerke:2013tw}.}
+\label{fig:trends}
+\end{SCfigure}
 
 \textbf{We propose a different approach, using pedigree and genetic data to identify underutilized cornbelt germplasm.}  
 While this approach shares with projects like GEM the disadvantage that diverse material is often  agronomically inferior, it has several advantages.  
 First, with sufficient information (see below), breeders may be able to learn a substantial amount about the potential utility of a line by predicting phenotype directly or understanding its relationship to known material. 
 Second, in contrast to exotic germplasm, older U.S. germplasm is already reasonably well-adapted to the photoperiod and climate of the U.S., meaning it can be immediately incorporated into breeding programs.
 \textcolor{red}{MORE ADVANTAGES??}
-
-
 
 \subsection*{Identifying useful diversity}
 As any breeder will attest, many old lines have fallen out of use precisely because they showed inferior agronomic performance under a particular selective regime (drought, disease resistance, etc).
@@ -201,13 +199,15 @@ First, lines are often discarded or selected against because of poor performance
 For example, thanks to its combining ability, the U.S. inbred B73 quickly spread in popularity and now makes up a considerable portion of modern breeding material \citep{van2012historical}. 
 Yet when evaluated for drought and heat stress, B73 significantly underperformed compared to less well-utilized lines such as B76 \citep{chen2012characterization}.
 Second, the contribution of older lines to modern germplasm does not necessarily reflect their genetic potential.
-Our previous analysis of maize ancestry found popular lines with fewer beneficial alleles than expected given their importance to modern germplasm as well as lines with more beneficial (as defined by a steady increase in allele frequency over time) alleles than expected (Figure \ref{fig:wf9}).
+Our analyses of maize ancestry found popular lines with fewer beneficial alleles than expected given their importance to modern germplasm as well as lines with more beneficial (as defined by a steady increase in allele frequency over time) alleles than expected (Figure \ref{fig:wf9}).
 
-\begin{itemize}
-\item popgen point about alleles lost due to drift
-\item previous efforts like our popgen only looked at allele frequency. this is problematic because of structure etc.
-\item pedigree analysis allows improved popgen and other benefits (discuss)
-\end{itemize}
+blah blah blah blah
+
+
+ popgen point about alleles lost due to drift
+ previous efforts like our popgen only looked at allele frequency. this is problematic because of structure etc.
+ pedigree analysis allows improved popgen and other benefits (discuss)
+ 
 
 \subsection*{Pedigree-based approaches to identifying useful maize germplasm}
 
@@ -344,8 +344,8 @@ As an example, using Mendelian rules and starting with a mostly homozygous line 
 Because we know what our expectations ($E$) for number ($N$) of $AA$ (or $aa$) homozygous inbred progeny at generation 6 (under no selection) should be (given by $E = 1/2 N$), we can compare to the actual observed number of progeny. 
 If our observations deviate from this expectation, we would tend to conclude breeder's selection for these alleles (especially if observed across a good portion of the entire pedigree). 
 
-\begin{figure}[p]
-\includegraphics[width=1.0\linewidth]{Pruned.pdf}
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{Pruned.pdf}
 \caption{B73 (also known as PI550473 by NPGS and a number of its inbred progeny) is heterozygous at 379 loci out of over 954,000 loci with GBS markers). The blue labels represent which inbred progeny obtained the A allele, whereas the yellow labels indicate the progeny that have obtained the G allele at a particular locus. \textbf{NB: the other parent of these lines is not indicated for simplicity}.}
 \label{fig:alleledrop}
 \end{figure}
@@ -360,14 +360,14 @@ We may then look for these alleles across all other breeding programs where sele
 Genotypes when combined with a pedigree can be used to predict phenotypes \citep{de2009predicting,crossa2010prediction,Decker:2012kd}.  
 By using allele dropping we target individual loci, but as 
 Significant hits from a genome wide association study (GWAS)  can be summarized as the allelic effects $\alpha^{2}$ (or breeding values) that breeders can take advantage to get an estimate of $V_{A}$ for any trait of interest. $V_{A}$ can be estimated for one locus (equation 1 below) or summarized across all loci $L$ in the genome (equation 2 below):
-\begin{multicols}{2}
-  \begin{equation}
+
+  \begin{align}
     V_A = 2pq\alpha^2
-  \end{equation}\break
-  \begin{equation}
+ % \end{equation}\break
+ % \begin{equation}
     V_A = \overset{L}{\underset{l=1}{\sum}}\alpha^2_l2p_l(1-p_l)
-  \end{equation}
-\end{multicols}
+  \end{align}
+
 If alleles are at high frequency in certain breeding programs and can also associated with a beneficial phenotype (e.g. blight resistance), they are potentially beneficial alleles that could be resurrected and introgressed back into a modern breeding program. 
 By then searching the entire pedigree for these alleles and isolating those lines that have these SNPs, they may be targeted by breeders and public research programs.
 Further, the greater the $V_A$ of a trait (the greater the allelic diversity of that trait, i.e. $N_{e}$), and thus, the greater $R$ (response to selection) to any new selective program a breeder chooses to apply.
