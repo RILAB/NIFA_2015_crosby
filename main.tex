@@ -68,8 +68,8 @@ With decreasing diversity available for breeding decreasing yield gains are a ma
 \end{SCfigure}
 
 While open-pollinated varieties and exotic inbred lines represent a viable source of new diversity, these have been only sparingly used in the private sector due to their poor agronomic performance, photoperiod sensitivity, and the necessary generations of back-crossing to adapted lines required to incorporate useful alleles into high-performing temperate germplasm \citep{goodman1999broadening}.
-In contrast, older U.S. inbred lines, though lower-yielding than their contemporaries, harbor novel genetic diversity of potential use for breeding but are already adapted to the U.S. cornbelt.  
-Breeders have clearly bee successful in advancing high-yielding germplasm and discarding ill-adapted material.
+In contrast, older U.S. inbred lines, though lower-yielding than their contemporaries, harbor novel genetic diversity of potential use for breeding \citep[e.g.][]{chen2012characterization,wisser2011multivariate}, but are already adapted to the U.S. cornbelt.  
+Breeders have clearly been successful in advancing high-yielding germplasm and discarding ill-adapted material.
 This does not mean, however, that all discarded material has little genetic merit --- beneficial alleles can be lost to genetic drift, particularly considering the polygenicity of agronomic traits and also because breeders are unable to select for all traits simultaneously. Our own population genetic analysis supports this notion; a number of underutilized older inbreds are enriched with favorable alleles (Figure \ref{fig:wf9}). 
 
 \begin{SCfigure}
@@ -117,7 +117,7 @@ Inbreds that form less desirable combinations are usually discarded from the bre
 Useful inbreds within a group are crossed with each other, and their segregating progeny evaluated and self-fertilized to create new inbreds. 
 Maintaining this system for propagation of inbred lines and hybridizing inbreds for evaluating production traits has worked well for many decades, but there is growing reason for concern that this method may need a genetic boost. 
 
-\subsection*{Decelerating yield gains} 
+\subsection*{Decelerating yield gains and decreasing diversity} 
 
 Maize yields have steadily increased since the advent of hybrid breeding in the 1930's.
 But linear increases necessarily mean a decrease in relative gain, and projections suggest that current trends are unlikely to meet future yield goals \citep{grassini2013distinguishing}. 
@@ -125,12 +125,10 @@ Of even greater concern is the possibility that the rate of gain may actually be
 While some of these yield trends are undoubtedly related to changing management practices, much of the change is indeed due to breeding \citep{Duvick:2001fy}, and current rates of yield gain are lower than historical trends even after correcting for nitrogen fertilizer inputs (data not shown). 
 
 \begin{SCfigure}
-\includegraphics[width=0.6\linewidth]{yield.pdf}
+\includegraphics[width=0.6\linewidth]{yield.png}
 \caption{Piecewise regressions of time against total yield through the four eras of modern maize breeding. Colors represent distinct eras of maize breeding that roughly correspond to the eras  referred to in Figure \ref{fig:diversity}.} 
 \label{fig:piecewise}
 \end{SCfigure}
-
-\subsection*{Decreasing diversity} 
 
 As selection progresses within a breeding program, inbred lines with poor performance are generally discarded, leading to a decreased effective population size ($N_e$) of the breeding pools.
 Response to selection is proportional to the additive genetic variance $V_A$ (equation \ref{eq:lush}), and $V_A$, in turn, depends on $N_e$ as well as the mutational variance per generation ${\sigma}_m^2$ \citep{whitlock1999neutral}:
@@ -152,7 +150,7 @@ Decreasing $N_e$ (Figure \ref{fig:diversity}) in U.S. cornbelt germplasm risks o
 %\label{fig:pca}
 %\end{figure}
 
-\subsection*{A novel approach to incorporate new diversity}
+\subsection*{A novel pedigree-based approach to incorporate new diversity}
 
 Incorporating novel diversity into contemporary modern maize lines is clearly an important goal necessary to maintain and increase rates of yield gain.
 While there are other public efforts to achieve this goal, like the GEM  (Germplasm Enhancement of Maize) program \citep{pollak2003history}, these  focus on incorporating exotic germplasm (e.g. CIMMYT lines, tropical hybrids, etc.) into U.S. materials by backcrossing to well-adapted U.S. cornbelt backgrounds.
@@ -183,25 +181,22 @@ Second, with sufficient information (see below), breeders may be able to learn a
 Finally, considerable information is available about many old breeding lines even without prediction (Figure \ref{fig:words})
 
 
-\subsection*{Identifying useful diversity}
-As any breeder will attest, many old lines have fallen out of use precisely because they showed inferior agronomic performance under a particular selective regime (drought, disease resistance, etc).
+\subsubsection*{Identifying useful diversity}
+As any breeder will attest, old lines have fallen out of use precisely because they showed inferior agronomic performance under a particular selective regime (usually combining ability).
 There are a number of reasons, however, why older lines may retain useful genetic diversity.
-First, lines are often discarded or selected against because of poor performance for a particular trait, which does not preclude that line's utility in breeding for other traits.
+Lines are often discarded or selected against because of poor performance for a particular trait, but this does not preclude that line's utility in breeding for other traits.
 For example, thanks to its combining ability, the U.S. inbred B73 quickly spread in popularity and now makes up a considerable portion of modern breeding material \citep{van2012historical}. 
-Yet when evaluated for drought and heat stress, B73 significantly underperformed compared to less well-utilized lines such as B76 \citep{chen2012characterization}.
-Second, the contribution of older lines to modern germplasm does not necessarily reflect their genetic potential.
-Our analyses of maize ancestry found popular lines with fewer beneficial alleles than expected given their importance to modern germplasm as well as lines with more beneficial (as defined by a steady increase in allele frequency over time) alleles than expected (Figure \ref{fig:wf9}).
+Yet when evaluated for drought and heat stress, B73 significantly underperformed compared to less well-utilized lines such as B76 \citep{chen2012characterization}, and many older public inbreds show greater resistance to a suite of important diseases \citep{wisser2011multivariate}. 
+Because of this, beneficial alleles for many traits of interest may remain in older germplasm, not having been advanced during breeding (Figure \ref{fig:div}).
 
-\jri{blah blah blah blah}
+Most breeding programs consist of relatively small population sizes, and in these cases genetic drift can substantially impact the fate of even beneficial alleles \citep[e.g.][]{Gerke:2013tw}.
+The contribution of older lines to modern germplasm thus does not necessarily reflect their genetic potential: our population genetic analysis of maize ancestry, for example, found lines with more beneficial (as defined by a steady increase in allele frequency over time) alleles than expected given their contribution to modern germplasm (Figure \ref{fig:wf9}).
 
-
- %popgen point about alleles lost due to drift
  %previous efforts like our popgen only looked at allele frequency. this is problematic because of structure etc.
  %pedigree analysis allows improved popgen and other benefits (discuss)}
  
 
 \subsection*{Pedigree-based approaches to identifying useful maize germplasm}
-
 
 \subsubsection*{Advantage of pedigree vs. disadvantages of other approaches}
 Most release sheets and information in NPGS on modern inbreds contain not only parentage information, but a wealth of important phenotypic information and the selective regime used in propagating a given line. 
