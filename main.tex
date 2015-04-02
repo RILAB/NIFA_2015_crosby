@@ -290,17 +290,18 @@ Dr. Tracy was a co-author on the leading pedigree book on maize lines \cite{gerd
 
 The land grant schools they have identified include: the University of Wisconsin, Virginia Tech, the University of Georgia, the University of Florida, Pennsylvania State University, the University of Nebraska, North Carolina State University, the USDA station at the University of Missouri. 
 Dr. Tracy (based at the University of Wisconsin) and Dr. Holland's student (based at North Carolina State) will largely be responsible for visiting these schools in the first year to obtain and digitally scan this information with portable digital scanners. 
-Dr. Tracy will obtain information from the University of Wisconsin (host institution), the University of Florida, the University of Nebraska, and the University of Georgia. Dr. Holland's student will be responsible for North Carolina State University (host institution), Virginia Tech, Pennsylvania State University, and finally, the USDA station at the University of Missouri.
+Dr. Randall Wisser's student will be responsible for visiting two schools starting in the second year of the grant.
+Dr. Tracy will obtain information from the University of Wisconsin (host institution), the University of Florida, and the University of Nebraska. 
+Dr. Holland's student (in the first year) will be responsible for North Carolina State University (host institution), the University of Georgia, and finally, the USDA station at the University of Missouri. 
+Dr. Randall Wisser's student (to start in year two of the grant) will be responsible for the University of Pennsylvania and Virginia Tech.
 Drs. Tracy and Smith have extensive contacts with faculty past and present at these schools, so obtaining the information and scanning it at each school traveled to should take no more than a few days. 
 
 Dr. Kate Crosby, Dr. Taner Sen (support letter from maize GDB enclosed), senior personnel Dr. Oscar Smith, and CO-PI Dr. Bill Tracy will consult on an agreed upon standard format with which to store the raw scan of pedigree records, the phenotypic and genomic information. 
 Establishing an agreed upon format in the first few months before the scans are obtained will enable easy mapping of current and future genomic data formats to pedigree information.
-Additionally, Dr. Kate Crosby is currently investigating the possibility of using no-SQL database without formal schemas specified \textit{a priori} (graph databases) to be able handle queries with respect to mapped genomic data, extended ancestry, and phenotypic data, along with new visualization tools \citep{ParejaTobes:2015bf}.
 
 We fully anticipate that we will isolate some lines that feature heavily in the historical pedigree and have germplasm available, but that do not have any genomic data available for them. 
-In such cases (where germplasm is available), we intend to use genotype-by-sequencing (GBS) \citep{Elshire:2011ha} as a cost-efficient platform \citep{Glaubitz:2014eu} to obtain high-coverage and density of SNPs  for these lines, with markers aligned to the newest maize reference genome (currently B73 v. 3). We anticipate that this number of lines should be no more than a few hundred, or two plates worth of samples.
+In such cases (where germplasm is available), we intend to use genotype-by-sequencing (GBS) \citep{Elshire:2011ha} as a cost-efficient platform \citep{Glaubitz:2014eu} to obtain high-coverage and density of SNPs  for these lines, with markers aligned to the newest maize reference genome (currently B73 v. 3). We anticipate that this number of lines should be no more than a few hundred samples of inbred lines, or two-four plates worth of samples (192-384 inbred lines).
 In addition to serving as contact for obtaining hard-copy breeding information, Dr. Sherry Flint-Garcia will serve as a contact at the USDA station to help Dr. Holland's student understand how inbred lines are deposited, uniquely named, and will also be able to help the student obtain any available USDA germplasm deemed to be important in the pedigree, but not yet genotyped.
-
 
 \subsubsection*{Expected outcomes (Aim 1)}
 Our main deliverable from the first aim is an \textbf{open public pedigree database to be hosted on maize GDB (http://www.maizegdb.org/) for the long term future.} Users will be able to contribute and revise incomplete information, with the goal of establishing a nearly complete public pedigree of maize inbred lines. \textbf{To our knowledge, this will be one of the first public crop databases of its kind (with lines having genomic and phenotypic data mapped onto entries).}  
@@ -308,7 +309,7 @@ Our main deliverable from the first aim is an \textbf{open public pedigree datab
 The initial database will house information on release dates, selection regime, historical phenotype information, germplasm availability (or nearest neighbor germplasm availability).
 Breeders and researchers will be able to query information on lines across many years, their closest relatives, and additionally for alleles that are associated with a given a selection regime. 
 For instance, if a breeder wants to establish an inbred line that is both drought and blight resistant, they could query information on lines that are drought resistant and lines that are blight resistant, plus query how other alleles in a chosen line might be associated with other traits of interest. They could then decide on crosses and breeding designs in the field, and update information (should they choose) on maize GDB following actual growouts.
-
+\kc{include this or ditch? Additionally, Dr. Kate Crosby is currently investigating the possibility of using no-SQL database without formal schemas specified \textit{a priori} (graph databases) to be able handle queries with respect to mapped genomic data, extended ancestry, and phenotypic data, along with new visualization tools \citep{ParejaTobes:2015bf}.}
 Ensuring data, code, and script are open-access or open-source (freely available to the public) is important for critique, debate, and dialogue in science. Dr. Ross-Ibarra has a long track record of ensuring openness with his science, data, and code. Throughout this project, both Dr. Ross-Ibarra and Dr. Crosby will endeavour to ensure that code and data are available via repositories such as github, figshare, maize GDB, and iPlant.
 
 
@@ -330,26 +331,18 @@ Currently, we know that approximately 12.9\% of germplasm from NPGS for which we
 Undoubtedly, as we add more records from breeding books, journals, meeting minutes, and research station bulletins, we expect a similar level of unavailability of germplasm.  
 In such cases, we would seek available germplasm from the next nearest relatives according to historical information, and genotype those accessions. 
 
-\subsection*{Aim 2: Identify useful diversity, and resurrect it}
-\label{ssec:GWAS}
-As different lines have been under different historical selective regimes or breeding programs, these phenotypes likely have an underlying genetic basis. This ``useful diversity'' in the historic germplasm will be initially targeted with quick ``$F_{ST}$'' outlier  methods (also known as ``$F_{ST}$ scans'').
-\kc{Need I mention co-ancestry, pop. structure ideas here- inflation of false positives, etc?}
+\subsection*{Aim 2: Identify useful diversity}
 
-Briefly, ``$F_{ST}$'' outlier methods work under the null hypothesis that most alleles change over time due to neutral forces (genetic drift and migration). 
-Any alleles in a breeding population or program that deviate from this assumption and show very high or low frequency, are likely subject to adaptive change, or in the case of modern maize, breeder's selection. These outlier alleles of lines can then be associated with phenotypic trait information from the pedigree (this is known as a genome-wide association study or (GWAS)). 
-
-\subsubsection*{Aim 2: Mendelian segreagation on a pedigree}
-Following the digitization of historical information, the Dr. Holland's student and the post-doc (Kate Crosby) will construct many small pedigrees and use the technique of \textbf{``allele-dropping''} to further identify breeder's selection. 
-%\kc{Below for how typical inbred lines are produced - but ditch huge figure and make a cartoon - easier to understand.
-%Using Mendelian rules and starting with homozygous parents for opposite allelic combinations at a single locus (i.e. $AA$ for parent 1 and $aa$ for parent2) we know that our expectations ($E$) for number ($N$) of $AA$ (or $aa$) homozygous inbred progeny at generation 6 (under no selection) should be given by $E = 1/2 N$. If our observations deviate from this expectation, we would tend to conclude selection.} 
+\subsubsection*{Mendelian segregation on a pedigree}
+As different lines have been under different historical selective regimes or breeding programs, these phenotypes likely have an underlying genetic basis. Following the digitization of historical information, the Dr. Holland's student and the post-doc (Kate Crosby) will construct many small pedigrees of the different selection regimes and use the technique of \textbf{``allele-dropping''} to further identify breeder's selection and useful diversity. 
 
 ``Allele-dropping'' is a patented method \cite{sebastian1995method}, used in industry and works by identifying distorted segregation at all heterozygous loci within a single pedigree/breeding programs and across many pedigrees/breeding programs (Figure \ref{fig:alleledrop}). 
-As a simple Mendelian approach this technique identifies traces of selection by directly accounting for ancestry, and without the worry of having to account for shared population structure \cite{sebastian1995method} (as in modern population genomics approaches - see above).
-\kc{see my comment on whether we mention false positives of Fst scans}. 
-If we observe the uni-directional shift of a given allele across many of these small pedigrees at a set of loci, this would indicate selection.
+As a simple Mendelian approach this technique identifies traces of selection by directly accounting for ancestry, and without the worry of having to account for shared population structure \cite{sebastian1995method} (as in modern population genomics approaches - see above). 
+
+If we observe the uni-directional shift of a given allele across many of these small pedigrees at a set of loci (or even within just one pedigree in a specific breeding program), this would indicate selection.
 As an example, using Mendelian rules and starting with a mostly homozygous line (with some residual heterozygosity), we can examine single heterozygous locus (i.e. $Aa$). 
 Because we know what our expectations ($E$) for number ($N$) of $AA$ (or $aa$) homozygous inbred progeny at generation 6 (under no selection) should be (given by $E = 1/2 N$), we can compare to the actual observed number of progeny. 
-If our observations deviate from this expectation, we would tend to conclude selection (especially if observed across a good portion of the entire pedigree). 
+If our observations deviate from this expectation, we would tend to conclude breeder's selection for these alleles (especially if observed across a good portion of the entire pedigree). 
 
 \begin{figure}[p]
 \includegraphics[width=1.0\linewidth]{Pruned.pdf}
@@ -358,15 +351,15 @@ If our observations deviate from this expectation, we would tend to conclude sel
 \end{figure}
 
 Our current preliminary data set of 1696 accessions contains a fair amount of information on different selection regimes (Figure \ref{fig:words}). 
-By applying allele-dropping to a number of these smaller breeding programs, and tracking unidirectional shifts, we will isolate strong signals of breeders selection for a given selective agent (within a program). 
-We then look for these alleles across all other breeding programs where selection was presumably relaxed (Figure \ref{fig:div}), and if we can isolate these alleles, then they may be introgressed back in as useful diversity to other breeding programs.
+By applying allele-dropping to a number of these smaller breeding programs, and tracking unidirectional shifts, we (Dr. Holland's student and Dr. Crosby) will attempt isolate strong signals of breeders selection for a given selective agent (within a program). 
+We may then look for these alleles across all other breeding programs where selection was presumably relaxed (Figure \ref{fig:div}), and if we can isolate these alleles, then they may be introgressed back in as useful diversity to other breeding programs.
 
 
-\subsubsection*{Aim 2: Predictive phenotyping}
+\subsubsection*{Predictive phenotyping}
 \jri{here we show that if individual lines predictive phenotype is better than expected given pedigree/genomic background, then it's likely a good choice for breeding! }
 Genotypes when combined with a pedigree can be used to predict phenotypes \citep{de2009predicting,crossa2010prediction,Decker:2012kd}.  
-By using allele dropping
-Significant hits from GWAS ~\ref{ssec:GWAS} can be summarized as the allelic effects $\alpha^{2}$ (or breeding values) that breeders can take advantage to get an estimate of $V_{A}$ for any trait of interest. $V_{A}$ can be estimated for one locus (equation 1 below) or summarized across all loci $L$ in the genome (equation 2 below):
+By using allele dropping we target individual loci, but as 
+Significant hits from a genome wide association study (GWAS)  can be summarized as the allelic effects $\alpha^{2}$ (or breeding values) that breeders can take advantage to get an estimate of $V_{A}$ for any trait of interest. $V_{A}$ can be estimated for one locus (equation 1 below) or summarized across all loci $L$ in the genome (equation 2 below):
 \begin{multicols}{2}
   \begin{equation}
     V_A = 2pq\alpha^2
@@ -376,12 +369,12 @@ Significant hits from GWAS ~\ref{ssec:GWAS} can be summarized as the allelic eff
   \end{equation}
 \end{multicols}
 If alleles are at high frequency in certain breeding programs and can also associated with a beneficial phenotype (e.g. blight resistance), they are potentially beneficial alleles that could be resurrected and introgressed back into a modern breeding program. 
-By then searching the entire pedigree for these alleles and isolating those lines that have these SNPs, 
+By then searching the entire pedigree for these alleles and isolating those lines that have these SNPs, they may be targeted by breeders and public research programs.
 Further, the greater the $V_A$ of a trait (the greater the allelic diversity of that trait, i.e. $N_{e}$), and thus, the greater $R$ (response to selection) to any new selective program a breeder chooses to apply.
 
 
 \subsubsection*{Expected outcomes (Aim 2)}
-We will identify alleles useful for breeding using pronged approach, first
+We will identify alleles useful for breeding using several approaches, first
 \begin{itemize}
 	\item FST outlier scans and do GWAS
 	\item compare GWAS SNPs to allele dropping (may lack power) - mention Holland's student
@@ -420,12 +413,7 @@ Should loci be identified as having uni-directionally shifted through time acros
 
 \subsubsection*{Project 2 for student 2: novel population genomics approaches to project current phenotypes back in time}
 %Probably should explain Qst and Fst more? Latta's intro is clear on this problem.
-Novel population genomic approaches described in \cite{Berg:2014bs} propose the idea of using a technique analogous to $Q_{ST}$- $F_{ST}$ approaches popularized in the 1990s \citep{Latta:1998ek,  McKay:2002wi}, but applied to large numbers of SNP marker hits from Genome-Wide-Association-Studies (GWAS). 
-GWAS hits have typically fallen short in explaining much of variation in quantitative characters \citep{Rockman:2011ej}, with only a small portion of GWAS hits associated with or close to a quantitative trait locus (QTL) of large effect. 
-This lack of signal in GWAS hits may be due to the polygenic nature of many traits, with the genetic basis of each trait explained by many loci of small effect(s). 
 
-With polygenic signals and their effects scattered throughout the genome, these become difficult to detect and interpret with conventional statistical methods. 
-In order to be able to detect these weak signals, \cite{Berg:2014bs} compare the dispersion of GWAS hits, and their effect sizes (in different environments or time periods), to random sets of SNPs (from the same time), and look for a correlated shift in alleles associated with traits of interest in each divergent environment (or, in our case time period).
 %-Do I provide Qx statistic here?
 Dr. Randall Wisser's student will be responsible for performing this analysis on lines deemed to be of interest from both periods (likely those founder parents and their progeny or later generation ancestors). 
 %I know Qx accounts for structure - but I think looking at inter-familial and extra-familial will be cool (different covariance matrices for sure.
