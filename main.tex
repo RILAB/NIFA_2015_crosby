@@ -1,3 +1,4 @@
+%Project Narrative
 \documentclass[draft,12pt]{article}
 \usepackage[margin=1.1in]{geometry}
 \usepackage{color}
@@ -337,9 +338,10 @@ In such cases, we would seek available germplasm from the next nearest relatives
 As different lines have been under different historical selective regimes or breeding programs, these phenotypes likely have an underlying genetic basis. Following the digitization of historical information, the Dr. Holland's student and the post-doc (Kate Crosby) will construct many small pedigrees of the different selection regimes and use the technique of \textbf{``allele-dropping''} to further identify breeder's selection and useful diversity. 
 
 ``Allele-dropping'' is a patented method \cite{sebastian1995method}, used in industry and works by identifying distorted segregation at all heterozygous loci within a single pedigree/breeding programs and across many pedigrees/breeding programs (Figure \ref{fig:alleledrop}). 
-As a simple Mendelian approach this technique identifies traces of selection by directly accounting for ancestry, and without the worry of having to account for shared population structure \cite{sebastian1995method} (as in modern population genomics approaches - see above). 
+As a simple Mendelian approach this technique identifies traces of selection by directly accounting for ancestry, and without the worry of having to account for shared population structure \cite{sebastian1995method} (as can often be a problem or limitation in modern population genomics approaches). 
 
-If we observe the uni-directional shift of a given allele across many of these small pedigrees at a set of loci (or even within just one pedigree in a specific breeding program), this would indicate selection.
+If we observe the uni-directional shift of a given allele across many of these small pedigrees at a set of loci (or even within just one pedigree in a specific breeding program), this would tend to indicate selection. 
+We would tend to predict that a consistent subset of alleles that are associated with combining ability would tend to increase in frequency across the pedigree.
 As an example, using Mendelian rules and starting with a mostly homozygous line (with some residual heterozygosity), we can examine single heterozygous locus (i.e. $Aa$). 
 Because we know what our expectations ($E$) for number ($N$) of $AA$ (or $aa$) homozygous inbred progeny at generation 6 (under no selection) should be (given by $E = 1/2 N$), we can compare to the actual observed number of progeny. 
 If our observations deviate from this expectation, we would tend to conclude breeder's selection for these alleles (especially if observed across a good portion of the entire pedigree). 
@@ -354,11 +356,14 @@ Our current preliminary data set of 1696 accessions contains a fair amount of in
 By applying allele-dropping to a number of these smaller breeding programs, and tracking unidirectional shifts, we (Dr. Holland's student and Dr. Crosby) will attempt isolate strong signals of breeders selection for a given selective agent (within a program). 
 We may then look for these alleles across all other breeding programs where selection was presumably relaxed (Figure \ref{fig:div}), and if we can isolate these alleles, then they may be introgressed back in as useful diversity to other breeding programs.
 
+\subsubsection*{Potential pitfalls \& limitations (allele-dropping)}
+One of the potential limitations with the allele-dropping approach is that we may lack the statistical power to detect selection on individual alleles, because there may be too few progeny of each line under a given selection regime. 
+However, this limitation of power is not an issue for the complementary population genetic approach we plan on using: the $Q_{x}$ method described in \cite{Berg:2014bs}. 
 
-\subsubsection*{Predictive phenotyping}
+\subsubsection*{Predictive phenotyping ($Q_{x}$)}
 \jri{here we show that if individual lines predictive phenotype is better than expected given pedigree/genomic background, then it's likely a good choice for breeding! }
 Genotypes when combined with a pedigree can be used to predict phenotypes \citep{de2009predicting,crossa2010prediction,Decker:2012kd}.  
-By using allele dropping we target individual loci, but as 
+By using allele dropping we target individual loci within and across breeding programs. But, allele dropping may not have the statistical power to detect a more diffuse polygenic signal of adaptation. 
 Significant hits from a genome wide association study (GWAS)  can be summarized as the allelic effects $\alpha^{2}$ (or breeding values) that breeders can take advantage to get an estimate of $V_{A}$ for any trait of interest. $V_{A}$ can be estimated for one locus (equation 1 below) or summarized across all loci $L$ in the genome (equation 2 below):
 \begin{multicols}{2}
   \begin{equation}
@@ -376,7 +381,6 @@ Further, the greater the $V_A$ of a trait (the greater the allelic diversity of 
 \subsubsection*{Expected outcomes (Aim 2)}
 We will identify alleles useful for breeding using several approaches, first
 \begin{itemize}
-	\item FST outlier scans and do GWAS
 	\item compare GWAS SNPs to allele dropping (may lack power) - mention Holland's student
 	\item use GWAS SNPs to also do Qx (complementary approach where power is less of an issue) within and across pedigrees
 	\item ideally every single method used will isolate a consistent set of SNPs, these we would have a very high confidence that they are under selection
@@ -384,9 +388,7 @@ We will identify alleles useful for breeding using several approaches, first
 
 \jri{identification of lines with good alleles. identification of new phenotpyes undergoing selection? for pitfalls perhaps lack power for individual alleles, but this is complemented by the Qx approach.}
 
-\subsubsection{Potential pitfalls \& limitations (Aim 2)}
-One of the potential limitations with this approach is that we may lack the statistical power to detect selection on individual alleles, because there may be too few progeny of each line under a given selection regime. 
-However, this limitation of power is not an issue for the complementary population genetic approach we plan on using \cite{Berg:2014bs}.
+
 
 \subsection*{Aim 3: Field testing individual lines}
 \jri{explain we don't have feasibility of doing large scale testing, but this is meant as a proof-of-principle to ground-truth our strategy. }
@@ -400,15 +402,7 @@ In order to test the idea that phenotypes
 %\jri{year 2 fills in important gaps in pedigree data and genotyping. year 3 tests our predictions. explain it will not be comprehensive, but should give an idea of how well things work, as well as an idea of the agronomics of the old lines -- if even the "best" old lines have terrible agronomics, we'll know our whole idea is probably not great.
 
 
-
-The student would also be responsible for simulating allele frequency change under neutral processes (genetic drift). The approach would be similar to that used in \citep{Gerke:2013tw}, to evaluate at which loci adaptive (by breeders) or neutral forces have shaped the current allelic diversity of the overall modern breeding population. 
 Should loci be identified as having uni-directionally shifted through time across many of these small pedigrees, we would compare this to our findings in project 2 (see next section \textbf{project 2}).
-
-
-
-
-
-
 
 
 \subsubsection*{Project 2 for student 2: novel population genomics approaches to project current phenotypes back in time}
