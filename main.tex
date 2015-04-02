@@ -1,6 +1,6 @@
 %Project Narrative
 \documentclass[12pt]{article}
-\usepackage[margin=1.1in]{geometry}
+\usepackage[margin=1.2in]{geometry}
 \usepackage{color}
 \usepackage{graphicx}
 \usepackage{url}
@@ -249,13 +249,12 @@ These records can be queried based on unique identifiers from the USDA (PI numbe
 \label{fig:b73isbig}
 \end{figure}
 
-\paragraph{unincorporated text $->$}
-Pedigrees, especially when combined with modern genomic and phenotypic trait data, are useful tools for predicting phenotype \citep{crossa2010prediction} and identifying beneficial alleles \citep{sebastian1995method}.
- that have experienced strong artificial selection across breeding pools. Examples of their application can be found with: cattle \citep{Decker:2012kd}, soybean (cite), and grape (cite). 
+\subsubsection{Preserving valuable information vulnerable to loss \kc{where to put this?}.}
+Much of the pedigree information on older founder inbred maize lines sits in old volumes of Crop Science or the Agronomy Journal, experimental station technical bulletins, regional corn breeding meeting records, release sheets, or breeding books, unused and vulnerable to loss.  
+The National Plant Germplasm Service (NPGS) database contains information with regards to ancestry of public maize inbred lines, but this information may be incomplete or missing (see section above). 
+However, much of this ancestry information on modern maize lines  is still publicly available, only not in digital form, nor is it easily-accessible. 
 While private companies likely have their own pedigree databases to do exactly this, these data are private, patented, and not available to the public. 
-Further, much of the pedigree information on older founder inbred maize lines sits in old volumes of Crop Science or the Agronomy Journal, experimental station technical bulletins, regional corn breeding meeting records, release sheets, or breeding books, unused and vulnerable to loss.  
-The National Plant Germplasm Service (NPGS) database contains information with regards to ancestry of public maize inbred lines, much of this information is incomplete or missing (see section above). 
-However, much of this ancestry information on modern maize lines  is still publicly available, only not in digital form, nor is it easily-accessible. This historical pedigree information exists in old volumes and minutes of breeding committees, old breeding program books, and other hard-copy-only sources. Here, we propose a project that will help preserve, maintain, and use this historical information with novel genomic data to better benefit future maize breeding programs.
+This historical pedigree information exists in old volumes and minutes of breeding committees, old breeding program books, and other hard-copy-only sources. Here, we propose a project that will help preserve, maintain, and use this historical information with novel genomic data to better benefit future public and private (see letter of support from Dupont Pioneer) maize breeding programs.
 
 \section*{Approach}
 \label{sec:approach}
@@ -352,7 +351,7 @@ However, this limitation of power is not an issue for the complementary populati
 
 Here we propose the first study to look for correlated allele shifts (thought to be associated with production traits) in lines from temporally (not spatially) different environments using a statistic in a recently described population genomics approach \cite{Berg:2014bs}: $Q_{x}$. 
 
-First, significant hits from a genome wide association study (GWAS)  can be summarized as the allelic effects $\alpha^{2}$ (or breeding values) that breeders can take advantage to get an estimate of $V_{A}$ for any trait of interest. $V_{A}$ can be estimated for one locus (left-side of equation below) or summarized across all loci $L$ in the genome (right-side equation below):
+First, significant hits from a genome wide association study (GWAS)  can be summarized as the allelic effects $\alpha^{2}$ (or breeding values) that breeders can take advantage to get an estimate of $V_{A}$ for any trait of interest. $V_{A}$ can be estimated for one locus or summarized across all loci $L$ in the genome (equation 3 below):
 
   \begin{align}
     V_A = 2pq\alpha^2
@@ -382,11 +381,14 @@ We will identify alleles useful for breeding using several approaches, first
 
 
 \subsection*{Aim 3: Field testing individual lines}
-\jri{explain we don't have feasibility of doing large scale testing, but this is meant as a proof-of-principle to ground-truth our strategy. }
 A mass grow out and genotyping of all inbred lines in the total pedigree would be ideal, but realistically, we do not have the resources (either in terms of time, space, or available germplasm) to do this.
-However, we can target specific lines that have many progeny (thus, many alleles), or germplasm from lines that have important phenotypic information associated with them.
-In order to empirically (\kc{right word?}) test the idea that inbred lines from the past express the predicted phenotypes from the $Q_{x}$ approach Dr. Randall Wisser and his student will grow out a subset of lines in the third year at the University of Delaware, and phenotype them.
-We have allocated enough money in our budget to grow out 50 good lines 
+However, we can target specific lines that have many progeny (thus, many alleles) or very few progeny (rare alleles in the pedigree), and germplasm from lines that have important phenotypic information associated with them (from release sheets). 
+
+In the latter part of the second year, Dr. Wisser and his student will grow out several hundred of these lines, obtain tissue for GBS, and potentially also verify the phenotypic information provided on the release sheet (if the information is available).
+
+In order to empirically (\kc{right word?}) test and ground-truth the idea that inbred lines from the past express the predicted phenotypes from the $Q_{x}$ and allele-dropping approaches Dr. Wisser and his student will grow out a subset of lines in the third year at the University of Delaware, and phenotype them.
+The subset of lines here will be based on those lines that show overdispersion for production and production associated traits from the $Q_{x}$ approach described above, and ``fit'' and ``unfit'' lines from the allele-dropping method.
+We have allocated resources to grow out 50 of the predicted ``fit'' and 50 ``unfit'' lines, with 2 rows of 10 each, phenotype the middle 5 of each row. 
 
 %\jri{year 2 plot we grow up stuff that we want phenotypes and genotypes for}
 
@@ -394,6 +396,7 @@ We have allocated enough money in our budget to grow out 50 good lines
 
 \subsubsection*{Expected outcomes and potential pitfalls: Aim 3}
 %\jri{year 2 fills in important gaps in pedigree data and genotyping. year 3 tests our predictions. explain it will not be comprehensive, but should give an idea of how well things work, as well as an idea of the agronomics of the old lines -- if even the "best" old lines have terrible agronomics, we'll know our whole idea is probably not great.
+This final aim of the project fills in incomplete genotype and phenotype information for lines in the pedigree.
 
 
 
