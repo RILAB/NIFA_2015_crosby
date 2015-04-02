@@ -186,68 +186,58 @@ Finally, considerable information is available about many old breeding lines eve
  %previous efforts like our popgen only looked at allele frequency. this is problematic because of structure etc.
  %pedigree analysis allows improved popgen and other benefits (discuss)}
  
+\subsubsection*{Advantage of pedigree approaches}
+\textcolor{blue}{Most release sheets and information in NPGS on modern inbreds contain not only parentage information, but a wealth of important phenotypic information and the selective regime used in propagating a given line (e.g. Figure \ref{fig:words}). 
 
-\subsection*{Pedigree-based approaches to identifying useful maize germplasm}
-
-\subsubsection*{Advantage of pedigree vs. disadvantages of other approaches}
-Most release sheets and information in NPGS on modern inbreds contain not only parentage information, but a wealth of important phenotypic information and the selective regime used in propagating a given line. 
-As an example, a regular expression ``grep", case-insensitive search for counts of character strings of terms that might typically be associated with selection regimes  (Figure \ref{fig:words}), such as ``resistance'', ``tolerance'', ``blight'', ``drought'', ``disease'', etc - reveal that indeed, many lines with ancestry information were targeted by breeder's for different phenotypes. 
-If 
-Broadly, most inbred lines have been selected for ``combining ability'' across the pedigree, but other programs are more targeted in their choice of selective regime: blight resistance, maize mosaic virus, drought resistance, etc. 
-
-
-
-Using expectations of relatedness coefficients between \textbf{known} close relatives (inbred parents-inbred progeny) we can compare to observations of genomic sharing, where significant deviations from expected relatedness coefficients would tend to indicate selection. 
+Using expectations of relatedness coefficients between known close relatives (inbred parents-inbred progeny) we can compare to observations of genomic sharing, where significant deviations from expected relatedness coefficients would tend to indicate selection. 
 Across the entire pedigree, we expect that certain alleles will go to fixation due to breeder's selection as they are beneficial for ``combining ability''. 
 But, within smaller breeding programs (and pedigrees) under a specific selective regime we will observe only 
 
-
-
+\textcolor{blue}{
 \begin{itemize}
 \item observed vs. expected allow us to look allele specific ``hard'' breeder sweeps across the pedigree for combining ability
 \item but phenotypic information of each program contained in release sheets may also allow us to look at selective regimes within programs (while selection is relaxed in others).
 \item If alleles exist in other programs along with the specific diversity of that program, we can target those.
-\end{itemize}
+\end{itemize}}
 
+\subsubsection*{The missing data challenge}
 
+Unfortunately, much of the pedigree information on older founder inbred maize lines sits in old volumes of Crop Science or the Agronomy Journal, experimental station technical bulletins, regional corn breeding meeting records, release sheets, or breeding books --- unaviable and vulnerable to loss.  
+The National Plant Germplasm Service (NPGS) database records ancestry information, but at least 25\% of the accessions in the database have zero ancestry data, and another \textcolor{red}{XXX} have incomplete data. 
+While private companies likely have their own pedigree databases, these data are private, patented, and not available to the public. 
+\textbf{We will gather pedigree data from public sources (minutes of breeding committees, breeding program books, and other hard-copy-only sources) in order to preserve this historical information and combine it with genotyping data to accelerate future public and private (see letter of support from Dupont Pioneer) maize breeding programs.}
 
-\subsubsection*{Preliminary work: pedigree records to date}
-To date, we (Drs. Smith and Crosby) have gathered parentage info for over 3193 lines and originally built a large pedigree of some 700 lines (Figure \ref{fig:b73isbig}is but a small portion of this pedigree) with complete parentage information that overlaps with currently available GBS maize 2.7 data \citep{Glaubitz:2014eu}. 
-Currently, we have a total of 1696 unique (1900 duplicate) records overlapping with GBS data, which is stored in a rudimentary SQL database. 
-These records can be queried based on unique identifiers from the USDA (PI numbering system) or based on its ``classic inbred line name'' that most breeders recognize.
+\subsection*{Preliminary work}
+To date, we have gathered parentage info for over 3193 lines from a variety of sources, including \cite{gerdes1993compilation}, the NPGS, patent variety protection records, inbred release publications, and communication with breeders.
+We have standardized names across these datasets and stored these data in a SQL database, which can be queried by common name (e.g. ``B73'') as well as unique NPGS identifiers (``PI 550473'' for B73).
+We have combined these data with genome-wide genotyping-by-sequencing (GBS) data \citep{romay2013comprehensive}, and built a large pedigree of $\approx$700 lines (Figure \ref{fig:b73isbig}) with complete parentage and genotype information. GBS data allows us to validate recorded pedigrees, identifying parental combinations that are impossible given the genotyping data (Figure \ref{fig:notthemomma}).
 
-
-\subsubsection*{Preliminary work: allele dropping works? GBS pruning?}
-
-
-\begin{figure}[ht]
+\begin{figure}
 \includegraphics[width=1.0\linewidth]{pedigree_poster.pdf}
-\caption{Reconstructed pedigree data for the inbred line B73 that features heavily in modern germplasm.}
+\caption{A small portion of our current pedigree, showing data for the inbred line B73.}
 \label{fig:b73isbig}
 \end{figure}
 
-\subsubsection*{Preserving valuable information vulnerable to loss \kc{where to put this?}.}
-Much of the pedigree information on older founder inbred maize lines sits in old volumes of Crop Science or the Agronomy Journal, experimental station technical bulletins, regional corn breeding meeting records, release sheets, or breeding books, unused and vulnerable to loss.  
-The National Plant Germplasm Service (NPGS) database contains information with regards to ancestry of public maize inbred lines, but this information may be incomplete or missing (see section above). 
-However, much of this ancestry information on modern maize lines  is still publicly available, only not in digital form, nor is it easily-accessible. 
-While private companies likely have their own pedigree databases to do exactly this, these data are private, patented, and not available to the public. 
-This historical pedigree information exists in old volumes and minutes of breeding committees, old breeding program books, and other hard-copy-only sources. Here, we propose a project that will help preserve, maintain, and use this historical information with novel genomic data to better benefit future public and private (see letter of support from Dupont Pioneer) maize breeding programs.
+\begin{SCfigure}
+\includegraphics[width=0.6\linewidth]{weighted.png}
+\caption{Pedigree of putative first-generation descendants of inbred B73. Blue arrows are weighted by the relatedness estimated from identy-by-state using GBS, clearly showing multiple errors in the putative pedigree.}
+\label{fig:notthemomma}
+\end{SCfigure}
 
 \section*{Approach}
 \label{sec:approach}
-Our proposed research has three major aims in using pedigree information to detect historic shifts in allele frequencies of modern inbred maize lines.
+Our proposed research has three major aims in identifying and utilizing diversity to aceclerate maize breeding.
 
 \begin{itemize}
 \item Aim 1: Digitize and curate pedigree and genotype information into a publicly available database. 
 \item Aim 2: Identify useful diversity using a combination of pedigree and population genetic approaches.
-\item Aim 3: Phenotypic and genotypic evaluation of individuals lines that feature heavily in the historical pedigree.
+\item Aim 3: Field test individuals lines that feature heavily in the historical pedigree.
 \end{itemize}
 
 \subsection*{Aim 1: Public pedigree curation}
-Our first aim is  stop the potential loss of hard copy pedigree data by gathering it from land grant institutions that previously hosted breeding research programs of maize inbred lines. 
-We have good reason to believe this information that could help complete the public pedigree is likely archived in their libraries . 
-The land grant schools of importance were identified by two maize breeding experts named on this grant: Dr. William Tracy and Dr. Oscar ``Howie'' Smith who have between them +70 years of breeding experience in maize. 
-Dr. Tracy was a co-author on the leading pedigree book on maize lines \cite{gerdes1993compilation} and Dr. Smith spent 7 years as maize breeder for the USDA, and then a further 20+ years working as a maize breeder for Dupont Pioneer.
+Our first aim is stop the potential loss of hard copy pedigree data by gathering it from land grant institutions that previously hosted breeding research programs of maize inbred lines. 
+Land grant schools of primary importance were identified by Co-PI Dr. William Tracy and Co-Investigator Dr. Oscar ``Howie'' Smith, who have between them have more than 70 years of breeding experience in maize. 
+Dr. Tracy was senior author on the leading pedigree book of maize lines \cite{gerdes1993compilation} and Dr. Smith spent 7 years working as maize breeder for the USDA (including working on the Iowa RRS population), followe by more than 20 years as a maize geneticist for Dupont Pioneer.
 
 The land grant schools they have identified include: the University of Wisconsin, Virginia Tech, the University of Georgia, the University of Florida, Pennsylvania State University, the University of Nebraska, North Carolina State University, the USDA station at the University of Missouri. 
 Dr. Tracy (based at the University of Wisconsin) and Dr. Holland's student (based at North Carolina State) will largely be responsible for visiting these schools in the first year to obtain and digitally scan this information with portable digital scanners. 
@@ -272,7 +262,6 @@ Breeders and researchers will be able to query information on lines across many 
 For instance, if a breeder wants to establish an inbred line that is both drought and blight resistant, they could query information on lines that are drought resistant and lines that are blight resistant, plus query how other alleles in a chosen line might be associated with other traits of interest. They could then decide on crosses and breeding designs in the field, and update information (should they choose) on maize GDB following actual growouts.
 \kc{include this or ditch? Additionally, Dr. Kate Crosby is currently investigating the possibility of using no-SQL database without formal schemas specified \textit{a priori} (graph databases) to be able handle queries with respect to mapped genomic data, extended ancestry, and phenotypic data, along with new visualization tools \citep{ParejaTobes:2015bf}.}
 Ensuring data, code, and script are open-access or open-source (freely available to the public) is important for critique, debate, and dialogue in science. Dr. Ross-Ibarra has a long track record of ensuring openness with his science, data, and code. Throughout this project, both Dr. Ross-Ibarra and Dr. Crosby will endeavour to ensure that code and data are available via repositories such as github, figshare, maize GDB, and iPlant.
-
 
 
 \subsubsection*{Potential pitfalls \& limitations (Aim 1)}
@@ -323,7 +312,7 @@ However, there are two potential limitations with the allele-dropping approach. 
 But, allele dropping may not have the statistical power to detect a more diffuse polygenic signal of adaptation spread across many alleles in a genome (similar the drawbacks of using traditional QTL mapping and $F_{ST}$ scans) \cite{Rockman:2011ej, Berg:2014bs}. 
 However, this limitation of power is not an issue for the complementary population genetic approach we plan on using: the $Q_{x}$ method described in \cite{Berg:2014bs} (see next section). 
 
-\subsubsection*{Predictive phenotyping ($Q_{x}$)}
+\subsubsection*{Predictive phenotyping ($Q_{x}$)}954
 \jri{here we show that if individual lines predictive phenotype is better than expected given pedigree/genomic background, then it's likely a good choice for breeding! }
 
 Here we propose the first study to look for correlated allele shifts (thought to be associated with production traits) in lines from temporally different environments using a statistic in a recently described population genomics approach \cite{Berg:2014bs}: $Q_{x}$. 
