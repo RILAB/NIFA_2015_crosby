@@ -35,7 +35,6 @@ Maize is also the most valuable field crop in the United States, with production
 
 But while maize yields have increased over the last several decades, the rate of gain falls short of projected needs in the near future \citep{grassini2013distinguishing}.
 Even under stable climatic conditions, current rates of maize improvement are insufficient to meet requirements of population growth over the next 30 years \citep{ray2013yield}; in  addition to requirements in terms of food and animal feed, worldwide ethanol use is projected to increase 40\% within just the next decade \citep{usdalong}.
-%could be convinced to drop the ethanol comment
 
 Changing climatic conditions, however, will likely further challenge our ability to meet needed yield gains. 
 Historical analyses suggests that climate change over the last 30 years has already dramatically impacted maize yields worldwide, retarding gains from breeding and management \citep{Lobell2011}.
@@ -59,7 +58,6 @@ showing that adaptation --- the response to selection $R$ --- depends not only o
 The advent of modern hybrid maize breeding, the development of distinct breeding pools and the winnowing of inbreds from individual breeding programs has led to a marked decrease in genetic diversity. 
 Analyzing genotypes of more than 4000 public and recently released private lines, we recently showed that the diversity available to maize breeders in current germplasm is less than half what it was in before 1950 (Figure \ref{fig:diversity}). 
 With decreasing diversity available for breeding decreasing yield gains are a mathematical certainty. 
-%over the top?
 
 \begin{SCfigure}
 \includegraphics[width=0.5\linewidth]{joost_diversity.png}
@@ -96,14 +94,10 @@ Instead, historical pedigree information exists primarily in the minutes of bree
 
 \textbf{We propose to generate an open-source database of public maize pedigrees and use this resource to identify genotypic and phenotypic diversity of high utility in advancing maize breeding.}
 Given the importance of maize to U.S. agriculture, this proposal clearly aligns with the USDA AFRI program priorities of ``Plant Breeding for Agricultural Production,'' particularly the ``development and application of tools to predict phenotype from genotype to accelerate breeding of finished varieties''.   
-%JRI: Do we include this second quote?  Too long?  Too obvious?  Do we not meet it well enough?
 Our proposal will develop tools to accelerate breeding by allowing breeders to more quickly identify useful inbreds, and our application of population and quantitative genetic methods will identify specific genetic and phenotypic diversity of potential use for future breeding.  
 
 \section*{Introduction}
 \label{sec:introduction}
-
-%a. Introduction
-%Include a clear statement of the long-term goal(s) and supporting objectives of the proposed project. Summarize the body of knowledge or past activities that substantiate the need for the proposed project. Describe ongoing or recently completed activities significant to the proposed project including the work of key project personnel.
 
 \subsection*{Maize breeding}
 Maize has undergone dramatic phenotypic and genetic changes since its domestication and subsequent spread across the Americas \citep{daFonseca:2015ey,Doebley:2004ce}. More recently, beginning in the mid-20$^{th}$ century, the intensification of maize breeding efforts has lead to subtler but equally important changes including increasing yields and improved agronomic traits such as leaf angle and density tolerance \citep{duvick2005contribution}. 
@@ -138,17 +132,21 @@ E[V_a] = 4N_e {\sigma}_m^2
 \label{eq:whitlock}
 \end{align}
 
-A reduction in $N_e$ thus inherently leads to a reduced response to  selection, leading to diminishing returns on yield unless new diversity is brought back into breeding pools.
+A reduction in $N_e$ thus inherently leads to a reduced response to selection, leading to diminishing returns on yield unless new diversity is brought back into breeding pools.
 Evidence from the Iowa Reciprocal Recurrent Selection breeding program suggests these concerns are valid (Figure \ref{fig:trends}), as yield gains plateau over time \citep{rouse2003selection} concomitant with continued declines in genetic diversity \citep{Gerke:2013tw}.
 Decreasing $N_e$ (Figure \ref{fig:diversity}) in U.S. cornbelt germplasm risks our ability to maintain or increase rates of genetic gain in yield.
 
-%\begin{figure}[ht]
-%\includegraphics[width=\linewidth]{joostgerke.png}
-%\caption{Changes in diversity and population structure during maize breeding.  
-%A) Principal component analysis of genotypes from the Iowa Reciprocal Recurrent Selection population. The first eignevector represents divergence between the two heterotic pools, and the second divergence over time within each pool. Figure from \citet{Gerke:2013tw}. 
-%B) Population structure --- quantified by the differentiation statistic C --- over time across all U.S. public inbreds. Eras represent time periods in Fig. \ref{fig:diversity}; figure is from \citep{van2012historical} } 
-%\label{fig:pca}
-%\end{figure}
+\subsubsection*{Identifying useful diversity}
+As any breeder will attest, old lines have fallen out of use precisely because they showed inferior agronomic performance under a particular selective regime (usually combining ability).
+There are a number of reasons, however, why older lines may retain useful genetic diversity.
+Lines are often discarded or selected against because of poor performance for a particular trait, but this does not preclude that line's utility in breeding for other traits.
+Because of this, beneficial alleles for many traits of interest may remain in older germplasm, not having been advanced during breeding (Figure \ref{fig:div}).
+For example, thanks to its combining ability, the U.S. inbred B73 quickly spread in popularity and now makes up a considerable portion of modern breeding material \citep{van2012historical}. 
+Yet when evaluated for drought and heat stress, B73 significantly underperformed compared to less well-utilized lines such as B76 \citep{chen2012characterization}.
+Analysis of a suite of diseases also finds that many less well-utilized public inbreds show greater resistance than popular lines \citep{wisser2011multivariate}. 
+
+Most breeding programs consist of relatively small population sizes, and in these cases genetic drift can substantially impact the fate of even beneficial alleles \citep[e.g.][]{Gerke:2013tw}.
+The contribution of older lines to modern germplasm thus does not necessarily reflect their genetic potential: our population genetic analysis of maize ancestry, for example, found lines with more beneficial (as defined by a steady increase in allele frequency over time) alleles than expected given their contribution to modern germplasm (Figure \ref{fig:wf9}).
 
 \subsection*{A novel pedigree-based approach to incorporate new diversity}
 
@@ -156,18 +154,6 @@ Incorporating novel diversity into contemporary modern maize lines is clearly an
 While there are other public efforts to achieve this goal, like the GEM  (Germplasm Enhancement of Maize) program \citep{pollak2003history}, these  focus on incorporating exotic germplasm (e.g. CIMMYT lines, tropical hybrids, etc.) into U.S. materials by backcrossing to well-adapted U.S. cornbelt backgrounds.
 While this approach is successful at bringing in new diversity, it requires time-consuming back-crossing before it can generate lines that are of sufficient quality to incorporate into a breeding program.
 
-%rjw: this will raise the question --  how the proposed approach will accomplish the desired end result differently, since in the end mining for lost alleles will still require breeding which itself is being presented as the bottleneck here.
-
-%\begin{wrapfigure}{R}{0.5\textwidth}
-%\begin{minipage}[t]{0.5\textwidth}
-%\begin{SCfigure}
-%\includegraphics[width=0.5\textwidth]{BSSS.png}
-% 
-%
-%\end{SCfigure}
-%\end{minipage}
-%\end{wrapfigure}
-%\begin{wrapfigure}[30]{R}{0.5\textwidth}
 \begin{SCfigure}
     \includegraphics[width=0.4\textwidth]{BSSS.png}
   \caption{Yield and genetic diversity in the Iowa Recriprocal Recurrent Selection Program across 16 cycles of selection. (Top) Grain yield at three planting densities; data are from \citet{rouse2003selection}. (Bottom) Genetic diversity of the BSSS and BSCB1 breeding pools separately and combined; data are from \citet{Gerke:2013tw}.}
@@ -179,30 +165,6 @@ While this approach shares with projects like GEM the disadvantage that diverse 
 First, in contrast to exotic germplasm, older U.S. germplasm is already reasonably well-adapted to the daylength and climate of the U.S., meaning it can be immediately incorporated into breeding programs without first requiring extensive back-crossing.
 Second, with sufficient information (see below), breeders may be able to learn a substantial amount about the potential utility of a line by predicting phenotype directly or understanding its relationship to known material. 
 Finally, considerable information is available about many old breeding lines even without prediction (Figure \ref{fig:words})
-
-
-\subsubsection*{Identifying useful diversity}
-As any breeder will attest, old lines have fallen out of use precisely because they showed inferior agronomic performance under a particular selective regime (usually combining ability).
-There are a number of reasons, however, why older lines may retain useful genetic diversity.
-Lines are often discarded or selected against because of poor performance for a particular trait, but this does not preclude that line's utility in breeding for other traits.
-For example, thanks to its combining ability, the U.S. inbred B73 quickly spread in popularity and now makes up a considerable portion of modern breeding material \citep{van2012historical}. 
-Yet when evaluated for drought and heat stress, B73 significantly underperformed compared to less well-utilized lines such as B76 \citep{chen2012characterization}, and many older public inbreds show greater resistance to a suite of important diseases \citep{wisser2011multivariate}. 
-Because of this, beneficial alleles for many traits of interest may remain in older germplasm, not having been advanced during breeding (Figure \ref{fig:div}).
-
-Most breeding programs consist of relatively small population sizes, and in these cases genetic drift can substantially impact the fate of even beneficial alleles \citep[e.g.][]{Gerke:2013tw}.
-The contribution of older lines to modern germplasm thus does not necessarily reflect their genetic potential: our population genetic analysis of maize ancestry, for example, found lines with more beneficial (as defined by a steady increase in allele frequency over time) alleles than expected given their contribution to modern germplasm (Figure \ref{fig:wf9}).
-
- %previous efforts like our popgen only looked at allele frequency. this is problematic because of structure etc.
- %pedigree analysis allows improved popgen and other benefits (discuss)}
- 
-
-\subsection*{Pedigree-based approaches to identifying useful maize germplasm}
-
-\subsubsection*{Advantage of pedigree vs. disadvantages of other approaches}
-Most release sheets and information in NPGS on modern inbreds contain not only parentage information, but a wealth of important phenotypic information and the selective regime used in propagating a given line. 
-As an example, a regular expression ``grep", case-insensitive search for counts of character strings of terms that might typically be associated with selection regimes  (Figure \ref{fig:words}), such as ``resistance'', ``tolerance'', ``blight'', ``drought'', ``disease'', etc - reveal that indeed, many lines with ancestry information were targeted by breeder's for different phenotypes. 
-If 
-Broadly, most inbred lines have been selected for ``combining ability'' across the pedigree, but other programs are more targeted in their choice of selective regime: blight resistance, maize mosaic virus, drought resistance, etc. 
 
 \begin{figure}[t]
         \begin{subfigure}[b]{0.5\textwidth}
@@ -217,8 +179,23 @@ Broadly, most inbred lines have been selected for ``combining ability'' across t
                 \caption{}
                 \label{fig:div}
         \end{subfigure}
-\caption{\textbf{a)} Counts of a small set of germplasm descriptors from the USDA database for which we currently have genomic and ancestral data. \textbf{b)} Expected segregation of alleles at loci for two traits in different breeding programs.  Selective regime for combining ability across two example breeding programs and loci. Fitness (w) of each allele indicated, with selection coefficient (1-\textit{s}) for the allele being selected against in a given regime. Locus 2, though beneficial under drought conditions, risks loss due to drift in breeding programs focusing only on combining ability. }
+\caption{a) Counts of a small set of germplasm descriptors from the USDA database for which we currently have genomic and ancestral data. b) Expected segregation of alleles at loci for two traits in different breeding programs.  Selective regime for combining ability across two example breeding programs and loci. Fitness (w) of each allele indicated, with selection coefficient (1-\textit{s}) for the allele being selected against in a given regime. Locus 2, though beneficial under drought conditions, risks loss due to drift in breeding programs focusing only on combining ability.}
 \end{figure}
+
+
+ %previous efforts like our popgen only looked at allele frequency. this is problematic because of structure etc.
+ %pedigree analysis allows improved popgen and other benefits (discuss)}
+ 
+
+\subsection*{Pedigree-based approaches to identifying useful maize germplasm}
+
+\subsubsection*{Advantage of pedigree vs. disadvantages of other approaches}
+Most release sheets and information in NPGS on modern inbreds contain not only parentage information, but a wealth of important phenotypic information and the selective regime used in propagating a given line. 
+As an example, a regular expression ``grep", case-insensitive search for counts of character strings of terms that might typically be associated with selection regimes  (Figure \ref{fig:words}), such as ``resistance'', ``tolerance'', ``blight'', ``drought'', ``disease'', etc - reveal that indeed, many lines with ancestry information were targeted by breeder's for different phenotypes. 
+If 
+Broadly, most inbred lines have been selected for ``combining ability'' across the pedigree, but other programs are more targeted in their choice of selective regime: blight resistance, maize mosaic virus, drought resistance, etc. 
+
+
 
 Using expectations of relatedness coefficients between \textbf{known} close relatives (inbred parents-inbred progeny) we can compare to observations of genomic sharing, where significant deviations from expected relatedness coefficients would tend to indicate selection. 
 Across the entire pedigree, we expect that certain alleles will go to fixation due to breeder's selection as they are beneficial for ``combining ability''. 
