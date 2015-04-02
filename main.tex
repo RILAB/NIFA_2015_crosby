@@ -184,22 +184,22 @@ Finally, considerable information is available about many old breeding lines eve
 \caption{a) Counts of a small set of germplasm descriptors from the USDA database for which we currently have genomic and ancestral data. b) Expected segregation of alleles at loci for two traits in different breeding programs.  Selective regime for combining ability across two example breeding programs and loci. Fitness (w) of each allele indicated, with selection coefficient (1-\textit{s}) for the allele being selected against in a given regime. Locus 2, though beneficial under drought conditions, risks loss due to drift in breeding programs focusing only on combining ability.}
 \end{figure}
  
-\subsubsection*{Advantage of pedigree approaches}
-\textcolor{red}{$XXXX--->$}
-Most release sheets and information in NPGS on modern inbreds contain not only parentage information, but a wealth of important phenotypic information and the selective regime used in propagating a given line (e.g. Figure \ref{fig:words}). 
+\subsubsection*{Advantages of pedigree approaches}
 
-Using expectations of relatedness coefficients between known close relatives (inbred parents-inbred progeny) we can compare to observations of genomic sharing, where significant deviations from expected relatedness coefficients would tend to indicate selection. 
-Across the entire pedigree, we expect that certain alleles will go to fixation due to breeder's selection as they are beneficial for ``combining ability''. 
-But, within smaller breeding programs (and pedigrees) under a specific selective regime we will observe only 
-
-CITE ZAMIR somewhere: zamir2013have
+Pedigree-based analysis offers a number of advantages for identifying useful diversity in older germplasm.
+First, most pedigree data contain not only parentage information, but a wealth of important phenotypic data and information about the breeding program inbreds were utilized in (e.g. Figure \ref{fig:words}). 
+Pedigree approaches also allow the identification of beneficial allelic diversity (e.g. Figure \ref{fig:div}, see Aim 2).
+While population genetic approaches can achieve this latter goal to some extent \citep[e.g.][]{van2012historical}, they have so far failed to identify many large-effect loci, though patterns of diversity within individual breeding programs suggest such loci are likely to exist \citep{Gerke:2013tw}.
+Pedigree approaches can identify strong selection within individual breeding programs (see Aim 2) without needing to average across many different programs.  
+Pedigree approaches can also naturally deal with population structure, because expected relatedness is built into the pedigree itself.
+Finally, pedigrees allow prediction of phenotype even in the absence of genotype \citep{piepho2008blup}.  
+While this is never a substitute for growing lines in the relevant environment for comparative purposes (see Aim 3), it doe save considerable time and expense and provides breeders an initial estimate of which germplasm could be most useful.
 
 \begin{itemize}
 \item observed vs. expected allow us to look allele specific ``hard'' breeder sweeps across the pedigree for combining ability
 \item but phenotypic information of each program contained in release sheets may also allow us to look at selective regimes within programs (while selection is relaxed in others).
 \item If alleles exist in other programs along with the specific diversity of that program, we can target those.
 \end{itemize}
-\textcolor{red}{$<---XXXX$}
 
 \subsubsection*{The missing data challenge}
 
@@ -265,28 +265,20 @@ We will update the database as new information arises, and provide functionality
 
 \subsubsection*{Expected outcomes (Aim 1)}
 Our main deliverable from Aim 1 is an \textbf{open public pedigree database to be hosted on MaizeGDB (http://www.maizegdb.org/) for the long term future.} 
+In addition to providing information on pedigree, this database will house both genotype and substantial phenotype information, a combination of critical importance for continued plant breeding efforts \citep{zamir2013have}.
 Users will be able to contribute and revise incomplete information, with the goal of establishing a nearly complete public pedigree of maize inbred lines.   
-For instance, a breeder could query the database for lines with descriptors suggesting drought and blight resistance, identify the genotype of such lines at loci thought to be associated with the trait of interest from GWAS or other studies, and use the database to predict phenotype for related material with no descriptive data.
+
+Eample usage might include a breeder querying the database for lines with descriptors suggesting drought and blight resistance, identifying the genotype of such lines at loci thought to be associated these traits from GWAS or other studies, and use the database to predict phenotype for related material with no descriptive data.
 
 Ensuring data, code, and script are open-access or open-source (freely available to the public) is important for critique, debate, and dialogue in science. 
-Drs. Ross-Ibarra and Crosby have a long track record of ensuring openness in science, data, and code. Throughout this project, both Dr. Ross-Ibarra and Dr. Crosby will endeavour to ensure that code and data are available via permanent, publicly accessible repositories such as github, figshare, maizeGDB, and iPlant.
+Drs. Ross-Ibarra and Crosby have a long track record of ensuring openness in science, data, and code. Throughout this project, both Dr. Ross-Ibarra and Dr. Crosby will endeavor to ensure that code and data are available via permanent, publicly accessible repositories such as github, figshare, maizeGDB, and iPlant.
 
 \subsubsection*{Potential pitfalls \& limitations (Aim 1)}
-\textcolor{red}{While we are very optimistic about the prospect of obtaining accurate pedigree information from these various institutions the nature of corn-breeding and record keeping of corn-breeding can be nebulous. 
-Ideally, we would be able to accurately count the number of meioses in the total pedigree, in each breeding program, down to each line; thus, retracing the complete ancestry of a given contemporary inbred. }
-
-
-%JRI: DITCH THIS
-%However, in many cases, it may not have been noted at which point in a breeding program a line was bulked at, nor on occasion which lines were used in recycling an inbred when seed was exhausted. 
-
-%For instance, a record from NPGS may indicate that a line was bulked and stored after being selfed to generation 6, or it may have been bulked and stored following selfing at generation 4. As a ballpark figure, a ``selfed generation 6 inbred'' means that germplasm from that line is 99\% homozygous at all locus pairs. 
-%Meaning that if this inbred is selfed further, not much changes with respect to levels of homozygosity nor heterozygosity (as recombination via selfing is ineffective beyond this point).  
-%Thus, so long as an inbred is at or beyond cycle 6, it will be kept, but inbreds before this period shall be discarded.
-
-%To ensure that historical records of inbred lines are isolated following the sixth generation of selfing and beyond we will investigate the level of heterozygosity in each of these lines with GBS data relative to the total amount of missing data in an individual line. 
-%Within reasonable confidence limits most lines should show a very small portion of heterozygous loci even with GBS markers (known to have a high rate of error in the under-calling heterozygous). 
-
-Historical pedigree records and other information on old lines may be available, but the germplasm from these old lines may no longer be available. 
+While we are optimistic about the prospect of obtaining accurate pedigree information from these various institutions, we recognize that many records will be incomplete. 
+In practice, while knowing the exact number of meioses between lines would be desirable, we expect we will recover only parentage information from a large number of lines. 
+Parentage alone is sufficient for allele-dropping and prediction (see Aim 2), but not knowing the number of meioses makes it difficult to know the uncertainty associated with prediction or use pedigree data to understand recombination.
+ 
+A second challenge is that while pedigree records and other information on old lines may be available, the germplasm from these old lines may no longer be available. 
 Approximately 12.9\% of germplasm from NPGS for which we have parentage information is no longer available, and we expect similar or higher levels from less accessible sources. 
 We note, however, that such lines remain useful in connecting available lines together in the pedigree, and pedigree alone can be used to predict phenotype. 
 If we identify historically important germplasm that is no longer available, we will identify and genotype the nearest relatives for which seed are available. 
