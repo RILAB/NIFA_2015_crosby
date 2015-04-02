@@ -181,7 +181,7 @@ Finally, considerable information is available about many old breeding lines eve
                 \caption{}
                 \label{fig:div}
         \end{subfigure}
-\caption{a) Counts of a small set of germplasm descriptors from the USDA database for which we currently have genomic and ancestral data. b) Expected segregation of alleles at loci for two traits in different breeding programs.  Selective regime for combining ability across two example breeding programs and loci. Fitness (w) of each allele indicated, with selection coefficient (1-\textit{s}) for the allele being selected against in a given regime. Locus 2, though beneficial under drought conditions, risks loss due to drift in breeding programs focusing only on combining ability.}
+\caption{a) Counts of a small set of germplasm descriptors from the USDA database for which we currently have genomic and ancestral data. b) Expected segregation of alleles at loci for two traits in different breeding programs.  Selective regime for combining ability across two example breeding programs and loci. Fitness (w) of each allele indicated, with selection coefficient (1-\textit{s}) for the allele being selected against in a given regime. Locus 2, though beneficial under drought conditions, risks loss due to drift in breeding programs focusing only on combining ability. \kc{I think there's also the aspect that the alleles for drought are still preserved, because they are conditionally neutral in the combining program (breeder's selection is relaxed for drought - and yes, they can be lost to drift). These conditionally neutral alleles are preserved against a different genetic background. If we find lots of adaptive alleles in one environment, we might find them in another, but with a different background - introgressions can be planned in that way. I think of this more as local breeder's adaptation - when you cross lines from two or more populations/programs, you'll likely get a bunch of crap hybrids, but you may also get transgressive segregation of all beneficial alleles (subject to some stats - Pioneer can do crazy CTL things to avoid massive amounts of crosses) - this is exactly how heterotic groups work. But here, we're talking about creating lines from way more divergent crosses prior to losing these alleles to drift.}}
 \end{figure}
  
 \subsubsection*{Advantages of pedigree approaches}
@@ -314,11 +314,12 @@ However, there are two potential limitations with the allele-dropping approach. 
 But, allele dropping may not have the statistical power to detect a more diffuse polygenic signal of adaptation spread across many alleles in a genome (similar the drawbacks of using traditional QTL mapping and $F_{ST}$ scans) \cite{Rockman:2011ej, Berg:2014bs}. 
 However, this limitation of power is not an issue for the complementary population genetic approach we plan on using: the $Q_{x}$ method described in \cite{Berg:2014bs} (see next section). 
 
-\subsubsection*{Predictive phenotyping ($Q_{x}$)}954
+\subsubsection*{Predictive phenotyping ($Q_{x}$)}
 \jri{here we show that if individual lines predictive phenotype is better than expected given pedigree/genomic background, then it's likely a good choice for breeding! }
 
 Here we propose the first study to look for correlated allele shifts (thought to be associated with production traits) in lines from different time periods (environments) using a statistic in a recently described population genomics approach \cite{Berg:2014bs}: $Q_{x}$. 
-Briefly, the approach $Q_{x}$ takes SNP hits and their effect sizes from a GWAS analysis for observed phenotypic traits of interest in one environment, then projects the expected phenotypic (breeding) value based on the genotype of individuals in another environment (where the phenotype has not been observed). 
+Briefly, the approach $Q_{x}$ uses SNP hits and their effect sizes across the genome from a GWAS analysis that are associated with phenotypic traits of interest in one environment. 
+These hits are then projected to the expected phenotypic (breeding) value based on the genotype of individuals in another environment (where the phenotype has not been observed). 
 In the case of maize, we have contemporary lines from various mapping populations, their genotypes, and their phenotypes, e.g. the Nested Association Mapping population (NAM) \textcolor{red}{CITE NAM original ref}.   
 First, significant hits from a genome wide association study (GWAS)  can be summarized as the allelic effects $\alpha^{2}$ (or breeding values) that breeders can take advantage to get an estimate of $V_{A}$ for any trait of interest. $V_{A}$ can be estimated for one locus or summarized across all loci $L$ in the genome (equation 3 below):
 
@@ -347,15 +348,14 @@ However, we can target specific lines that have many progeny (thus, many alleles
 In the latter part of the second year, Dr. Wisser and his student will grow out several hundred of these lines, obtain tissue for GBS (for those with no genotypic information), and potentially also verify the phenotypic information provided on the release sheet (if the information is available). 
 
 In order to empirically (\kc{right word?}) test and ground-truth the idea that inbred lines from the past express the predicted phenotypes from the $Q_{x}$ approach Dr. Wisser and his student will grow out a subset of lines in the third year at the University of Delaware, and phenotype these.
-The subset of lines here will be based on those lines that show overdispersion for production and production associated traits from the $Q_{x}$ approach described above, and ``fit'' and ``unfit'' lines from the allele-dropping method. 
-We have allocated resources to grow out 50 of the predicted ``fit'' and 50 ``unfit'' lines, with 2 rows of 10 each, and the middle 5 of each row will be phenotyped. 
+The subset of lines here will be based on those lines that show overdispersion for production and production associated traits from the $Q_{x}$ approach described above, and predictably good agronomically performing lines from the allele-dropping method. 
+We have allocated resources to grow out 50 of the predicted to be productive lines and 50 of the predicted ``least'' productive lines, with 2 rows of 10 each, and the middle 5 of each row will be phenotyped. 
 We will include several contemporary ex patent-variety-protection (ex-PVP) lines to check the predictions given by $Q_{x}$.
 
 
 \subsubsection*{Expected outcomes and potential pitfalls: Aim 3}
-This final aim of the project fills in any incomplete genotype and phenotype information for important lines in the pedigree. If the ``best old'' lines show terrible agronomic performance, we will know the approach of integrating ``old'' diversity is an inefficient approach to adding diversity to the breeding pool for yield. 
-We expect that it will demonstrably provide evidence of breeder's selection through time on different lines.
-Perhaps, more importantly, it will allow us to evaluate the expected/predicted effects sizes (breeding values) of an identified SNP on the observed phenotype. 
+This final aim of the project fills in any incomplete genotype and phenotype information for important lines in the pedigree. 
+If the ``best old'' lines show terrible agronomic performance relative to current ex-PVP inbred varieties, we will know the approach of integrating ``old'' diversity is an inefficient approach to adding diversity to the breeding pool for yield. \kc{Slight comment - in fact, we won't really know until we do crosses - temporal ones, but we don't have the resources for this.}
 
 
 
