@@ -11,7 +11,8 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage[round]{natbib}
-\bibliographystyle{evolution}
+\bibliographystyle{abbrvnat}
+\setcitestyle{authoryear,open={(},close={)}}
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 \usepackage[innercaption]{sidecap} % side captions
 \sidecaptionvpos{figure}{c}
@@ -31,10 +32,10 @@
 \label{sec:rationale}
 
 Maize is a natural resource of fundamental national importance, vital for food, livestock feed, and fuel production.
-Maize is also the most valuable field crop in the United States, with production values at greater than \$50 billion dollars every year since 2010 \citep{usdanass}. 
+Maize is also the most valuable field crop in the United States, with production values at greater than \$50 billion dollars every year since 2010 \citep{Tho98w}. 
 
 But while maize yields have increased over the last several decades, the rate of gain falls short of projected needs in the near future \citep{grassini2013distinguishing}.
-Even under stable climatic conditions, current rates of maize improvement are insufficient to meet requirements of population growth over the next 30 years \citep{ray2013yield}; in  addition to requirements in terms of food and animal feed, worldwide ethanol use is projected to increase 40\% within just the next decade \citep{usdalong}.
+Even under stable climatic conditions, current rates of maize improvement are insufficient to meet requirements of population growth over the next 30 years \citep{ray2013yield}; in  addition to requirements in terms of food and animal feed, worldwide ethanol use is projected to increase 40\% within just the next decade \citep{wtf2015usda}.
 
 Changing climatic conditions, however, will likely further challenge our ability to meet needed yield gains. 
 Historical analyses suggests that climate change over the last 30 years has already dramatically impacted maize yields worldwide, retarding gains from breeding and management \citep{Lobell2011}.
@@ -60,7 +61,7 @@ Analyzing genotypes of more than 4000 public and recently released private lines
 With decreasing diversity available for breeding decreasing yield gains are a mathematical certainty. 
 
 \begin{SCfigure}
-\includegraphics[width=0.5\linewidth]{joost_diversity.png}
+\includegraphics[width=0.45\linewidth]{joost_diversity.png}
 \caption{Changes in genetic diversity (represented as the effective number of ancestors) of the three primary maize heterotic groups (SS: stiff-stalk; NSS: non-stiff-stalk; IDT: iodent). Inbreds are divided into eras representing different time periods: 1:1930-1950; 2:1950-1980; 3:1985-1992. Figure from \citet{van2012historical}.} 
 \label{fig:diversity}
 \end{SCfigure}
@@ -71,8 +72,8 @@ Breeders have clearly been successful in advancing high-yielding germplasm and d
 This does not mean, however, that all discarded material has little genetic merit --- beneficial alleles can be lost to genetic drift, particularly considering the polygenicity of agronomic traits and also because breeders are unable to select for all traits simultaneously. Our own population genetic analysis supports this notion; a number of underutilized older inbreds are enriched with favorable alleles (Figure \ref{fig:wf9}). 
 
 \begin{SCfigure}
-\includegraphics[width=0.5\linewidth]{joost_wf9.png}
-\caption{Enrichment (defined as the log probability ratio with respect to control loci) of favorable alleles in older (era 1) inbreds as a function of their average ancestral contribution to modern (era 3) lines. The gray dotted line the regression  with slope −0.1). Inbred names are shown for lines with log probability ratios higher than 4 or ancestry proportion above 0.03. Labels in boldface mark breeding lines of known historic popularity. Figure from \citet{van2012historical}.} 
+\includegraphics[width=0.55\linewidth]{joost_wf9.png}
+\caption{Enrichment (log probability ratio with respect to control loci) of favorable alleles in older (era 1) inbreds as a function of average ancestral contribution to modern (era 3) lines. The gray dotted line is a  regression with slope $-0.1$). Inbred names are shown for lines with ratios higher than 4 or ancestry proportion above 0.03. Labels in boldface mark breeding lines of known historic popularity. Figure from \citet{van2012historical}.} 
 \label{fig:wf9}
 \end{SCfigure}
 
@@ -118,11 +119,12 @@ But linear increases necessarily mean a decrease in relative gain, and projectio
 Of even greater concern is the possibility that the rate of gain may actually be decreasing (Figure \ref{fig:piecewise}).
 While some of these yield trends are undoubtedly related to changing management practices, much of the change is indeed due to breeding \citep{Duvick:2001fy}, and current rates of yield gain are lower than historical trends even after correcting for nitrogen fertilizer inputs (data not shown). 
 
-\begin{SCfigure}
-\includegraphics[width=0.6\linewidth]{yield.png}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{yield.png}
 \caption{Piecewise regressions of time against total yield through the four eras of modern maize breeding. Colors represent distinct eras of maize breeding that roughly correspond to the eras  referred to in Figure \ref{fig:diversity}.} 
 \label{fig:piecewise}
-\end{SCfigure}
+\end{figure}
 
 As selection progresses within a breeding program, inbred lines with poor performance are generally discarded, leading to a decreased effective population size ($N_e$) of the breeding pools.
 Response to selection is proportional to the additive genetic variance $V_A$ (equation \ref{eq:lush}), and $V_A$, in turn, depends on $N_e$ as well as the mutational variance per generation ${\sigma}_m^2$ \citep{whitlock1999neutral}:
@@ -136,7 +138,13 @@ A reduction in $N_e$ thus inherently leads to a reduced response to selection, l
 Evidence from the Iowa Reciprocal Recurrent Selection breeding program suggests these concerns are valid (Figure \ref{fig:trends}), as yield gains plateau over time \citep{rouse2003selection} concomitant with continued declines in genetic diversity \citep{Gerke:2013tw}.
 Decreasing $N_e$ (Figure \ref{fig:diversity}) in U.S. cornbelt germplasm risks our ability to maintain or increase rates of genetic gain in yield.
 
-\subsubsection*{Identifying useful diversity}
+\begin{SCfigure}
+    \includegraphics[width=0.45\textwidth]{BSSS.png}
+  \caption{Yield and genetic diversity in the Iowa Recriprocal Recurrent Selection Program across 16 cycles of selection. (Top) Grain yield at three planting densities; data are from \citet{rouse2003selection}. (Bottom) Genetic diversity of the BSSS and BSCB1 breeding pools separately and combined; data are from \citet{Gerke:2013tw}.}
+\label{fig:trends}
+\end{SCfigure}
+
+\subsubsection*{Useful diversity in old lines}
 As any breeder will attest, old lines have fallen out of use precisely because they showed inferior agronomic performance under a particular selective regime (usually combining ability).
 There are a number of reasons, however, why older lines may retain useful genetic diversity.
 Lines are often discarded or selected against because of poor performance for a particular trait, but this does not preclude that line's utility in breeding for other traits.
@@ -150,17 +158,11 @@ The contribution of older lines to modern germplasm thus does not necessarily re
 
 \subsection*{A novel pedigree-based approach to incorporate new diversity}
 
-Incorporating novel diversity into contemporary modern maize lines is clearly an important goal necessary to maintain and increase rates of yield gain.
-While there are other public efforts to achieve this goal, like the GEM  (Germplasm Enhancement of Maize) program \citep{pollak2003history}, these  focus on incorporating exotic germplasm (e.g. CIMMYT lines, tropical hybrids, etc.) into U.S. materials by backcrossing to well-adapted U.S. cornbelt backgrounds.
+Incorporating novel diversity into contemporary modern maize lines is clearly an important goal necessary to maintain or accelerate breeding and rates of yield gain.
+While there are other public efforts that aim to achieve this goal, like the GEM  (Germplasm Enhancement of Maize) program \citep{pollak2003history}, these  focus on incorporating exotic germplasm (e.g. CIMMYT lines, tropical hybrids, etc.) into U.S. materials by backcrossing to well-adapted U.S. cornbelt backgrounds.
 While this approach is successful at bringing in new diversity, it requires time-consuming back-crossing before it can generate lines that are of sufficient quality to incorporate into a breeding program.
 
-\begin{SCfigure}
-    \includegraphics[width=0.4\textwidth]{BSSS.png}
-  \caption{Yield and genetic diversity in the Iowa Recriprocal Recurrent Selection Program across 16 cycles of selection. (Top) Grain yield at three planting densities; data are from \citet{rouse2003selection}. (Bottom) Genetic diversity of the BSSS and BSCB1 breeding pools separately and combined; data are from \citet{Gerke:2013tw}.}
-\label{fig:trends}
-\end{SCfigure}
-
-\textbf{We propose a different approach, using pedigree and genetic data to identify underutilized cornbelt germplasm.}  
+\textbf{We propose a different approach, using pedigree data to identify underutilized cornbelt germplasm.}  
 While this approach shares with projects like GEM the disadvantage that diverse material is often  agronomically inferior, it has a number of advantages.  
 First, in contrast to exotic germplasm, older U.S. germplasm is already reasonably well-adapted to the daylength and climate of the U.S., meaning it can be immediately incorporated into breeding programs without first requiring extensive back-crossing.
 Second, with sufficient information (see below), breeders may be able to learn a substantial amount about the potential utility of a line by predicting phenotype directly or understanding its relationship to known material. 
@@ -181,24 +183,23 @@ Finally, considerable information is available about many old breeding lines eve
         \end{subfigure}
 \caption{a) Counts of a small set of germplasm descriptors from the USDA database for which we currently have genomic and ancestral data. b) Expected segregation of alleles at loci for two traits in different breeding programs.  Selective regime for combining ability across two example breeding programs and loci. Fitness (w) of each allele indicated, with selection coefficient (1-\textit{s}) for the allele being selected against in a given regime. Locus 2, though beneficial under drought conditions, risks loss due to drift in breeding programs focusing only on combining ability.}
 \end{figure}
-
-
- %previous efforts like our popgen only looked at allele frequency. this is problematic because of structure etc.
- %pedigree analysis allows improved popgen and other benefits (discuss)}
  
 \subsubsection*{Advantage of pedigree approaches}
-\textcolor{blue}{Most release sheets and information in NPGS on modern inbreds contain not only parentage information, but a wealth of important phenotypic information and the selective regime used in propagating a given line (e.g. Figure \ref{fig:words}). 
+\textcolor{red}{$XXXX--->$}
+Most release sheets and information in NPGS on modern inbreds contain not only parentage information, but a wealth of important phenotypic information and the selective regime used in propagating a given line (e.g. Figure \ref{fig:words}). 
 
 Using expectations of relatedness coefficients between known close relatives (inbred parents-inbred progeny) we can compare to observations of genomic sharing, where significant deviations from expected relatedness coefficients would tend to indicate selection. 
 Across the entire pedigree, we expect that certain alleles will go to fixation due to breeder's selection as they are beneficial for ``combining ability''. 
 But, within smaller breeding programs (and pedigrees) under a specific selective regime we will observe only 
 
-\textcolor{blue}{
+CITE ZAMIR somewhere: zamir2013have
+
 \begin{itemize}
 \item observed vs. expected allow us to look allele specific ``hard'' breeder sweeps across the pedigree for combining ability
 \item but phenotypic information of each program contained in release sheets may also allow us to look at selective regimes within programs (while selection is relaxed in others).
 \item If alleles exist in other programs along with the specific diversity of that program, we can target those.
-\end{itemize}}
+\end{itemize}
+\textcolor{red}{$<---XXXX$}
 
 \subsubsection*{The missing data challenge}
 
@@ -208,25 +209,19 @@ While private companies likely have their own pedigree databases, these data are
 \textbf{We will gather pedigree data from public sources (minutes of breeding committees, breeding program books, and other hard-copy-only sources) in order to preserve this historical information and combine it with genotyping data to accelerate future public and private (see letter of support from Dupont Pioneer) maize breeding programs.}
 
 \subsection*{Preliminary work}
-To date, we have gathered parentage info for over 3193 lines from a variety of sources, including \cite{gerdes1993compilation}, the NPGS, patent variety protection records, inbred release publications, and communication with breeders.
+To date, we (senior personnel Drs. Oscar Smith and Kate Crosby) have gathered parentage info for over 3193 lines from a variety of sources, including \cite{gerdes1993compilation}, the NPGS, patent variety protection records, inbred release publications, and communication with breeders.
 We have standardized names across these datasets and stored these data in a SQL database, which can be queried by common name (e.g. ``B73'') as well as unique NPGS identifiers (``PI 550473'' for B73).
-We have combined these data with genome-wide genotyping-by-sequencing (GBS) data \citep{romay2013comprehensive}, and built a large pedigree of $\approx$700 lines (Figure \ref{fig:b73isbig}) with complete parentage and genotype information. GBS data allows us to validate recorded pedigrees, identifying parental combinations that are impossible given the genotyping data (Figure \ref{fig:notthemomma}).
+We have combined these data with genome-wide genotyping-by-sequencing (GBS) data \citep{romay2013comprehensive}, and built a large pedigree of $\approx$700 lines (Figure \ref{fig:combo}a) with complete parentage and genotype information. GBS data allows us to validate recorded pedigrees, identifying parental combinations that are impossible given the genotyping data (Figure \ref{fig:combo}b).
 
 \begin{figure}
-\includegraphics[width=1.0\linewidth]{pedigree_poster.pdf}
-\caption{A small portion of our current pedigree, showing data for the inbred line B73.}
-\label{fig:b73isbig}
+\includegraphics[width=1\linewidth]{crosby_combo}
+\caption{A) A small portion of our current pedigree, showing partial data for inbred  B73. B) Pedigree of putative first-generation descendants of inbred B73. Blue arrows are weighted by the relatedness estimated from identy-by-state using GBS, clearly showing multiple errors in the putative pedigree.}
+\label{fig:combo}
 \end{figure}
-
-\begin{SCfigure}
-\includegraphics[width=0.6\linewidth]{weighted.png}
-\caption{Pedigree of putative first-generation descendants of inbred B73. Blue arrows are weighted by the relatedness estimated from identy-by-state using GBS, clearly showing multiple errors in the putative pedigree.}
-\label{fig:notthemomma}
-\end{SCfigure}
 
 \section*{Approach}
 \label{sec:approach}
-Our proposed research has three major aims in identifying and utilizing diversity to aceclerate maize breeding.
+Our proposed research has three major aims in identifying and utilizing diversity to accelerate maize breeding.
 
 \begin{itemize}
 \item Aim 1: Digitize and curate pedigree and genotype information into a publicly available database. 
@@ -236,50 +231,64 @@ Our proposed research has three major aims in identifying and utilizing diversit
 
 \subsection*{Aim 1: Public pedigree curation}
 Our first aim is stop the potential loss of hard copy pedigree data by gathering it from land grant institutions that previously hosted breeding research programs of maize inbred lines. 
-Land grant schools of primary importance were identified by Co-PI Dr. William Tracy and Co-Investigator Dr. Oscar ``Howie'' Smith, who have between them have more than 70 years of breeding experience in maize. 
-Dr. Tracy was senior author on the leading pedigree book of maize lines \cite{gerdes1993compilation} and Dr. Smith spent 7 years working as maize breeder for the USDA (including working on the Iowa RRS population), followe by more than 20 years as a maize geneticist for Dupont Pioneer.
+Land grant schools of primary importance were identified by Co-PI Dr. William Tracy and  Dr. Smith (senior personnel), who have between them have more than 70 years of breeding experience in maize. 
+Dr. Tracy was senior author on the leading pedigree book of maize lines \cite{gerdes1993compilation} and Dr. Smith spent 7 years working as maize breeder for the USDA (including working on the Iowa RRS population), follow by more than 20 years as a maize geneticist for Dupont Pioneer. The land grant schools they have identified include: the University of Wisconsin, Virginia Tech, the University of Georgia, the University of Florida, Pennsylvania State University, the University of Nebraska, North Carolina State University, and the USDA station at the University of Missouri. 
 
-The land grant schools they have identified include: the University of Wisconsin, Virginia Tech, the University of Georgia, the University of Florida, Pennsylvania State University, the University of Nebraska, North Carolina State University, the USDA station at the University of Missouri. 
-Dr. Tracy (based at the University of Wisconsin) and Dr. Holland's student (based at North Carolina State) will largely be responsible for visiting these schools in the first year to obtain and digitally scan this information with portable digital scanners. 
-Dr. Randall Wisser's student will be responsible for visiting two schools starting in the second year of the grant.
-Dr. Tracy will obtain information from the University of Wisconsin (host institution), the University of Florida, and the University of Nebraska. 
-Dr. Holland's student (in the first year) will be responsible for North Carolina State University (host institution), the University of Georgia, and finally, the USDA station at the University of Missouri. 
-Dr. Randall Wisser's student (to start in year two of the grant) will be responsible for the University of Pennsylvania and Virginia Tech.
+Co-PI Tracy and Co-PI Holland's student will largely be responsible for visiting these schools in the first year to obtain and digitally scan this information with portable digital scanners. 
+Co-PI Wisser's student will be responsible for visiting two schools starting in the second year of the grant.
+Co-PI  Tracy will obtain information from the University of Wisconsin (host institution), the University of Florida, and the University of Nebraska. 
+Co-PI Holland's student (in the first year) will be responsible for North Carolina State University (host institution), the University of Georgia.
+Dr. Sherry Flint-Garcia (senior personnel) has agreed to obtain and pass along records from the USDA station at the University of Missouri. 
+Co-PI Wisser's student (to start in year two of the grant) will be responsible for the University of Pennsylvania and Virginia Tech.
 Drs. Tracy and Smith have extensive contacts with faculty past and present at these schools, so obtaining the information and scanning it at each school traveled to should take no more than a few days. 
 
-Dr. Kate Crosby, Dr. Taner Sen (support letter from maize GDB enclosed), senior personnel Dr. Oscar Smith, and CO-PI Dr. Bill Tracy will consult on an agreed upon standard format with which to store the raw scan of pedigree records, the phenotypic and genomic information. 
-Establishing an agreed upon format in the first few months before the scans are obtained will enable easy mapping of current and future genomic data formats to pedigree information.
+Optical character recognition software will be used where possible to automate extraction of information from scans, but we imagine a fair amount of hand-curation will be required.
+Dr. Kate Crosby (senior personnel), Dr. Taner Sen (support letter from maize GDB enclosed), senior personnel Dr. Oscar Smith, and Co-PI Dr. Bill Tracy will consult on an agreed upon standard format for recording data from scans.
+Standardized formatting will enable consistent mapping of current and future genomic data formats to pedigree information. Both the raw scans of pedigree records and our data sheets which will be made available publicly with permanent doi via services such as Github (\url{www.github.com}) or Figshare (\url{www.figshare.com}).
 
-We fully anticipate that we will isolate some lines that feature heavily in the historical pedigree and have germplasm available, but that do not have any genomic data available for them. 
-In such cases (where germplasm is available), we intend to use genotype-by-sequencing (GBS) \citep{Elshire:2011ha} as a cost-efficient platform \citep{Glaubitz:2014eu} to obtain high-coverage and density of SNPs  for these lines, with markers aligned to the newest maize reference genome (currently B73 v. 3). We anticipate that this number of lines should be no more than a few hundred samples of inbred lines, or two-four plates worth of samples (192-384 inbred lines).
-In addition to serving as contact for obtaining hard-copy breeding information, Dr. Sherry Flint-Garcia will serve as a contact at the USDA station to help Dr. Holland's student understand how inbred lines are deposited, uniquely named, and will also be able to help the student obtain any available USDA germplasm deemed to be important in the pedigree, but not yet genotyped.
+We anticipate that we will identify some lines that feature heavily in the historical pedigree but that do not have any genotypic data available for them. 
+To facilitate downstream applications (see Aims 2 and 3), we will use genotype-by-sequencing (GBS) \citep{Elshire:2011ha} to obtain genome-wide genotype data.
+Germplasm will be requested from the relevant sources, and germination and DNA extraction will be performed at UC Davis.  
+Genotyping will be outsourced to the Genomic Diversity Facility at Cornell University (\url{www.biotech.cornell.edu/brc/genomic-diversity-facility}), and sequence data processed following standard pipelines \citep{Glaubitz:2014eu}.
+We anticipate that no more than a few hundred inbred lines (2-4 96-well plates) would need to be 
+
+Dr. Crosby will be responsible for database generation and curation.
+The initial database will continue to be in SQL format, with entries for release dates, historical phenotype information, breeder notes, germplasm availability (or nearest neighbor germplasm availability), and GBS genotype.  
+While other genotyping has been performed on a number of lines, GBS is the \emph{de facto} standard \citep{romay2013comprehensive} and merging data across platforms is beyond the scope of the work proposed here. 
+GBS data will be stored in hdf5 format and made available via iPlant (\url{www.http://iplantcollaborative.org}).
+We will develop software to extract genotype data from specific genomic regions in subsets of lines and estimate allele sharing via identity by state (IBS) between sets of lines in specified genomic regions.
+Finally, we will implement simple phenotypic prediction (see Aim 2) functionality allowing users to estimate phenotypic values based on a set of loci from genome-wide association studies.
+
+Starting in year two of the grant, the pedigree database will be made available publicly via MaizeGDB (\url{www.maizegdb.org}), the USDA-funded central resources for maize genomics (see letter of support from Dr. Taner Sen).
+We will update the database as new information arises, and provide functionality such that users can submit database updates (in the appropriate format) to MaizeGDB to ensure continued utility and availability of this resource.
 
 \subsubsection*{Expected outcomes (Aim 1)}
-Our main deliverable from the first aim is an \textbf{open public pedigree database to be hosted on maize GDB (http://www.maizegdb.org/) for the long term future.} Users will be able to contribute and revise incomplete information, with the goal of establishing a nearly complete public pedigree of maize inbred lines. \textbf{To our knowledge, this will be one of the first public crop databases of its kind (with lines having genomic and phenotypic data mapped onto entries).}  
+Our main deliverable from Aim 1 is an \textbf{open public pedigree database to be hosted on MaizeGDB (http://www.maizegdb.org/) for the long term future.} 
+Users will be able to contribute and revise incomplete information, with the goal of establishing a nearly complete public pedigree of maize inbred lines.   
+For instance, a breeder could query the database for lines with descriptors suggesting drought and blight resistance, identify the genotype of such lines at loci thought to be associated with the trait of interest from GWAS or other studies, and use the database to predict phenotype for related material with no descriptive data.
 
-The initial database will house information on release dates, selection regime, historical phenotype information, germplasm availability (or nearest neighbor germplasm availability).
-Breeders and researchers will be able to query information on lines across many years, their closest relatives, and additionally for alleles that are associated with a given a selection regime. 
-For instance, if a breeder wants to establish an inbred line that is both drought and blight resistant, they could query information on lines that are drought resistant and lines that are blight resistant, plus query how other alleles in a chosen line might be associated with other traits of interest. They could then decide on crosses and breeding designs in the field, and update information (should they choose) on maize GDB following actual growouts.
-\kc{include this or ditch? Additionally, Dr. Kate Crosby is currently investigating the possibility of using no-SQL database without formal schemas specified \textit{a priori} (graph databases) to be able handle queries with respect to mapped genomic data, extended ancestry, and phenotypic data, along with new visualization tools \citep{ParejaTobes:2015bf}.}
-Ensuring data, code, and script are open-access or open-source (freely available to the public) is important for critique, debate, and dialogue in science. Dr. Ross-Ibarra has a long track record of ensuring openness with his science, data, and code. Throughout this project, both Dr. Ross-Ibarra and Dr. Crosby will endeavour to ensure that code and data are available via repositories such as github, figshare, maize GDB, and iPlant.
-
+Ensuring data, code, and script are open-access or open-source (freely available to the public) is important for critique, debate, and dialogue in science. 
+Drs. Ross-Ibarra and Crosby have a long track record of ensuring openness in science, data, and code. Throughout this project, both Dr. Ross-Ibarra and Dr. Crosby will endeavour to ensure that code and data are available via permanent, publicly accessible repositories such as github, figshare, maizeGDB, and iPlant.
 
 \subsubsection*{Potential pitfalls \& limitations (Aim 1)}
-While we are very optimistic about the prospect of obtaining accurate pedigree information from these various institutions the nature of corn-breeding and record keeping of corn-breeding can be nebulous. 
-Ideally, we would be able to accurately count the number of meioses in the total pedigree, in each breeding program, down to each line; thus, retracing the complete ancestry of a given contemporary inbred. 
+\textcolor{red}{While we are very optimistic about the prospect of obtaining accurate pedigree information from these various institutions the nature of corn-breeding and record keeping of corn-breeding can be nebulous. 
+Ideally, we would be able to accurately count the number of meioses in the total pedigree, in each breeding program, down to each line; thus, retracing the complete ancestry of a given contemporary inbred. }
 
-However, in many cases, it may not have been noted at which point in a breeding program a line was bulked at, nor on occasion which lines were used in recycling an inbred when seed was exhausted. 
 
-For instance, a record from NPGS may indicate that a line was bulked and stored after being selfed to generation 6, or it may have been bulked and stored following selfing at generation 4. As a ballpark figure, a ``selfed generation 6 inbred'' means that germplasm from that line is 99\% homozygous at all locus pairs. 
-Meaning that if this inbred is selfed further, not much changes with respect to levels of homozygosity nor heterozygosity (as recombination via selfing is ineffective beyond this point).  
-Thus, so long as an inbred is at or beyond cycle 6, it will be kept, but inbreds before this period shall be discarded.
+%JRI: DITCH THIS
+%However, in many cases, it may not have been noted at which point in a breeding program a line was bulked at, nor on occasion which lines were used in recycling an inbred when seed was exhausted. 
 
-To ensure that historical records of inbred lines are isolated following the sixth generation of selfing and beyond we will investigate the level of heterozygosity in each of these lines with GBS data relative to the total amount of missing data in an individual line. 
-Within reasonable confidence limits most lines should show a very small portion of heterozygous loci even with GBS markers (known to have a high rate of error in the under-calling heterozygous). 
-Historical pedigree records and other information on old lines may be available, but the germplasm from these old lines may simply not be available (genomic data will not be able to be mapped onto these lines. 
-Currently, we know that approximately 12.9\% of germplasm from NPGS for which we have parentage information is not available. 
-Undoubtedly, as we add more records from breeding books, journals, meeting minutes, and research station bulletins, we expect a similar level of unavailability of germplasm.  
-In such cases, we would seek available germplasm from the next nearest relatives according to historical information, and genotype those accessions. 
+%For instance, a record from NPGS may indicate that a line was bulked and stored after being selfed to generation 6, or it may have been bulked and stored following selfing at generation 4. As a ballpark figure, a ``selfed generation 6 inbred'' means that germplasm from that line is 99\% homozygous at all locus pairs. 
+%Meaning that if this inbred is selfed further, not much changes with respect to levels of homozygosity nor heterozygosity (as recombination via selfing is ineffective beyond this point).  
+%Thus, so long as an inbred is at or beyond cycle 6, it will be kept, but inbreds before this period shall be discarded.
+
+%To ensure that historical records of inbred lines are isolated following the sixth generation of selfing and beyond we will investigate the level of heterozygosity in each of these lines with GBS data relative to the total amount of missing data in an individual line. 
+%Within reasonable confidence limits most lines should show a very small portion of heterozygous loci even with GBS markers (known to have a high rate of error in the under-calling heterozygous). 
+
+Historical pedigree records and other information on old lines may be available, but the germplasm from these old lines may no longer be available. 
+Approximately 12.9\% of germplasm from NPGS for which we have parentage information is no longer available, and we expect similar or higher levels from less accessible sources. 
+We note, however, that such lines remain useful in connecting available lines together in the pedigree, and pedigree alone can be used to predict phenotype. 
+If we identify historically important germplasm that is no longer available, we will identify and genotype the nearest relatives for which seed are available. 
 
 \subsection*{Aim 2: Identify useful diversity}
 
