@@ -12,20 +12,16 @@
 \usepackage[round]{natbib}
 \bibliographystyle{evolution}
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
-\newcommand{\jri}[1]{\textcolor{blue}{ \emph{\scriptsize  #1}} }
-\newcommand{\kc}[1]{\textcolor{violet}{ \emph{\scriptsize  #1}} }
-
-
-\newcommand{\citex}{\textcolor{red}{\textbf{(CITE)}}}
-
-%\bibliographystyle{abbrvnat}
-%\setcitestyle{authoryear,open={(},close={)}}
 \usepackage[innercaption]{sidecap} % side captions
 \sidecaptionvpos{figure}{c}
 
+\newcommand{\jri}[1]{\textcolor{blue}{ \emph{\scriptsize  #1}} }
+\newcommand{\kc}[1]{\textcolor{violet}{ \emph{\scriptsize  #1}} }
+\newcommand{\citex}{\textcolor{red}{\textbf{(CITE)}}}
+
 \begin{document}
 
-\title{Project Narrative: The genetic archaeology of maize breeding: identifying useful diversity through historical pedigree reconstruction}
+\title{\vspace{-5ex}The genetic archaeology of maize: reconstructing pedigrees to identify useful diversity for breeding\vspace{-4ex}}
 \author{}
 \date{}
 \maketitle
@@ -51,7 +47,14 @@ Breeding is also of key importance in adapting maize to the challenges of changi
 \subsection*{Diversity loss threatens breeding gains}
 
 Breeding, and adaptation in general, relies critically on the availability of genetic diversity. 
-This is best represented mathematically by JL Lush's famous ``breeder's equation'' $R=\frac{V_A}{V_P}s$, showing that adaptation --- the response to selection $R$ --- depends not only on the strength of selection $s$ but also directly on the amount of heritable genetic variation $V_A$ for the trait of interest \citep{kelly2011breeder}. 
+This is best represented mathematically by JL Lush's famous ``breeder's equation'':
+
+\begin{align}
+R=\frac{V_A}{V_P}s
+\label{eq:lush}
+\end{align}
+
+showing that adaptation --- the response to selection $R$ --- depends not only on the strength of selection $s$ but also directly on the amount of heritable genetic variation $V_A$ for the trait of interest \citep{kelly2011breeder}. 
 The advent of modern hybrid maize breeding, the development of distinct breeding pools and the winnowing of inbreds from individual breeding programs has led to a marked decrease in genetic diversity. 
 Analyzing genotypes of more than 4000 public and recently released private lines, we recently showed that the diversity available to maize breeders in current germplasm is less than half what it was in before 1950 (Figure \ref{fig:diversity}). 
 With decreasing diversity available for breeding decreasing yield gains are a mathematical certainty. 
@@ -65,14 +68,9 @@ With decreasing diversity available for breeding decreasing yield gains are a ma
 
 While open-pollinated varieties and exotic inbred lines represent a viable source of new diversity, these have been only sparingly used in the private sector due to their poor agronomic performance, photoperiod sensitivity, and the necessary generations of back-crossing to adapted lines required to incorporate useful alleles into high-performing temperate germplasm \citep{goodman1999broadening}.
 In contrast, older U.S. inbred lines, though lower-yielding than their contemporaries, harbor novel genetic diversity of potential use for breeding but are already adapted to the U.S. cornbelt.  
-For example, a recent phenotypic evaluation identified several older inbreds as sources of useful variation for drought and heat tolerance \citep{chen2012characterization} and our own population genetic analysis identified a number of older inbreds enriched for underutilized adaptive alleles (Figure \ref{fig:wf9}).
-
-%rjw: This last statement still does not rest well with me. The study classified alleles as "favorable" based on enriched in more modern germplasm then asked which of those alleles were present across the genome of lines (not alleles) that were "underutilized." The alleles themselves were identified because they were utilized. My suggestion is to remove the word underutilized here and say enriched with adaptive alleles. This then opens the debatable point about whether it is valuable to mine for diversity in old underutilized lines at the loci where favorable alleles have been declared. I believe this point needs to be more clearly addressed below, and I also think that J Holland's framing for this is best -- basically, losses due to drift.
-
-My suggestion is to remove the word underutilized here and say enriched with adaptive alleles. 
-
-This then opens the debatable point about whether it is valuable to mine for diversity in old underutilized lines at the loci where favorable alleles have been declared. I believe this point needs to be more clearly addressed below, and I also think that J Holland's framing for this is best -- basically, losses due to drift.
-
+Breeders have clearly bee successful in advancing high-yielding germplasm and discarding ill-adapted material.
+This does not mean, however, that all discarded material is bad --- beneficial alleles can be lost to genetic drift or simply because breeders are unable to select for all traits simultaneously. 
+For example, a recent phenotypic evaluation identified several older inbreds as sources of useful variation for drought and heat tolerance \citep{chen2012characterization} and our own population genetic analysis identified a number of underutilized older inbreds enriched for adaptive alleles (Figure \ref{fig:wf9}).
 
 \begin{SCfigure}
 \includegraphics[width=0.5\linewidth]{joost_wf9.png}
@@ -94,13 +92,12 @@ For example, of the over 45,000 worldwide inbreds in the USDA Germplasm Resource
 If we look at available germplasm only, that number shrinks to 2931 accessions with any available ancestry information.
 While there are published compilations of germplasm, these are far from complete:  \citet{gerdes1993compilation}, for example, contains complete pedigree data for less than 20\% of the germplasm in the USDA database.
 Moreover, what ancestry information that is available is not in electronic form nor easily accessible in any single resource.  
-Instead, historical pedigree information existis primarily in the minutes of breeding committees, old breeding program books, and other hard-copy sources with limited distribution.  
+Instead, historical pedigree information exists primarily in the minutes of breeding committees, old breeding program books, and other hard-copy sources with limited distribution.  
 
-{We propose to  generate an open-source database of public maize pedigrees and genotypes and use this resource to identify genotypic and phenotypic diversity of high utility in advancing maize breeding.}
-%this reads too long, efforts to shorten are welcome.
-Given the importance of maize to U.S. agriculture, this proposal clearly aligns with the USDA AFRI program priorities of ``Plant Breeding for Agricultural Production.''  
+\textbf{We propose to generate an open-source database of public maize pedigrees and use this resource to identify genotypic and phenotypic diversity of high utility in advancing maize breeding.}
+Given the importance of maize to U.S. agriculture, this proposal clearly aligns with the USDA AFRI program priorities of ``Plant Breeding for Agricultural Production,'' particularly the ``development and application of tools to predict phenotype from genotype to accelerate breeding of finished varieties''.   
+%JRI: Do we include this second quote?  Too long?  Too obvious?  Do we not meet it well enough?
 Our proposal will develop tools to accelerate breeding by allowing breeders to more quickly identify useful inbreds, and our application of population and quantitative genetic methods will identify specific genetic and phenotypic diversity of potential use for future breeding.  
-%do we say something about ``Development and application of tools to predict phenotype from genotype to accelerate breeding of finished varieties;'' (from the RFA)??
 
 \section*{Introduction}
 \label{sec:introduction}
