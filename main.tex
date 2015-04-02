@@ -249,7 +249,7 @@ These records can be queried based on unique identifiers from the USDA (PI numbe
 \label{fig:b73isbig}
 \end{figure}
 
-\subsubsection{Preserving valuable information vulnerable to loss \kc{where to put this?}.}
+\subsubsection*{Preserving valuable information vulnerable to loss \kc{where to put this?}.}
 Much of the pedigree information on older founder inbred maize lines sits in old volumes of Crop Science or the Agronomy Journal, experimental station technical bulletins, regional corn breeding meeting records, release sheets, or breeding books, unused and vulnerable to loss.  
 The National Plant Germplasm Service (NPGS) database contains information with regards to ancestry of public maize inbred lines, but this information may be incomplete or missing (see section above). 
 However, much of this ancestry information on modern maize lines  is still publicly available, only not in digital form, nor is it easily-accessible. 
@@ -336,7 +336,7 @@ If our observations deviate from this expectation, we would tend to conclude bre
 \end{figure}
 
 Our current preliminary data set of 1696 accessions contains a fair amount of information on different selection regimes (Figure \ref{fig:words}). 
-By applying allele-dropping to a number of these smaller breeding programs, and tracking unidirectional shifts, we (Dr. Holland's student and Dr. Crosby) will attempt isolate strong signals of breeders selection for a given selective agent (within a program). 
+By applying allele-dropping to a number of these smaller breeding programs, and tracking unidirectional shifts, we (Dr. Holland's student and Dr. Crosby) will attempt isolate strong signals of breeders selection for a given selective agent (within a past breeding program). 
 We may then look for these alleles across all other breeding programs where selection was presumably relaxed (Figure \ref{fig:div}), and if we can isolate these alleles, then they may be introgressed back in as useful diversity to other breeding programs.
 
 \subsubsection*{Potential pitfalls \& limitations (allele-dropping)}
@@ -344,12 +344,12 @@ Genotypes when combined with a pedigree can be used to predict phenotypes \citep
 By using allele dropping we target individual loci within and across breeding programs, attributing high frequency SNPs with their given breeding program. 
 However, there are two potential limitations with the allele-dropping approach. First, there may be a lack of statistical power in detecting selection on individual alleles, because there may be too few progeny of each line under a given selection regime. 
 But, allele dropping may not have the statistical power to detect a more diffuse polygenic signal of adaptation spread across many alleles in a genome (similar the drawbacks of using traditional QTL mapping and $F_{ST}$ scans) \cite{Rockman:2011ej, Berg:2014bs}. 
-However, this limitation of power is not an issue for the complementary population genetic approach we plan on using: the $Q_{x}$ method described in \cite{Berg:2014bs}. 
+However, this limitation of power is not an issue for the complementary population genetic approach we plan on using: the $Q_{x}$ method described in \cite{Berg:2014bs} (see next section). 
 
 \subsubsection*{Predictive phenotyping ($Q_{x}$)}
 \jri{here we show that if individual lines predictive phenotype is better than expected given pedigree/genomic background, then it's likely a good choice for breeding! }
 
-Here we propose the first study to look for correlated allele shifts (thought to be associated with production traits) in lines from temporally (not spatially) different environments using a statistic in a recently described population genomics approach \cite{Berg:2014bs}: $Q_{x}$. 
+Here we propose the first study to look for correlated allele shifts (thought to be associated with production traits) in lines from temporally different environments using a statistic in a recently described population genomics approach \cite{Berg:2014bs}: $Q_{x}$. 
 
 First, significant hits from a genome wide association study (GWAS)  can be summarized as the allelic effects $\alpha^{2}$ (or breeding values) that breeders can take advantage to get an estimate of $V_{A}$ for any trait of interest. $V_{A}$ can be estimated for one locus or summarized across all loci $L$ in the genome (equation 3 below):
 
@@ -382,17 +382,16 @@ We will identify alleles useful for breeding using several approaches, first
 
 \subsection*{Aim 3: Field testing individual lines}
 A mass grow out and genotyping of all inbred lines in the total pedigree would be ideal, but realistically, we do not have the resources (either in terms of time, space, or available germplasm) to do this.
-However, we can target specific lines that have many progeny (thus, many alleles) or very few progeny (rare alleles in the pedigree), and germplasm from lines that have important phenotypic information associated with them (from release sheets). 
-
-In the latter part of the second year, Dr. Wisser and his student will grow out several hundred of these lines, obtain tissue for GBS, and potentially also verify the phenotypic information provided on the release sheet (if the information is available).
+However, we can target specific lines that have many progeny (thus, many alleles) or very few progeny (few alleles in the pedigree). These lines will have been identified with the allele-dropping method by Dr. Holland's student and Dr. Crosby. 
+In the latter part of the second year, Dr. Wisser and his student will grow out several hundred of these lines, obtain tissue for GBS, and potentially also verify the phenotypic information provided on the release sheet (if the information is available). We will include several randomly chosen ex
 
 In order to empirically (\kc{right word?}) test and ground-truth the idea that inbred lines from the past express the predicted phenotypes from the $Q_{x}$ and allele-dropping approaches Dr. Wisser and his student will grow out a subset of lines in the third year at the University of Delaware, and phenotype them.
 The subset of lines here will be based on those lines that show overdispersion for production and production associated traits from the $Q_{x}$ approach described above, and ``fit'' and ``unfit'' lines from the allele-dropping method.
 We have allocated resources to grow out 50 of the predicted ``fit'' and 50 ``unfit'' lines, with 2 rows of 10 each, phenotype the middle 5 of each row. 
 
-%\jri{year 2 plot we grow up stuff that we want phenotypes and genotypes for}
 
-%\jri{year 3 plot we grow up 50 bad lines, 50 good lines (steal the design from my email, 2 rows of 10 each, phenotype middle 5, what traits, etc. to compare predicted "good" lines and predicted "bad" lines.  We also include as checksd some set of ex-PVP -- see my email to Randy for details}
+
+%\jri{year 3 plot we grow up 50 bad lines, 50 good lines (steal the design from my email, 2 rows of 10 each, phenotype middle 5, what traits, etc. to compare predicted "good" lines and predicted "bad" lines.  We also include as check some set of ex-PVP -- see my email to Randy for details}
 
 \subsubsection*{Expected outcomes and potential pitfalls: Aim 3}
 %\jri{year 2 fills in important gaps in pedigree data and genotyping. year 3 tests our predictions. explain it will not be comprehensive, but should give an idea of how well things work, as well as an idea of the agronomics of the old lines -- if even the "best" old lines have terrible agronomics, we'll know our whole idea is probably not great.
