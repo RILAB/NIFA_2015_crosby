@@ -212,7 +212,7 @@ While private companies likely have their own pedigree databases, these data are
 \subsection*{Preliminary work}
 To date, we (senior personnel Drs. Oscar Smith and Kate Crosby) have gathered parentage info for over 3193 lines from a variety of sources, including \cite{gerdes1993compilation}, the NPGS, patent variety protection records, inbred release publications, and communication with breeders.
 We have standardized names across these datasets and stored these data in a SQL database, which can be queried by common name (e.g. ``B73'') as well as unique NPGS identifiers (``PI 550473'' for B73).
-We have combined these data with genome-wide genotyping-by-sequencing (GBS) data \citep{romay2013comprehensive}, and built a large pedigree of $\approx$700 lines (Figure \ref{fig:combo}a) with complete parentage and genotype information. GBS data allows us to validate recorded pedigrees, identifying parental combinations that are impossible given the genotyping data (Figure \ref{fig:combo}b).
+We have combined these data with genome-wide genotyping-by-sequencing (GBS) data \citep{romay2013comprehensive}, and built a large pedigree of $\approx$700 lines (Figure \ref{fig:combo}a) with complete parentage and genotype information. GBS data allows us to validate recorded pedigrees, identifying parental combinations that are impossible given the genotyping data (Figure \ref{fig:combo}b).\textcolor{violet}{We propose that expectations on the mean and variance of genomic relatedness across generations within pedigree lineages will allow us to resolve many, but not necessarily all, pedigree errors. In turn, this will expand the resource available for pedigree-based analysis (for genetic inference) and decision making (for breeding)}
 
 \begin{figure}
 \includegraphics[width=1\linewidth]{crosby_combo}
@@ -278,7 +278,7 @@ Drs. Ross-Ibarra and Crosby have a long track record of ensuring openness in sci
 
 While we are optimistic about the prospect of obtaining accurate pedigree information from these various institutions, we recognize that many records will be incomplete. 
 In practice, while knowing the exact number of meioses between lines would be desirable, we expect we will recover only parentage information from a large number of lines. 
-Parentage alone is sufficient for allele-dropping and prediction (see Aim 2), but not knowing the number of meioses makes it difficult to know the uncertainty associated with prediction or use pedigree data to understand recombination.
+Parentage alone is sufficient for allele-dropping and prediction (see Aim 2), but not knowing the number of meioses makes it difficult to know the uncertainty associated with prediction or use pedigree data to understand recombination. \textcolor{violet}{However, with genomic data we will attempt to correct some incomplete pedigrees.}
  
 A second challenge is that while pedigree records and other information on old lines may be available, the germplasm from these old lines may no longer be available. 
 Approximately 12.9\% of germplasm from NPGS for which we have parentage information is no longer available, and we expect similar or higher levels from less accessible sources. 
@@ -298,7 +298,7 @@ As seen in Figure \ref{fig:div}, alleles under selection will show distorted pat
 Given pedigree information on a set of lines (Aim 1), we can use genotype data to test for selection on any locus simply by calculating the probability of the observed inheritance pattern along the pedigree given normal Mendelian segregation.
 Loci that show low probabilities are likely to have been under selection.
 Because this method uses the pedigree structure directly, it avoids difficulties of population structure inherent in population genetic or genome-wide association methods \citep{astle2009population}.
-This method has already been employed by industry to identify useful alleles in their own pedigrees \citep{sebastian1995method}.
+This method has already been employed by industry to identify useful alleles in their own pedigrees \citep{sebastian1995method}. \textcolor{violet} {As sample sizes may be small within a given pedigree, we recognize that distorted segregation of alleles from parents to offspring may be due to drift alone. To account for the role of genetic drift, Dr. Crosby will perform simulations within and across pedigrees, with slight modifications to the code here: (\url{https://github.com/kate-crosby/simulation_epistasis}).} 
 
 One of the major advantages of this 	``allele-dropping'' approach is the opportunity it provides to test for loci under selection in a number of different contexts.
 For example, because  different breeding programs selected for different traits (and this information is often available in pedigree records, e.g. Figure \ref{fig:words}), we can test for selection in a subset of pedigrees related by trait.
@@ -342,6 +342,7 @@ This allows us to identify breeding populations or lines that have responded to 
 
 The idea of applying these two complementary approaches is to identify potentially useful diversity from our pedigree database.
 SNPs identified by allele-dropping can be tagged in the database for future reference, and breeding programs or lines showing evidence of selection for specific phenotypes can be noted as well.
+Taken together, this information can provide insight into the evolution of genetic architectures across the history of U.S. maize breeding.
 These notations may be of use for breeders, though we expect breeders interested in subsets of the germplasm or specific traits would want to run additional analyses.
 Each analysis will be run by one of the two masters students employed on the grant, providing them with statistical genetics training and an analytical skill-set desirable for applied industry or public research. 
 
@@ -350,7 +351,7 @@ Each analysis will be run by one of the two masters students employed on the gra
 There are two potential limitations with the allele-dropping approach. First, there may be a lack of statistical power in detecting selection on individual alleles, because there may be too few progeny of each line under a given selection regime. 
 Secondly, allele dropping may not have the statistical power to detect a more diffuse polygenic signal of adaptation spread across many alleles in a genome (similar the drawbacks of using traditional QTL mapping and $F_{ST}$ scans) \cite{Rockman:2011ej, Berg:2014bs}. 
 Both of these limitations are circumvented to some degree by our second approach, which can look across a broader set of arbitrarily related germplasm for a large number of loci.
-This second approach, however, may exhibit high false positive rates if gentic structure in the test population is correlated with that of the original GWAS panel \citep{Berg:2014bs}. 
+This second approach, however, may exhibit high false positive rates if genetic structure in the test population is correlated with that of the original GWAS panel \citep{Berg:2014bs}. 
 This is an area we are actively investigating; while we have not resolved it to our satisfaction yet we suspect that by re-running the GWAS with subsets of the diverse NAM \citep{mcmullen2009genetic} panel (composed of thousands of recombinant inbred lines - the inbred progeny of some 25 of the original modern US maize founders) much of this problem can be ameliorated.  
 
 \subsection*{Aim 3: Field testing individual lines}
