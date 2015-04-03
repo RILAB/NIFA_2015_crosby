@@ -1,6 +1,6 @@
 %Project Narrative
 \documentclass[12pt]{article}
-\usepackage[margin=1.2in]{geometry}
+\usepackage[margin=1.3in]{geometry}
 \usepackage{color}
 \usepackage{graphicx}
 \usepackage{url}
@@ -324,6 +324,7 @@ Many crop phenotypes are highly quantitative, and in such cases population genet
 Recently developed quantitative genetic methods, however, circumvent this problem by asking whether groups of SNPs identified \emph{a priori} from GWAS analysis show concerted changes in linkage disequilibrium and frequency \citep{Berg:2014bs}.
 For a given population (or individual) the method estimates the genetic value $Z$ of a trait by summing over the estimated effect sizes $\alpha$ of the $L$ GWAS hits weighted by their frequency $p$ (for diploid individuals the frequency would be 0,0.5,or 1 ): 
 
+\jri{shouldn't this be the below, from eq. 1 in B and Coop? i think we want this and not $V_A$ right?}
 \begin{align}
     Z = \sum_{i=1}^L\alpha_ip_i
 	\label{eq:berg}
@@ -402,17 +403,19 @@ Finally, growouts of a diverse set of older germplasm in comparison with ex-PVPs
 We predict that we will be able to show that our pedigree-based methods in Aim 2 allow us to successfully choose germplasm that out-competes elite lines for specific traits of interest. 
 
 \subsubsection*{Potential pitfalls \& limitations (Aim 3)}
-Ideally, field-testing of these lines would be more comprehensive, including more replication, better controls, and multiple environments. However, we are working under space/time constraints and more importantly with limited germplasm obtained from seed repositories.
+
+Ideally, field-testing of these lines would be more comprehensive, including more replication, better controls, and multiple environments.
 Given the space and time constraints of this grant, however, we feel this design is a  reasonable compromise.
 
-Two of the most likely issues relate to limited availability of germplasm. 
-If insufficient seed is available, we may be unable to reach the 40 lines desired or the available lines may be very unbalanced (e.g. many new lines, a few older lines).  However, we are working under space/time constraints and more importantly with limited germplasm obtained from seed repositories.   
+Two of the most likely pitfalls relate to limited availability of germplasm. 
+If numbers of seed at germplasm repositories are insufficient, we may be unable to reach the 40 lines desired or the available lines may be very unbalanced (e.g. many new lines, a few older lines).
 Additionally, as we will be working with older germplasm, it is possible that some lines will fail to germinate, resulting in unequal numbers with which to test our assumptions. 
 
 \subsection*{Research Timeline}
 A graphical timeline of our three-year proposal is presented below (Figure \ref{fig:timeline}).
 The first year will be spent traveling and gathering and digitizing pedigree records at land-grant institutions.
 Dr. Tracy and Dr. Holland's  student will be responsible for traveling to and scanning hard-copy records into digital format.  We estimate that this should take no longer than a few days at each institution.
+
 
 The scanned digital records will then be translated into a usable data format for further analysis by Dr. Crosby.  Dr. Crosby will ensure that a functional version of the database is available at MaizeGDB by the end of the first year; she will act as database manager throughout the proposal to the end of the third year, when all information is transferred to MaizeGDB administrators. 
 
