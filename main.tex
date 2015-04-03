@@ -40,6 +40,8 @@ Even under stable climatic conditions, current rates of maize improvement are in
 Changing climatic conditions, however, will likely further challenge our ability to meet needed yield gains. 
 Historical analyses suggests that climate change over the last 30 years has already dramatically impacted maize yields worldwide, retarding gains from breeding and management \citep{Lobell2011}.
 Moreover, predicted temperature increases will increase volatility in yield across the U.S. and may even decrease future yields \citep{urban2012projected}, with some models suggesting a change of even 1$^{\circ}$C could negatively impact yields by as much as 17\% \citep{lobell2003climate}; more dire warnings suggest that U.S. maize yields could drop 30-46\% below current levels by the end of the century \citep{schlenker2009nonlinear}.
+It is also predicted that these climate changes will interact with and change soil properties resulting in increased fertilizer inputs \citep{rosenzweig2014assessing}, and even further interact with pests and diseases \citep{anderson2004emerging}. 
+These different factors may give rise to completely novel environments far different from the ones that farmers and breeders had to contend with in the past. 
 Substantial efforts will clearly be needed to preserve U.S. maize production and increase or maintain yields.  
 
 Much of the historical gains in maize yield can be directly attributed to breeding efforts \citep{Duvick1992, duvick2005genetic}, and \textbf{ breeding must remain of central importance in order to meet increased yield demands}.  
@@ -67,9 +69,11 @@ With decreasing diversity available for breeding decreasing yield gains are a ma
 \end{SCfigure}
 
 While open-pollinated varieties and exotic inbred lines represent a viable source of new diversity, these have been only sparingly used in the private sector due to their poor agronomic performance, photoperiod sensitivity, and the necessary generations of back-crossing to adapted lines required to incorporate useful alleles into high-performing temperate germplasm \citep{goodman1999broadening}.
-In contrast, older U.S. inbred lines, though lower-yielding than their contemporaries, harbor novel genetic diversity of potential use for breeding \citep[e.g.][]{chen2012characterization,wisser2011multivariate}, but are already adapted to the temperate U.S.  
+
+
+In contrast, older U.S. inbred lines, though lower-yielding than their contemporaries, harbor novel genetic diversity of potential use for breeding \citep[e.g.][]{chen2012characterization,wisser2011multivariate}, and are already adapted to the temperate U.S.  
 Breeders have clearly been successful in advancing high-yielding germplasm and discarding ill-adapted material.
-This does not mean, however, that all discarded material has little genetic merit --- beneficial alleles can be lost to genetic drift, particularly considering the polygenicity of agronomic traits and also because breeders are unable to select for all traits simultaneously. Our own population genetic analysis supports this notion; a number of underutilized older inbreds are enriched with favorable alleles (Figure \ref{fig:wf9}). 
+This does not mean, however, that all discarded material has little genetic merit --- beneficial alleles can be lost to genetic drift, particularly considering the polygenicity of agronomic traits and also because breeders are unable to select for all traits simultaneously. Our own population genetic analysis supports this notion; a number of underutilized older inbreds are enriched with favorable alleles (Figure \ref{fig:wf9}).  
 
 \begin{SCfigure}
 \includegraphics[width=0.55\linewidth]{joost_wf9.png}
@@ -93,7 +97,7 @@ While there are published compilations of germplasm, these are far from complete
 Moreover, what ancestry information that is available is not in electronic form nor easily accessible in any single resource.  
 Instead, historical pedigree information exists primarily in the minutes of breeding committees, old breeding program books, and other hard-copy sources with limited distribution.  
 
-\textbf{We propose to generate an open-source database of public maize pedigrees and use this resource to identify genotypic and phenotypic diversity of high utility in advancing maize breeding.}
+\textbf{We propose the generation an open-source database of public maize pedigrees and use this resource to identify genotypic and phenotypic diversity of high utility in advancing maize breeding.}
 Given the importance of maize to U.S. agriculture, this proposal clearly aligns with the USDA AFRI program priorities of ``Plant Breeding for Agricultural Production,'' particularly the ``development and application of tools to predict phenotype from genotype to accelerate breeding of finished varieties''.   
 Our proposal will develop tools to accelerate breeding by allowing breeders to more quickly identify useful inbreds, and our application of population and quantitative genetic methods will identify specific genetic and phenotypic diversity of potential use for future breeding.  
 
@@ -108,7 +112,7 @@ The most important heterotic groups among U.S. public germplasm are the ``stiff 
 Inbred lines from separate breeding pools are then crossed to make hybrid progeny.  
 These hybrids often display heterosis, meaning that yield and associated traits of the hybrid are superior to  either inbred parent \citep{Springer:2007bj}.  
 Inbreds capable of producing high-yielding, heterotic offspring are said to have good ``combining ability'', and are recycled in their respective breeding pools.
-Inbreds that form less desirable combinations are usually discarded from the breeding pool. 
+Inbreds that form less desirable hybrid combinations are usually discarded from the breeding pool. 
 Useful inbreds within a group are crossed with each other, and their segregating progeny evaluated and self-fertilized to create new inbreds. 
 Maintaining this system for propagation of inbred lines and hybridizing inbreds for evaluating production traits has worked well for many decades, but there is growing reason for concern that this method may need a genetic boost. 
 
@@ -116,7 +120,8 @@ Maintaining this system for propagation of inbred lines and hybridizing inbreds 
 
 Maize yields have steadily increased since the advent of hybrid breeding in the 1930's.
 But linear increases necessarily mean a decrease in relative gain, and projections suggest that current trends are unlikely to meet future yield goals \citep{grassini2013distinguishing}. 
-Of even greater concern is the possibility that the rate of gain may actually be decreasing (Figure \ref{fig:piecewise}).
+Of even greater concern is the possibility that the rate of gain may actually be decreasing (Figure \ref{fig:piecewise}, NB: \textbf{the black regression line's slope has decreased relative to the yellow line's slope.}).
+
 While some of these yield trends are undoubtedly related to changing management practices, much of the change is indeed due to breeding \citep{Duvick:2001fy}, and current rates of yield gain are lower than historical trends even after correcting for nitrogen fertilizer inputs (data not shown). 
 
 \begin{figure}
@@ -164,7 +169,7 @@ This complementary approach is good source of bringing in new diversity, but req
 
 \textbf{We propose a different approach, using pedigree data to identify underutilized cornbelt germplasm.}  
 While this approach shares with projects like GEM the disadvantage that diverse material is often  agronomically inferior, it has a number of advantages.  
-First, in contrast to exotic germplasm, older U.S. germplasm is already reasonably well-adapted to the daylength and climate of the U.S., meaning it can be immediately incorporated into breeding programs without first requiring extensive back-crossing.
+First, in contrast to exotic germplasm, older U.S. germplasm is already reasonably well-adapted to the daylength and climate of the U.S. \citep{Teixeira:2014hr}, meaning it can be immediately incorporated into breeding programs without first requiring extensive back-crossing.
 Second, with sufficient information (see below), breeders may be able to learn a substantial amount about the potential utility of a line by predicting phenotype directly or understanding its relationship to known material. 
 Finally, considerable information is available about many old breeding lines even without prediction (Figure \ref{fig:words})
 
@@ -181,7 +186,11 @@ Finally, considerable information is available about many old breeding lines eve
                 \caption{}
                 \label{fig:div}
         \end{subfigure}
+<<<<<<< HEAD
+\caption{a) Counts of a small set of germplasm descriptors from the USDA database for which we currently have genomic and ancestral data. b) Expected segregation of alleles at loci for two traits in different breeding programs.  Selective regime for combining ability across two example breeding programs and loci. Fitness (w) of each allele indicated, with selection coefficient (1-\textit{s}) for the allele being selected against in a given regime. Locus 2, though beneficial under drought conditions, risks loss due to drift in breeding programs focusing only on combining ability.}
+=======
 \caption{a) Counts of a small set of germplasm descriptors from the USDA database for which we currently have genomic and ancestral data. b) Expected segregation of alleles at loci for two traits in different breeding programs.  Selective regime for combining ability across two example breeding programs and loci. Fitness (w) of each allele indicated, with selection coefficient (1-\textit{s}) for the allele being selected against in a given regime. In each breeding program one of the alleles is effectively neutral such that older lines may still harbor useful diversity for traits which were not under selection.}
+>>>>>>> 14aa3af07f48629fa2df75513dde89be65e6e93f
 \end{figure}
  
 \subsubsection*{Advantages of pedigree approaches}
@@ -193,12 +202,12 @@ While population genetic approaches can achieve this latter goal to some extent 
 Pedigree approaches can identify strong selection within individual breeding programs (see Aim 2) without needing to average across many different programs.  
 Pedigree approaches can also naturally deal with population structure, because expected relatedness is built into the pedigree itself.
 Finally, pedigrees allow prediction of phenotype even in the absence of genotype \citep{piepho2008blup}.  
-While this is never a substitute for growing lines in the relevant environment for comparative purposes (see Aim 3), it doe save considerable time and expense and provides breeders an initial estimate of which germplasm could be most useful.
+While this is never a substitute for growing lines in the relevant environment for comparative purposes (see Aim 3), it does save considerable time and expense and provides breeders an initial estimate of which germplasm could be most useful.
 
 \subsubsection*{The missing data challenge}
 
 Unfortunately, much of the pedigree information on older founder inbred maize lines sits in old volumes of Crop Science or the Agronomy Journal, experimental station technical bulletins, regional corn breeding meeting records, release sheets, or breeding books --- unaviable and vulnerable to loss.  
-The National Plant Germplasm Service (NPGS) database records ancestry information, but at least 25\% of the accessions in the database have zero ancestry data, and another \textcolor{red}{XXX} have incomplete data. 
+The National Plant Germplasm Service (NPGS) database records ancestry information, but at least 92\% of the accessions in the database have zero ancestry data, and of the 8\% that do have some ancestry data 20\% is incomplete or uses pedigree notation that is not standard. 
 While private companies likely have their own pedigree databases, these data are private, patented, and not available to the public. 
 \textbf{We will gather pedigree data from public sources (minutes of breeding committees, breeding program books, and other hard-copy-only sources) in order to preserve this historical information and combine it with genotyping data to accelerate future public and private (see letter of support from Dupont Pioneer) maize breeding programs.}
 
@@ -238,7 +247,7 @@ Drs. Tracy and Smith have extensive contacts with faculty past and present at th
 
 Optical character recognition software will be used where possible to automate extraction of information from scans, but we imagine a fair amount of hand-curation will be required.
 Dr. Crosby (senior personnel), Dr. Taner Sen (support letter from maize GDB enclosed), senior personnel Dr.  Smith, and Co-PI Dr. Tracy will consult on an agreed upon standard format for recording data from scans.
-Standardized formatting will enable consistent mapping of current and future genomic data formats to pedigree information. Both the raw scans of pedigree records and our data sheets which will be made available publicly with permanent doi via services such as Github (\url{www.github.com}) or Figshare (\url{www.figshare.com}).
+Standardized formatting will enable consistent mapping of current and future genomic data formats to pedigree information. Both the raw scans of pedigree records and our data sheets which will be made available publicly with permanent, unique doi (digital object identifier) via services such as Github (\url{www.github.com}) or Figshare (\url{www.figshare.com}).
 We will translate current and new phenotypic data into standardized maize ontologies such as those supported by the Generation Challenge Program \citep[\url{http://www.cropontology.org/ontology/CO_322/Maize}, ][]{shrestha2012bridging}
 
 We anticipate that we will identify some lines that feature heavily in the historical pedigree but that do not have any genotypic data available for them. 
@@ -268,11 +277,29 @@ Ensuring data, code, and script are open-access or open-source (freely available
 Drs. Ross-Ibarra and Crosby have a long track record of ensuring openness in science, data, and code. Throughout this project, both Dr. Ross-Ibarra and Dr. Crosby will endeavor to ensure that code and data are available via permanent, publicly accessible repositories such as github, figshare, maizeGDB, and iPlant.
 
 \subsubsection*{Potential pitfalls \& limitations (Aim 1)}
+<<<<<<< HEAD
+\textcolor{red}{While we are very optimistic about the prospect of obtaining accurate pedigree information from these various institutions the nature of corn-breeding and record keeping of corn-breeding can be nebulous. 
+Ideally, we would be able to accurately count the number of meioses in the total pedigree, in each breeding program, down to each line; thus, retracing the complete ancestry of a given contemporary inbred. }
+
+\kc{ok - but this is the potential pitfall liz lee was on about, and also howie? Thoughts?}
+%JRI: DITCH THIS
+%However, in many cases, it may not have been noted at which point in a breeding program a line was bulked at, nor on occasion which lines were used in recycling an inbred when seed was exhausted. 
+
+%For instance, a record from NPGS may indicate that a line was bulked and stored after being selfed to generation 6, or it may have been bulked and stored following selfing at generation 4. As a ballpark figure, a ``selfed generation 6 inbred'' means that germplasm from that line is 99\% homozygous at all locus pairs. 
+%Meaning that if this inbred is selfed further, not much changes with respect to levels of homozygosity nor heterozygosity (as recombination via selfing is ineffective beyond this point).  
+%Thus, so long as an inbred is at or beyond cycle 6, it will be kept, but inbreds before this period shall be discarded.
+
+%To ensure that historical records of inbred lines are isolated following the sixth generation of selfing and beyond we will investigate the level of heterozygosity in each of these lines with GBS data relative to the total amount of missing data in an individual line. 
+%Within reasonable confidence limits most lines should show a very small portion of heterozygous loci even with GBS markers (known to have a high rate of error in the under-calling heterozygous). 
+
+Historical pedigree records and other information on old lines may be available, but the germplasm from these old lines may no longer be available. 
+=======
 While we are optimistic about the prospect of obtaining accurate pedigree information from these various institutions, we recognize that many records will be incomplete. 
 In practice, while knowing the exact number of meioses between lines would be desirable, we expect we will recover only parentage information from a large number of lines. 
 Parentage alone is sufficient for allele-dropping and prediction (see Aim 2), but not knowing the number of meioses makes it difficult to know the uncertainty associated with prediction or use pedigree data to understand recombination.
  
 A second challenge is that while pedigree records and other information on old lines may be available, the germplasm from these old lines may no longer be available. 
+>>>>>>> 720c1b84f1fcaf658c28f86f2c67f73a625700b0
 Approximately 12.9\% of germplasm from NPGS for which we have parentage information is no longer available, and we expect similar or higher levels from less accessible sources. 
 We note, however, that such lines remain useful in connecting available lines together in the pedigree, and pedigree alone can be used to predict phenotype. 
 If we identify historically important germplasm that is no longer available, we will identify and genotype the nearest relatives for which seed are available. 
