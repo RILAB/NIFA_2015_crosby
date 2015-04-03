@@ -337,30 +337,6 @@ We will test for selection using data on genome-wide association results from mo
 We predict not only that we will find evidence of selection for traits that we know have been selected, but that many traits may show evidence of selection in the absence of pedigree data supporting conscious selection by the breeder.
 This allows us to identify breeding populations or lines that have responded to selection for a phenotype, even if the individual loci responsible remain only partially known.
 
-%Briefly, the approach $Q_{x}$ uses SNP hits and their allelic effects (breeding values) across the genome from a GWAS analysis. The effects sizes of these breeding values can be summarized by comparing to a random set of SNPs in that population. Here, allelic effects $\alpha^{2}$ (or breeding values), the same values that  breeders can take advantage to get an estimate of $V_{A}$ for any trait of interest. $V_{A}$ can be estimated for one locus or summarized across all loci $L$ in the genome (equation \ref{eq:berg} below):
-
-%\begin{align}
-%    V_A = 2p(1-p)\alpha^2 = \sum_{l=1}^L\alpha^2_l2p_l(1-p_l)
-% % \end{equation}\break
-% % \begin{equation}
-% %    = \overset{L}{\underset{l=1}{\sum}}\alpha^2_l2p_l(1-p_l)
-%	\label{eq:berg}
-%\end{align}
-
-%
-%These hits are then projected to the expected breeding value based on the genotype of individuals in another environment (where the phenotype has not actually been observed). 
-
-%We will test for  GWAS results from the In the case of maize, we have phenotypic data from contemporary lines from various mapping populations and their genotypes,, e.g. the large-scale Nested Association Mapping population (NAM) of thousands of recombinant inbred lines (RILs), which was developed ten years ago from 25 of the original founders of modern US germplasm \citep{mcmullen2009genetic}. 
-
-%If alleles are at high frequency in certain breeding programs and can also associated with a beneficial phenotype (e.g. blight resistance), they are potentially beneficial alleles that could be resurrected and introgressed back into a modern breeding program. 
-%By then searching the entire pedigree for these alleles and isolating those lines that have these SNPs, they may be targeted by breeders and public research programs.
-%Further, the greater the $V_A$ of a trait (the greater the allelic diversity of that trait, i.e. $N_{e}$), and thus, the greater $R$ (response to selection) to any new selective program a breeder chooses to apply.
-
-%\begin{SCfigure}
-%\includegraphics[width=0.7\linewidth]{Qx.pdf}
-%\caption{Simple schematic of how the $Q_{x}$ approach works}
-%\label{fig:qx}
-%\end{SCfigure}
 
 \subsubsection*{Expected outcomes (Aim 2)}
 
@@ -370,13 +346,13 @@ These notations may be of use for breeders, though we expect breeders interested
 Each analysis will be run by one of the two masters students employed on the grant, providing them with statistical genetics training and an analytical skill-set desirable for applied industry or public research. 
 
 \subsubsection*{Potential pitfalls \& limitations (Aim 2)}
-%Genotypes when combined with a pedigree can be used to predict phenotypes \citep{de2009predicting,crossa2010prediction,Decker:2012kd}.
-%By using allele dropping we target individual loci within and across breeding programs, associating high frequency SNPs with their given selective regime (drought, disease, etc). 
+
 There are two potential limitations with the allele-dropping approach. First, there may be a lack of statistical power in detecting selection on individual alleles, because there may be too few progeny of each line under a given selection regime. 
 Secondly, allele dropping may not have the statistical power to detect a more diffuse polygenic signal of adaptation spread across many alleles in a genome (similar the drawbacks of using traditional QTL mapping and $F_{ST}$ scans) \cite{Rockman:2011ej, Berg:2014bs}. 
 Both of these limitations are circumvented to some degree by our second approach, which can look across a broader set of arbitrarily related germplasm for a large number of loci.
 This second approach, however, may exhibit high false positive rates if gentic structure in the test population is correlated with that of the original GWAS panel \citep{Berg:2014bs}. 
-This is an area we are actively investigating; while we have not resolved it to our satisfaction yet we suspect that by re-running the GWAS with subsets of the diverse NAM panel much of this problem can be ameliorated.  
+This is an area we are actively investigating; while we have not resolved it to our satisfaction yet we suspect that by re-running the GWAS with subsets of the diverse NAM \citep{mcmullen2009genetic} panel (composed of thousands of recombinant inbred lines - the inbred progeny of some 25 of the original modern US maize founders) much of this problem can be ameliorated.  
+
 \subsection*{Aim 3: Field testing individual lines}
 
 Our final aim is to use small-scale grow-outs to validate our approaches in Aim 2 and test the utility of older lines as viable sources of diversity for breeding.
@@ -412,6 +388,16 @@ Additionally, as we will be working with older germplasm, it is possible that so
 
 To combat potentially unbalanced designs we will make use of modern statistical methods, such as the max-t test \citep{herberich2010robust}. 
 
+\subsection*{Hazards to Personnel}
+\subsubsection*{Field Plots}
+Students will be required to perform fieldwork in years 2-3 (Dr. Wisser's student in both years, and Dr. Holland's student in the first year) at the University of Delaware. As such, Dr. Wisser will ensure that his student is trained and aware of the hazards when working with corn plants. Maize pollen can cause allergies, with reactions ranging from mild to severe. Corn plants can also cause small cuts to the skin when standing in close proximity. The student will be informed on choices for ideal clothing to avoid this problem. As fieldwork is likely to take place during the hotter months of the year, sunscreen and adequate water will be provided to the student, as well as regular breaks.
+
+\subsubsection*{Lab Work}
+Our proposal includes only 1-2 lab sessions of DNA extractions. We will ensure that Dr. Crosby has gone through the required safety training mandated for all wet labs at UC Davis.
+
+\subsubsection*{Student \& CO-PI travel}
+Both masters students as well as Dr. Tracy will be required to travel to different states to obtain pedigree records from land-grant institutions. We will ensure that all participants have purchased car insurance if this is the method of transport, and air travel insurance (for flight interruption, medical emergency).
+
 \subsection*{Research Timeline}
 A graphical timeline of our three-year proposal is presented below (Figure \ref{fig:timeline}).
 The first year will be spent traveling and gathering and digitizing pedigree records at land-grant institutions.
@@ -436,12 +422,12 @@ During year 2, Dr. Holland's student will apply allele-dropping approaches to pe
 S/he will also be responsible for obtaining available germplasm of lines for phenotyping. 
 In year 2, Dr. Wisser's student will visit two land grant schools in the east (Virginia Tech and the University of Pennsylvania) to obtain additional records and submit an update to the database. 
 Dr. Wisser's student will also grow out the lines identified by Holland's student. 
-These lines will be phenotyped by a combination of Wisser/Holland students.
+These lines will be phenotyped by a combination of Wisser/Holland students, with Dr. Sherry Flint.
 
 In the final year (year 3), Dr. Wisser's student will apply the $Q_{x}$ method to identify phenotypes under selection and predict phenotype of under-utilized lines.
 During year 3 Dr. Wisser's student will perform the second grow-out to test predictions of the $Q_{x}$ method.
 
-Throughout the grant we will have monthly group conference calls to discuss progress, challenges, and logistics. 
+Throughout the grant we will have monthly group conference calls to discuss progress, challenges, and logistics. Drs. Ross-Ibarra, Wisser, and Holland all have a proven track record of delivering results when it comes to collaborating on larger grants across various research institutions. 
 
 As a final step, all phenotypic data, identified SNPs of related to various production traits, and ancestry information, will be transferred from Dr. Crosby's working database to maize GDB, and managed by administrators there for the long term future.
 
@@ -450,7 +436,7 @@ As a final step, all phenotypic data, identified SNPs of related to various prod
 \subsubsection*{Training}
 Our proposal helps train two students in bioinformatics, population and quantitative genetics, plant-breeding, experimental design, statistics, and database management. 
 All these applied skills that the students develop will help them in future careers, whether academic or industry. 
-They will both meet and work with some of the premier experts in maize breeding (Drs. Tracy \& Smith). 
+They will both meet and work with some of the premier experts in maize breeding (Drs. Tracy \& Smith).
 Both students will be expected and encouraged to attend the maize genetics conference, to present their results and network with working professionals from academia, government, and industry.
 
 Both students will work alongside Dr. Crosby as well as their respective advisors to plan out analyses, troubleshoot, and advance project goals. 
