@@ -269,7 +269,7 @@ Our main deliverable from Aim 1 is an \textbf{open public pedigree database to b
 In addition to providing information on pedigree, this database will house both genotype and substantial phenotype information, a combination of critical importance for continued plant breeding efforts \citep{zamir2013have}.
 Users will be able to contribute and revise incomplete information, with the goal of establishing a nearly complete public pedigree of maize inbred lines.   
 
-Eample usage might include a breeder querying the database for lines with descriptors suggesting drought and blight resistance, identifying the genotype of such lines at loci thought to be associated these traits from GWAS or other studies, and use the database to predict phenotype for related material with no descriptive data.
+Example usage might include a breeder querying the database for lines with descriptors suggesting drought and blight resistance, identifying the genotype of such lines at loci thought to be associated these traits from GWAS or other studies, and use the database to predict phenotype for related material with no descriptive data.
 
 Ensuring data, code, and script are open-access or open-source (freely available to the public) is important for critique, debate, and dialogue in science. 
 Drs. Ross-Ibarra and Crosby have a long track record of ensuring openness in science, data, and code. Throughout this project, both Dr. Ross-Ibarra and Dr. Crosby will endeavor to ensure that code and data are available via permanent, publicly accessible repositories such as github, figshare, maizeGDB, and iPlant.
@@ -287,27 +287,34 @@ If we identify historically important germplasm that is no longer available, we 
 
 \subsection*{Aim 2: Identify useful diversity}
 
+In this aim we propose to use two distinct statistical genetic methods to identify potentially useful diversity from our pedigree database.  
+First, we will use ``allele-dropping'' approaches to find individual loci that have been under selection.
+Second, we will use quantitative genetic methods to do test for selection on individual phenotypes of interest.
+
 \subsubsection*{Mendelian segregation on a pedigree}
-As different lines have been under different historical selective regimes or breeding programs, these phenotypes likely have an underlying genetic basis. Following the digitization of historical information, the Dr. Holland's student and the post-doc (Kate Crosby) will construct many small pedigrees of the different selection regimes and use the technique of \textbf{``allele-dropping''} to further identify breeder's selection and useful diversity. 
 
-``Allele-dropping'' is a patented method \citep{sebastian1995method}, used in industry and works by identifying distorted segregation at all heterozygous loci within a single pedigree/breeding programs and across many pedigrees/breeding programs (Figure \ref{fig:alleledrop}). 
-As a simple Mendelian approach this technique identifies traces of selection by directly accounting for ancestry, and without the worry of having to account for shared population structure \cite{sebastian1995method}, as can often be a problem or limitation in modern population genomics approaches - such as $F_{ST}$ outlier scans from genome wide association studies (GWAS). 
+The idea behind this method is simple: Mendelian genetics provides the simple null model for inheritance of alleles in the absence of selection.
+As seen in Figure \ref{fig:div}, alleles under selection will show distorted patterns of inheritance.
+Given pedigree information on a set of lines (Aim 1), we can use genotype data to test for selection on any locus simply by calculating the probability of the observed inheritance pattern along the pedigree given normal Mendelian segregation.
+Loci that show low probabilities are likely to have been under selection.
+Because this method uses the pedigree structure directly, it avoids difficulties of population structure inherent in population genetic or genome-wide association methods \citex.
+This method has already been employed by industry to identify useful alleles in their own pedigrees \citep{sebastian1995method}.
 
-With allele-dropping, if we observe the uni-directional shift of a given allele across many of these small pedigrees at a set of loci (or even within just one pedigree in a specific breeding program), this would tend to indicate selection. 
-We would tend to predict that a consistent subset of alleles that are associated with combining ability would tend to increase in frequency across the pedigree.
-As an example, using Mendelian rules and starting with a mostly homozygous line (with some residual heterozygosity), we can examine single heterozygous locus (i.e. $Aa$). 
-Because we know what our expectations ($E$) for number ($N$) of $AA$ (or $aa$) homozygous inbred progeny at generation 6 (under no selection) should be (given by $E = 1/2 N$), we can compare to the actual observed number of progeny. 
-If our observations deviate from this expectation, we would tend to conclude breeder's selection for these alleles (especially if observed across a good portion of the entire pedigree). 
+One of the major advantages of this 	``allele-dropping'' approach is the opportunity it provides to test for loci under selection in a number of different contexts.
+For example, because  different breeding programs selected for different traits (and this information is often available in pedigree records, e.g. Figure \ref{fig:words}), we can test for selection in a subset of pedigrees related by trait.
+This allows us to identify alleles selected for drought in programs breeding for drought and alleles selected for disease resistance in programs focusing on specific diseases.
+Alternatively, we can categorize breeding programs geographically, and ask whether certain alleles were selected in particular maturity zones, temperatures, or precipitation levels.
+Finally, we might expect some loci to be consistently under selection in most programs -- especially those that are associated with combining ability or other widely-valued agronomic traits. 
+
+By applying this segregation test to a number of smaller breeding programs, we will  isolate strong signals of breeder selection for an array of traits and environments. 
+Identification of beneficial alleles in these pedigrees then lets us search across our entire dataset for cases in which the beneficial allele may have undergone relaxed selection in programs selecting for different traits (Figure \ref{fig:div}).
+This allows us to identify useful alleles in specific breeding programs, or search for individual lines that stack useful alleles for multiple traits. 
 
 %\begin{SCfigure}
 %\includegraphics[width=0.5\linewidth]{Pruned.pdf}
 %\caption{Inbre B73 is heterozygous at 379 loci out of over 954,000 loci with GBS markers). The blue labels represent which of its inbred progeny obtained the A allele, whereas the yellow labels indicate the progeny that have obtained the G allele at a particular locus. \textbf{NB: the other parent of these lines is not indicated for simplicity}.}
 %\label{fig:alleledrop}
 %\end{SCfigure}
-
-Our current preliminary data set of 1696 accessions contains a fair amount of information on different selection regimes (Figure \ref{fig:words}). 
-By applying allele-dropping to a number of these smaller breeding programs, and tracking unidirectional shifts, we (Dr. Holland's student and Dr. Crosby) will attempt isolate strong signals of breeders selection for a given selective agent (within a past breeding program). 
-We may then look for these alleles across all other breeding programs where selection was presumably relaxed (Figure \ref{fig:div}), and if we can isolate these alleles, then they may be introgressed back in as useful diversity to other breeding programs.
 
 \subsubsection*{Predictive phenotyping ($Q_{x}$) (Aim 2)}
 \jri{here we show that if individual lines predictive phenotype is better than expected given pedigree/genomic background, then it's likely a good choice for breeding! }
@@ -316,12 +323,13 @@ We may then look for these alleles across all other breeding programs where sele
 Here we propose the first study to look for correlated allele shifts (thought to be associated with production traits) \textbf{through time} using a statistic in a recently described population genomics approach \cite{Berg:2014bs}: $Q_{x}$. 
 Briefly, the approach $Q_{x}$ uses SNP hits and their allelic effects (breeding values) across the genome from a GWAS analysis. The effects sizes of these breeding values can be summarized by comparing to a random set of SNPs in that population. Here, allelic effects $\alpha^{2}$ (or breeding values), the same values that  breeders can take advantage to get an estimate of $V_{A}$ for any trait of interest. $V_{A}$ can be estimated for one locus or summarized across all loci $L$ in the genome (equation 3 below):
 
-  \begin{align}
-    V_A = 2pq\alpha^2
+\begin{align}
+    V_A = 2pq\alpha^2 = \sum_{l=1}^L\alpha^2_l2p_l(1-p_l)
  % \end{equation}\break
  % \begin{equation}
-     = \overset{L}{\underset{l=1}{\sum}}\alpha^2_l2p_l(1-p_l)
-  \end{align}
+ %    = \overset{L}{\underset{l=1}{\sum}}\alpha^2_l2p_l(1-p_l)
+\end{align}
+
 These hits are then projected to the expected breeding value based on the genotype of individuals in another environment (where the phenotype has not actually been observed). 
 %In the case of maize, we have phenotypic data from contemporary lines from various mapping populations and their genotypes,, e.g. the large-scale Nested Association Mapping population (NAM) of thousands of recombinant inbred lines (RILs), which was developed ten years ago from 25 of the original founders of modern US germplasm \citep{mcmullen2009genetic}. 
 
@@ -329,11 +337,11 @@ If alleles are at high frequency in certain breeding programs and can also assoc
 By then searching the entire pedigree for these alleles and isolating those lines that have these SNPs, they may be targeted by breeders and public research programs.
 Further, the greater the $V_A$ of a trait (the greater the allelic diversity of that trait, i.e. $N_{e}$), and thus, the greater $R$ (response to selection) to any new selective program a breeder chooses to apply.
 
-\begin{SCfigure}
-\includegraphics[width=0.7\linewidth]{Qx.pdf}
-\caption{Simple schematic of how the $Q_{x}$ approach works}
-\label{fig:qx}
-\end{SCfigure}
+%\begin{SCfigure}
+%\includegraphics[width=0.7\linewidth]{Qx.pdf}
+%\caption{Simple schematic of how the $Q_{x}$ approach works}
+%\label{fig:qx}
+%\end{SCfigure}
 
 \subsubsection*{Expected outcomes (Aim 2)}
 
