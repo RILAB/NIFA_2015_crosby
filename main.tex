@@ -181,7 +181,7 @@ Finally, considerable information is available about many old breeding lines eve
                 \caption{}
                 \label{fig:div}
         \end{subfigure}
-\caption{a) Counts of a small set of germplasm descriptors from the USDA database for which we currently have genomic and ancestral data. b) Expected segregation of alleles at loci for two traits in different breeding programs.  Selective regime for combining ability across two example breeding programs and loci. Fitness (w) of each allele indicated, with selection coefficient (1-\textit{s}) for the allele being selected against in a given regime. Locus 2, though beneficial under drought conditions, risks loss due to drift in breeding programs focusing only on combining ability. \kc{I think there's also the aspect that the alleles for drought are still preserved, because they are conditionally neutral in the combining program (breeder's selection is relaxed for drought - and yes, they can be lost to drift). These conditionally neutral alleles are preserved against a different genetic background. If we find lots of adaptive alleles in one environment, we might find them in another, but with a different background - introgressions can be planned in that way. I think of this more as local breeder's adaptation - when you cross lines from two or more populations/programs, you'll likely get a bunch of crap hybrids, but you may also get transgressive segregation of all beneficial alleles (subject to some stats - Pioneer can do crazy CTL things to avoid massive amounts of crosses) - this is exactly how heterotic groups work. But here, we're talking about creating lines from way more divergent crosses prior to losing these alleles to drift.}}
+\caption{a) Counts of a small set of germplasm descriptors from the USDA database for which we currently have genomic and ancestral data. b) Expected segregation of alleles at loci for two traits in different breeding programs.  Selective regime for combining ability across two example breeding programs and loci. Fitness (w) of each allele indicated, with selection coefficient (1-\textit{s}) for the allele being selected against in a given regime. In each breeding program one of the alleles is effectively neutral such that older lines may still harbor useful diversity for traits which were not under selection.}
 \end{figure}
  
 \subsubsection*{Advantages of pedigree approaches}
@@ -194,12 +194,6 @@ Pedigree approaches can identify strong selection within individual breeding pro
 Pedigree approaches can also naturally deal with population structure, because expected relatedness is built into the pedigree itself.
 Finally, pedigrees allow prediction of phenotype even in the absence of genotype \citep{piepho2008blup}.  
 While this is never a substitute for growing lines in the relevant environment for comparative purposes (see Aim 3), it doe save considerable time and expense and provides breeders an initial estimate of which germplasm could be most useful.
-
-\begin{itemize}
-\item observed vs. expected allow us to look allele specific ``hard'' breeder sweeps across the pedigree for combining ability
-\item but phenotypic information of each program contained in release sheets may also allow us to look at selective regimes within programs (while selection is relaxed in others).
-\item If alleles exist in other programs along with the specific diversity of that program, we can target those.
-\end{itemize}
 
 \subsubsection*{The missing data challenge}
 
@@ -243,7 +237,7 @@ Co-PI Wisser's student (to start in year two of the grant) will be responsible f
 Drs. Tracy and Smith have extensive contacts with faculty past and present at these schools, so obtaining the information and scanning it at each school traveled to should take no more than a few days. 
 
 Optical character recognition software will be used where possible to automate extraction of information from scans, but we imagine a fair amount of hand-curation will be required.
-Dr. Kate Crosby (senior personnel), Dr. Taner Sen (support letter from maize GDB enclosed), senior personnel Dr. Oscar Smith, and Co-PI Dr. Bill Tracy will consult on an agreed upon standard format for recording data from scans.
+Dr. Crosby (senior personnel), Dr. Taner Sen (support letter from maize GDB enclosed), senior personnel Dr.  Smith, and Co-PI Dr. Tracy will consult on an agreed upon standard format for recording data from scans.
 Standardized formatting will enable consistent mapping of current and future genomic data formats to pedigree information. Both the raw scans of pedigree records and our data sheets which will be made available publicly with permanent doi via services such as Github (\url{www.github.com}) or Figshare (\url{www.figshare.com}).
 We will translate current and new phenotypic data into standardized maize ontologies such as those supported by the Generation Challenge Program \citep[\url{http://www.cropontology.org/ontology/CO_322/Maize}, ][]{shrestha2012bridging}
 
@@ -285,7 +279,7 @@ If we identify historically important germplasm that is no longer available, we 
 
 \subsection*{Aim 2: Identify useful diversity}
 
-\subsubsection*{Mendelian segregation on a pedigree (Aim 2)}
+\subsubsection*{Mendelian segregation on a pedigree}
 As different lines have been under different historical selective regimes or breeding programs, these phenotypes likely have an underlying genetic basis. Following the digitization of historical information, the Dr. Holland's student and the post-doc (Kate Crosby) will construct many small pedigrees of the different selection regimes and use the technique of \textbf{``allele-dropping''} to further identify breeder's selection and useful diversity. 
 
 ``Allele-dropping'' is a patented method \citep{sebastian1995method}, used in industry and works by identifying distorted segregation at all heterozygous loci within a single pedigree/breeding programs and across many pedigrees/breeding programs (Figure \ref{fig:alleledrop}). 
@@ -297,22 +291,15 @@ As an example, using Mendelian rules and starting with a mostly homozygous line 
 Because we know what our expectations ($E$) for number ($N$) of $AA$ (or $aa$) homozygous inbred progeny at generation 6 (under no selection) should be (given by $E = 1/2 N$), we can compare to the actual observed number of progeny. 
 If our observations deviate from this expectation, we would tend to conclude breeder's selection for these alleles (especially if observed across a good portion of the entire pedigree). 
 
-\begin{SCfigure}
-\includegraphics[width=0.5\linewidth]{Pruned.pdf}
-\caption{B73 (also known as PI550473 by NPGS and a number of its inbred progeny) is heterozygous at 379 loci out of over 954,000 loci with GBS markers). The blue labels represent which inbred progeny obtained the A allele, whereas the yellow labels indicate the progeny that have obtained the G allele at a particular locus. \textbf{NB: the other parent of these lines is not indicated for simplicity}.}
-\label{fig:alleledrop}
-\end{SCfigure}
+%\begin{SCfigure}
+%\includegraphics[width=0.5\linewidth]{Pruned.pdf}
+%\caption{Inbre B73 is heterozygous at 379 loci out of over 954,000 loci with GBS markers). The blue labels represent which of its inbred progeny obtained the A allele, whereas the yellow labels indicate the progeny that have obtained the G allele at a particular locus. \textbf{NB: the other parent of these lines is not indicated for simplicity}.}
+%\label{fig:alleledrop}
+%\end{SCfigure}
 
 Our current preliminary data set of 1696 accessions contains a fair amount of information on different selection regimes (Figure \ref{fig:words}). 
 By applying allele-dropping to a number of these smaller breeding programs, and tracking unidirectional shifts, we (Dr. Holland's student and Dr. Crosby) will attempt isolate strong signals of breeders selection for a given selective agent (within a past breeding program). 
 We may then look for these alleles across all other breeding programs where selection was presumably relaxed (Figure \ref{fig:div}), and if we can isolate these alleles, then they may be introgressed back in as useful diversity to other breeding programs.
-
-\subsubsection*{Potential pitfalls \& limitations (allele-dropping)}
-Genotypes when combined with a pedigree can be used to predict phenotypes \citep{de2009predicting,crossa2010prediction,Decker:2012kd}.
-By using allele dropping we target individual loci within and across breeding programs, associating high frequency SNPs with their given selective regime (drought, disease, etc). 
-However, there are two potential limitations with the allele-dropping approach. First, there may be a lack of statistical power in detecting selection on individual alleles, because there may be too few progeny of each line under a given selection regime. 
-Secondly, allele dropping may not have the statistical power to detect a more diffuse polygenic signal of adaptation spread across many alleles in a genome (similar the drawbacks of using traditional QTL mapping and $F_{ST}$ scans) \cite{Rockman:2011ej, Berg:2014bs}. 
-However, this limitation of power is not an issue for the complementary population genetic approach we plan on using: the $Q_{x}$ method described in \cite{Berg:2014bs} (see next section). 
 
 \subsubsection*{Predictive phenotyping ($Q_{x}$) (Aim 2)}
 \jri{here we show that if individual lines predictive phenotype is better than expected given pedigree/genomic background, then it's likely a good choice for breeding! }
@@ -330,10 +317,6 @@ Briefly, the approach $Q_{x}$ uses SNP hits and their allelic effects (breeding 
 These hits are then projected to the expected breeding value based on the genotype of individuals in another environment (where the phenotype has not actually been observed). 
 %In the case of maize, we have phenotypic data from contemporary lines from various mapping populations and their genotypes,, e.g. the large-scale Nested Association Mapping population (NAM) of thousands of recombinant inbred lines (RILs), which was developed ten years ago from 25 of the original founders of modern US germplasm \citep{mcmullen2009genetic}. 
 
-
-
-
-
 If alleles are at high frequency in certain breeding programs and can also associated with a beneficial phenotype (e.g. blight resistance), they are potentially beneficial alleles that could be resurrected and introgressed back into a modern breeding program. 
 By then searching the entire pedigree for these alleles and isolating those lines that have these SNPs, they may be targeted by breeders and public research programs.
 Further, the greater the $V_A$ of a trait (the greater the allelic diversity of that trait, i.e. $N_{e}$), and thus, the greater $R$ (response to selection) to any new selective program a breeder chooses to apply.
@@ -350,9 +333,16 @@ The idea of applying these two complementary approaches is \textbf{the isolation
 These SNPs can then be tagged in the database as being important for yield-related traits under different selective pressures.
 In obtaining this set of SNPs, each of the masters students will be trained in separate but complementary population and quantitative genetics approaches, and provide them with a skill-set for applied industry or public research. 
 
+\subsubsection*{Potential pitfalls \& limitations (Aim 2)}
+Genotypes when combined with a pedigree can be used to predict phenotypes \citep{de2009predicting,crossa2010prediction,Decker:2012kd}.
+By using allele dropping we target individual loci within and across breeding programs, associating high frequency SNPs with their given selective regime (drought, disease, etc). 
+However, there are two potential limitations with the allele-dropping approach. First, there may be a lack of statistical power in detecting selection on individual alleles, because there may be too few progeny of each line under a given selection regime. 
+Secondly, allele dropping may not have the statistical power to detect a more diffuse polygenic signal of adaptation spread across many alleles in a genome (similar the drawbacks of using traditional QTL mapping and $F_{ST}$ scans) \cite{Rockman:2011ej, Berg:2014bs}. 
+However, this limitation of power is not an issue for the complementary population genetic approach we plan on using: the $Q_{x}$ method described in \cite{Berg:2014bs} (see next section). 
 
 \subsection*{Aim 3: Field testing individual lines}
-A mass grow out and genotyping of all inbred lines in the total pedigree would be ideal, but realistically, we do not have the resources (either in terms of time, space, or available germplasm) to do this.
+\jri{ SFG phenotyping system}
+Our final goal is to use small-scale grow-outs to validate our approaches in Aim 2 and test the utility of older lines.
 However, we can target specific lines that have many progeny (thus, many alleles) or very few progeny (few alleles in the pedigree). These lines will have been identified with the allele-dropping method by Dr. Holland's student and Dr. Crosby. 
 In the latter part of the second year, Dr. Wisser and his student will grow out several hundred of these lines, obtain tissue for GBS (for those with no genotypic information), and potentially also verify the phenotypic information provided on the release sheet (if the information is available). 
 
@@ -362,19 +352,17 @@ We have allocated resources to grow out 50 of the predicted to be productive lin
 We will include several contemporary ex patent-variety-protection (ex-PVP) lines to check the predictions given by $Q_{x}$.
 
 
-\subsubsection*{Expected outcomes and potential pitfalls: Aim 3}
+\subsubsection*{Expected outcomes: Aim 3}
 This final aim of the project fills in any incomplete genotype and phenotype information for important lines in the pedigree. 
-\kc{NEED TO FIX THIS}
-If the ``best old'' lines show terrible agronomic performance relative to current ex-PVP inbred varieties, we will know the approach of integrating ``old'' diversity is an inefficient approach to adding diversity to the breeding pool for yield. \kc{Slight comment - in fact, we won't really know until we do crosses - temporal ones, but we don't have the resources for this.}
 
-
+If the ``best old'' lines show terrible agronomic performance relative to current ex-PVP inbred varieties, we will know the approach of integrating ``old'' diversity is an inefficient approach to adding diversity to the breeding pool for yield. 
 
 \subsection*{Research Timeline}
 A graphical timeline of our three-year proposal is presented below (Figure \ref{fig:timeline}).
 The first year will be spent traveling and gathering and digitizing pedigree records at land-grant institutions.
-Dr. Tracy and Dr. James Holland's masters student will be responsible for traveling to and scanning hard-copy records into digital format.  We estimate that this should take no longer than a few weeks at each institution for Dr. Holland's student and Dr. Tracy.
+Dr. Tracy and Dr. Holland's  student will be responsible for traveling to and scanning hard-copy records into digital format.  We estimate that this should take no longer than a few days at each institution.
 
-The scanned digital records will then be translated into a usable data format for further analysis by Dr. Crosby.  At worst, this will involve Holland's student and the postdoc (Crosby), physically reading and translating each of the scanned papers, and this could take several months to the entire first year depending on volume of records. Dr. Crosby will ensure that the database is up an running by the end of the first year, and act as database manager throughout the proposal to the end of the third year.
+The scanned digital records will then be translated into a usable data format for further analysis by Dr. Crosby.  Dr. Crosby will ensure that a functional version of the database is available at MiazeGDB by the end of the first year; she will act as database manager throughout the proposal to the end of the third year.
 
 Dr. Smith will consult as needed with both students (see roles below) and Dr. Crosby throughout the grant as an expert on the naming and potential ancestry of lines.
 
@@ -384,15 +372,17 @@ Dr. Smith will consult as needed with both students (see roles below) and Dr. Cr
 \label{fig:timeline}
 \end{SCfigure}
 
-At the end of the first year/start of the second year, any inbred line that is disproportionately present or absent in the pedigree with available germplasm, but that has no to little genetic information on it will be genotyped using the GBS platform - Dr. Crosby will be responsible for this aspect of the project, and Holland's student will receive training in GBS analysis from Dr. Crosby. 
+At the end of the first year/start of the second year, we will genotype inbred lines with available germplasm and that are well-represented in the pedigree but lack GBS data. 
+Dr. Crosby will be responsible for this aspect of the project, and Dr. Holland's student will receive training in GBS analysis from Dr. Crosby. 
 
-Dr. Holland's student will then begin to apply the technique of allele-dropping to various pedigrees, investigating which alleles undergo large directional shifts (in terms of allele frequency changes, generation-to-generation). He/she will also be responsible for obtaining available germplasm with the help of Dr. Flint-Garcia from various repositories for those lines that have no genetic information on them at present. 
+During year 2, Dr. Holland's student will apply allele-dropping approaches to pedigrees in the database. 
+S/he will also be responsible for obtaining available germplasm of lines for phenotyping. 
+In year 2, Dr. Wisser's student will visit two land grant schools in the east (Virginia Tech and the University of Pennsylvania) to obtain additional records and submit an update to the database. 
+Dr. Wisser's student will also grow out the lines identified by Holland's student. 
+These lines will be phenotyped by a combination of Wisser/Holland students.
 
-Dr. Randall Wisser's student will then start and visit the two land grant schools in the east (Virginia Tech and the University of Pennsylvania) to obtain the remaining records, and submit this phenotypic and pedigree information to the up-and-running database in the first 2-3 months. 
-
-Dr. Wisser's student will grow out the lines identified by Holland's student from the allele-dropping method and phenotype these lines for production related traits (flowering time, kernel size, kernel weight, etc), while at the same time (over a period of 2-3 months) learn the population genomics approach presented in \citep{Berg:2014bs}. 
-\kc{Worth it to add in part about SFG phenotyping system? This is also something Sherry could consult on}
-In the final year, Dr. Wisser's student will apply the $Q_{x}$ method, and choose the lines that show the greatest over-dispersion for production and production related traits of interest to grow out at Delaware.
+In the final year (year 3), Dr. Wisser's student will apply the $Q_{x}$ method to identify phenotypes under selection and predict phenotype of under-utilized lines.
+During year 3 Dr. Wisser's student will perform the second grow-out to test predictions of the $Q_{x}$ method.
 
 As a final step, all phenotypic data, identified SNPs of related to various production traits, and ancestry information, will be transferred from Dr. Crosby's working database to maize GDB, and managed by administrators there for the long term future.
 
@@ -404,6 +394,7 @@ Our proposal helps train two students in bioinformatics, population and quantita
 Both students will work alongside the post-doc, Dr. Crosby as well as their respective adivsors to plan out details, troubleshoot, and advance project goals. Dr. Crosby, in turn, will gain valuable experience helping to mentor students along with their main advisors Drs. Wisser and Holland. 
 
 \kc{Jeff, say something about yourself?}
+\jri{As an aquarius, I feel a bit beaten down this year, but all the more strong and mature as a result. I can bid farewell to the constant testing and hardships that I've braved and conquered.}
 
 \subsubsection*{Benefits to maize breeding and genomics}
 \subsubsection*{Novel diversity from old lines}
@@ -415,20 +406,12 @@ Private companies such as Monsanto and Dupont Pioneer have their own pedigree da
 Our proposal aims to make this information accessible, and by hosting on maize GDB, will allow the information to be updated as public breeders themselves try out lines, and make their own observations, well beyond the timeline of this three-year project.
 Additionally, Dupont Pioneer (see letter of support) recognizes that much the historical information on maize inbred lines is disjointed, incomplete, scattered across many institutions, and vulnerable to loss. So, this information is a valuable contribution to private industrial databases too.
 
-\kc{I could probably do the below, but it might be overkill}
-\subsubsection*{Open-source R package for database}
-The post-doc, Dr. Crosby while being responsible for database management and development, will also construct an open-source R-package. This package will allow users to access real-time pedigree information from the database with a suite of functions via an application program interface (API). The R-statistical programming language is open-source and one of the fastest growing languages in the United States and countries abroad for data analysis. 
 
 \subsubsection*{Application to other crop systems}
 Few other crops have attempted to make use of old diversity as novel diversity, in a comprehensive project, such as the one we propose here. 
 Yet, useful diversity does exist in old lines \citep{gamuyao2012protein}. 
 
 We think a full examination of this old diversity in one crop system (maize) may act as a stimulus for other researchers in other crops to act quickly to preserve hard-copy records, and germplasm associated with these records too. Our proposal, is in essence, a litmus test of how old diversity could be useful in propagating new modern lines in many crops. 
-
-
-
-
-
 
 \newpage
 \bibliography{kc.bib,jri.bib}
