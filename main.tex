@@ -210,7 +210,7 @@ While private companies likely have their own pedigree databases, these data are
 \textbf{We will gather pedigree data from public sources (minutes of breeding committees, breeding program books, and other hard-copy-only sources) in order to preserve this historical information and combine it with genotyping data to accelerate future public and private (see letter of support from Dupont Pioneer) maize breeding programs.In doing so, this project will preserve existing information and produce new insight into one of the world's most important transformations to agriculture in the modern era.}
 
 \subsection*{Preliminary work}
-To date, we (senior personnel Drs. Oscar Smith and Kate Crosby) have gathered parentage info for over 3193 lines from a variety of sources, including \cite{gerdes1993compilation}, the NPGS, patent variety protection records, inbred release publications, and communication with breeders.
+To date, we (senior personnel Drs. Oscar Smith and Kate Crosby) have gathered parentage info for over 3193 lines from a variety of sources, including \cite{gerdes1993compilation}, the NPGS, patent variety protection records, inbred release publications, old public records shared by Dupont Pioneer, and communication with breeders.
 We have standardized names across these datasets and stored these data in a SQL database, which can be queried by common name (e.g. ``B73'') as well as unique NPGS identifiers (``PI 550473'' for B73).
 We have combined these data with genome-wide genotyping-by-sequencing (GBS) data \citep{romay2013comprehensive}, and built a large pedigree of $\approx$700 lines (Figure \ref{fig:combo}a) with complete parentage and genotype information. GBS data allows us to validate recorded pedigrees, identifying parental combinations that are impossible given the genotyping data (Figure \ref{fig:combo}b).
 We propose that expectations on the mean and variance of genomic relatedness across generations within pedigree lineages will allow us to resolve many, but not necessarily all, pedigree errors. In turn, this will expand the resource available for pedigree-based analysis (for genetic inference) and decision making (for breeding)
@@ -273,7 +273,8 @@ Users will be able to contribute and revise incomplete information, with the goa
 Example usage might include a breeder querying the database for lines with descriptors suggesting drought and blight resistance, identifying the genotype of such lines at loci thought to be associated these traits from GWAS or other studies, and use the database to predict phenotype for related material with no descriptive data.
 
 Ensuring data, code, and script are open-access or open-source (freely available to the public) is important for critique, debate, and dialogue in science. 
-Drs. Ross-Ibarra and Crosby have a long track record of ensuring openness in science, data, and code. Throughout this project, both Dr. Ross-Ibarra and Dr. Crosby will endeavor to ensure that code and data are available via permanent, publicly accessible repositories such as github, figshare, maizeGDB, and iPlant.
+Drs. Ross-Ibarra and Crosby have a long track record of ensuring openness in science, data, and code. 
+Throughout this project, both Dr. Ross-Ibarra and Dr. Crosby will endeavor to ensure that code and data are available via permanent, publicly accessible repositories such as github, figshare, maizeGDB, and iPlant.
 
 \subsubsection*{Potential pitfalls \& limitations (Aim 1)}
 
@@ -331,8 +332,8 @@ For a given population (or individual) the method estimates the genetic value $Z
 \end{align}
 
 Using genome-wide SNPs to control for population structure or relatedness, the method can then calculate the probability of the observed genetic values, with extreme probabilities or outliers suggestive of the action of selection.
-We will first test this approach in two breeding programs in which we know the selection applied by breeders and we have empirical data on the response. Currently, these breeding programs are: ear number in Golden Glow \citep{beissinger2014genome} and flowering-time in a tropical-temperate population \citep{Teixeira:2014hr}.
-Assuming we can find evidence of selection where we know it should be, we will then apply the method to scan across our pedigree for evidence of selection for a number of traits.
+Though this method has been shown to have high power \citep{Berg:2014bs}, we will nonetheless first test the approach in two breeding programs in which we know the selection applied by breeders and we have empirical data on the response: ear number in Golden Glow \citep{beissinger2014genome} and flowering-time in a tropical-temperate population \citep{Teixeira:2014hr}.
+After validating the power of the approach using these controls, we will then apply the method to scan across our pedigree for evidence of selection for a number of traits.
 
 We will test for selection using data on genome-wide association results from more than 40 traits analyzed in the large nested association mapping (NAM) population \citep{wallace2014association}.  
 We predict not only that we will find evidence of selection for traits that we know have been selected, but that many traits may show evidence of selection in the absence of pedigree data supporting conscious selection by the breeder.
@@ -354,9 +355,9 @@ Secondly, allele dropping may not have the statistical power to detect a more di
 Both of these limitations are circumvented to some degree by our second approach, which can look across a broader set of arbitrarily related germplasm for a large number of loci.
 This second approach, however, may exhibit high false positive rates if genetic structure in the test population is correlated with that of the original GWAS panel \citep{Berg:2014bs}. 
 This is an area we are actively investigating; while we have not resolved it to our satisfaction yet we suspect that by re-running the GWAS with subsets of the diverse maize NAM \citep{mcmullen2009genetic} panel (composed of thousands of recombinant inbred lines - the inbred progeny of some 25 of the original modern US maize founders) much of this problem can be ameliorated.
-
-\textcolor{violet}{We bring it up with the ``Assuming statement above'', so I do think we need to acknowledge the possibility that we may not be able to isolate this signal - do we need to say something positive here - one sentence...}
-Finally, with the second approach, we acknowledge that we may not find evidence of a diffuse signal of selection in the two example breeding programs mentioned in the section above \citep{beissinger2014genome,Teixeira:2014hr}.      
+\citep{beissinger2014genome,Teixeira:2014hr}.      
+Finally, statistical power of both methods may be hampered by small sample size.
+We expect, however, that as our pedigree data grow (see Aim 1), we will not have difficulty finding sufficient samples to employ these methods.
 
 \subsection*{Aim 3: Field testing individual lines}
 
@@ -373,7 +374,7 @@ Using the prediction approaches outlined in Aim 2, we will identify breeding pro
 We will then choose 40 lines from early in these programs and 40 lines from late in these programs, accompanied by the same set of 40 ex-PVPs and again matching groups based on maturity and time period as much as possible.
 Here we predict that later lines in these breeding programs should show more desirable phenotypes for the trait of interest than earlier lines from the same programs.  
 For each experiment, we will grow 2 plots of each inbred including checks in a randomized complete block field design at the field station in U. Delaware. 
-The middle 5 plants of each plot will be phenotyped for the trait of interest as well as a set of phenotypes of general agronomic interest to evaluate lines per se (standability, flowering time, plant height, ear height, leaf angle, 50k weight, and yield) and provide some data for reverse-validation (from phenotype to genotype) or to serve as negative controls for the approach.
+The middle 5 plants of each plot will be phenotyped for the trait of interest as well as a set of phenotypes of general agronomic interest to evaluate lines per se (standability, flowering time, plant height, ear height, leaf angle, 50k weight, and yield) and provide data to validate our prediction approaches. 
 
 \subsubsection*{Expected outcomes: Aim 3}
 This aim will achieve three goals.
@@ -393,25 +394,10 @@ Seed from older lines would be fairly well randomized with respect to the enviro
 However, we also recognize that older germplasm has been sourced from different environments (time periods and locations), and that we will be comparatively trying to evaluate them in a novel (but common) environment.
 In the present day, these lines may germinate at different times, and as such we will standardize temporal trait data for as many traits as possible based on day of germination.
 
-% * <rjw@udel.edu> 2015-04-05T11:44:17.928Z:
-%
-%  Ideally we would do a seed increase in the same environment of all the lines to be tested. Here we are taking seed from various sources (increased at different times in different environments) and trying to comparatively evaluate. Maybe acknowledge the issue that seed sources are likely to be different and may cause differences in germination and other traits and we will standardize temporal trait data on germination date. Or else just don't bring up the issue. Your call.
-%
 If numbers of seed at germplasm repositories are insufficient, we may be unable to reach the desired 40 lines or the available lines may be very unbalanced (e.g. many new lines, a few older lines).
 Additionally, as we will be working with older germplasm, it is possible that some lines will fail to germinate, resulting in unequal numbers and again a possible unbalanced design. 
 
 To combat potentially unbalanced designs we will make use of modern statistical methods, such as the max-t test \citep{herberich2010robust}. 
-
-\subsection*{Hazards to Personnel}
-
-\subsubsection*{Field Plots}
-Students will be required to perform fieldwork in years 2-3 (Dr. Wisser's student in both years, and Dr. Holland's student in the first year) at the University of Delaware. As such, Dr. Wisser will ensure that his student is trained and aware of the hazards when working with corn plants. Maize pollen can cause allergies, with reactions ranging from mild to severe. Corn plants can also cause small cuts to the skin when standing in close proximity. The student will be informed on choices for ideal clothing to avoid this problem. As fieldwork is likely to take place during the hotter months of the year, sunscreen and adequate water will be provided to the student, as well as regular breaks.
-
-\subsubsection*{Lab Work}
-Our proposal includes only 1-2 lab sessions of DNA extractions. We will ensure that Dr. Crosby has gone through the required safety training mandated for all wet labs at UC Davis.
-
-\subsubsection*{Student \& CO-PI travel}
-Both masters students as well as Dr. Tracy will be required to travel to different states to obtain pedigree records from land-grant institutions. We will ensure that all participants have purchased car insurance if this is the method of transport, and air travel insurance (for flight interruption, medical emergency).
 
 \subsection*{Research Timeline}
 A graphical timeline of our three-year proposal is presented below (Figure \ref{fig:timeline}).
@@ -437,25 +423,28 @@ During year 2, Dr. Holland's student will apply allele-dropping approaches to pe
 S/he will also be responsible for obtaining available germplasm of lines for phenotyping. 
 In year 2, Dr. Wisser's student will visit two land grant schools in the east (Virginia Tech and the University of Pennsylvania) to obtain additional records and submit an update to the database. 
 Dr. Wisser's student will also grow out the lines identified by Holland's student. 
-These lines will be phenotyped by a combination of Wisser/Holland students, with Dr. Sherry Flint.
+These lines will be phenotyped by a combination of Wisser/Holland students.
 
 In the final year (year 3), Dr. Wisser's student will apply the $Q_{x}$ method to identify phenotypes under selection and predict phenotype of under-utilized lines.
 During year 3 Dr. Wisser's student will perform the second grow-out to test predictions of the $Q_{x}$ method.
 
-Throughout the grant we will have monthly group conference calls to discuss progress, challenges, and logistics. Drs. Ross-Ibarra, Wisser, and Holland all have a proven track record of delivering results when it comes to collaborating on larger grants across various research institutions. 
+Throughout the grant we will have monthly group conference calls to discuss progress, challenges, and logistics. 
+Drs. Ross-Ibarra, Wisser, and Holland all have a proven track record of delivering results when it comes to collaborating on larger grants across various research institutions. 
 
 As a final step, all phenotypic data, identified SNPs of related to various production traits, and ancestry information, will be transferred from Dr. Crosby's working database to maize GDB, and managed by administrators there for the long term future.
 
 \subsection*{Broader Impacts}
 
 \subsubsection*{Training}
-Our proposal helps train two students in bioinformatics, population and quantitative genetics, plant-breeding, experimental design, statistics, and database management. 
-All these applied skills that the students develop will help them in future careers, whether academic or industry. 
-They will both meet and work with some of the premier experts in maize breeding (Drs. Tracy \& Smith).
+Our proposal helps train two students and a postdoc in bioinformatics, population and quantitative genetics, plant-breeding, experimental design, statistics, and database management. 
+All these applied skills will help them in future careers, whether academic or industry. 
+Both students will meet and work with some of the premier experts in maize breeding (Drs. Tracy \& Smith).
 Both students will be expected and encouraged to attend the maize genetics conference, to present their results and network with working professionals from academia, government, and industry.
 
 Both students will work alongside Dr. Crosby as well as their respective advisors to plan out analyses, troubleshoot, and advance project goals. 
-Dr. Crosby, in turn, will gain valuable experience helping to mentor students along with their main advisors Drs. Wisser and Holland. 
+Dr. Crosby will gain valuable experience helping to mentor students along with their main advisors Drs. Wisser and Holland. 
+Dr. Crosby will meet weekly with her adviser, Dr. Ross-Ibarra, who will provide mentoring and guidance on writing and bioinformatics.
+The Ross-Ibarra lab has an excellent track record of career development for postdocs, with former postdocs now working in both academia and industry.
 
 \subsubsection*{Public Pedigree database}
 Private companies such as Monsanto and Dupont Pioneer have their own pedigree databases and information that they can draw from in order to breed new hybrid commercial varieties. 
@@ -470,6 +459,25 @@ Yet, useful diversity does exist in old lines of other species, e.g. rice \citep
 
 We hope that a full examination of the utility of older germplasm in one crop system (maize) may act as a stimulus for other researchers in other crops to act quickly to preserve hard-copy records and germplasm associated with these records. 
 With relatively minor changes to phenotypic ontogeny and mechanisms to access different genotype data, our database could be easily ported to use in other systems as well. 
+
+\subsection*{Hazards to Personnel}
+
+\subsubsection*{Field Plots}
+Students will be required to perform fieldwork in years 2-3 (Dr. Wisser's student in both years, and Dr. Holland's student in the first year) at the University of Delaware. 
+As such, Dr. Wisser will ensure that his student is trained and aware of the hazards when working with maize plants. 
+Maize pollen can cause allergies, with reactions ranging from mild to severe. 
+Maize plants can also cause small cuts to the skin when standing in close proximity. 
+The student will be informed on choices for ideal clothing to avoid this problem. 
+As fieldwork is likely to take place during the hotter months of the year, sunscreen and adequate water will be provided to the student, as well as regular breaks.
+
+\subsubsection*{Lab Work}
+Our proposal includes only 1-2 lab sessions of DNA extractions. 
+We will ensure that Dr. Crosby has gone through the required safety training mandated for all wet labs at UC Davis.
+
+\subsubsection*{Student \& CO-PI travel}
+Both masters students as well as Dr. Tracy will be required to travel to different states to obtain pedigree records from land-grant institutions. 
+We will ensure that all participants have purchased car insurance if this is the method of transport, and air travel insurance (for flight interruption, medical emergency).
+
 
 \newpage
 \bibliography{kc.bib,jri.bib}
